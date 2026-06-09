@@ -471,6 +471,9 @@ function getPointScore(i) {
   if (q.type === 'single') return r === true ? 1 : 0
   if (q.type === 'judge') return r === true ? 1 : 0
   if (q.type === 'multiple') {
+    // 未作答（空选）= 0分，不算错选扣分
+    const hasAnswered = answers[i] !== undefined && answers[i] !== null && Array.isArray(answers[i]) && answers[i].length > 0
+    if (!hasAnswered && (r === 'wrong' || r === false)) return 0
     if (r === 'full' || r === true) return 2
     if (r === 'partial') return 1
     if (r === 'wrong' || r === false) return -2
@@ -484,9 +487,9 @@ const scoreDetail = computed(() => {
   const detail = { singleEarned: 0, singleMax: 0, multiEarned: 0, multiMax: 0, judgeEarned: 0, judgeMax: 0 }
   examQuestions.value.forEach((q, i) => {
     const score = getPointScore(i)
-    if (q.type === 'single') { detail.singleMax += 1; detail.singleEarned += Math.max(0, score) }
+    if (q.type === 'single') { detail.singleMax += 1; detail.singleEarned += score }
     else if (q.type === 'multiple') { detail.multiMax += 2; detail.multiEarned += score }
-    else if (q.type === 'judge') { detail.judgeMax += 1; detail.judgeEarned += Math.max(0, score) }
+    else if (q.type === 'judge') { detail.judgeMax += 1; detail.judgeEarned += score }
   })
   return detail
 })
