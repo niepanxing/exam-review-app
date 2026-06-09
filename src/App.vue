@@ -5,6 +5,17 @@
       <div class="sidebar-header">
         <div class="logo">🎯 突击复习</div>
         <div class="subtitle">考试出题助手</div>
+        <div class="header-info">
+          <div class="theme-toggle" @click="toggleTheme">
+            <span class="theme-icon">{{ isDark ? '🌙' : '☀️' }}</span>
+            <span class="theme-label">{{ isDark ? '暗色' : '亮色' }}</span>
+            <el-switch :model-value="!isDark" size="small" active-text="" inactive-text="" />
+          </div>
+          <div class="question-count">
+            <el-icon><Document /></el-icon>
+            {{ totalQuestions }} 题
+          </div>
+        </div>
       </div>
       <el-menu :default-active="currentRoute" @select="handleSelect" class="sidebar-menu">
         <el-menu-item index="/">
@@ -40,17 +51,6 @@
           <span>设置</span>
         </el-menu-item>
       </el-menu>
-      <div class="sidebar-footer">
-        <div class="theme-toggle" @click="toggleTheme">
-          <span class="theme-icon">{{ isDark ? '🌙' : '☀️' }}</span>
-          <span class="theme-label">{{ isDark ? '暗色模式' : '亮色模式' }}</span>
-          <el-switch :model-value="!isDark" size="small" active-text="" inactive-text="" />
-        </div>
-        <div class="question-count">
-          <el-icon><Document /></el-icon>
-          题库: {{ totalQuestions }} 题
-        </div>
-      </div>
     </aside>
 
     <!-- 主内容区 -->
@@ -179,7 +179,7 @@ onMounted(async () => {
 }
 
 .sidebar-header {
-  padding: 24px 20px 16px;
+  padding: 20px 20px 14px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -193,23 +193,15 @@ onMounted(async () => {
 .subtitle {
   font-size: 12px;
   color: var(--text-muted);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
-.sidebar-menu {
-  flex: 1;
-  padding: 8px;
-}
-
-.sidebar-menu .el-menu-item {
-  border-radius: 8px;
-  margin-bottom: 4px;
-  height: 44px;
-  line-height: 44px;
-}
-
-.sidebar-footer {
-  padding: 12px 20px;
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 10px;
   border-top: 1px solid var(--border-color);
 }
 
@@ -217,23 +209,34 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 0;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
-  margin-bottom: 6px;
   user-select: none;
 }
 .theme-toggle:hover { color: var(--text-primary); }
-.theme-icon { font-size: 16px; }
+.theme-icon { font-size: 14px; }
 .theme-label { flex: 1; }
 
 .question-count {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
+  gap: 4px;
+  font-size: 12px;
   color: var(--text-muted);
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+.sidebar-menu .el-menu-item {
+  border-radius: 8px;
+  margin-bottom: 4px;
+  height: 44px;
+  line-height: 44px;
 }
 
 .main-content {
