@@ -3,15 +3,33 @@ AIGC:
   ContentProducer: '001191110102MAD55U9H0F10002'
   ContentPropagator: '001191110102MAD55U9H0F10002'
   Label: '1'
-  ProduceID: '395817d0-2241-4700-8b5b-02c01cf6eb1d'
-  PropagateID: '395817d0-2241-4700-8b5b-02c01cf6eb1d'
-  ReservedCode1: '0f5df9ad-4d35-4460-90de-7f6736ca3fe6'
-  ReservedCode2: '0f5df9ad-4d35-4460-90de-7f6736ca3fe6'
+  ProduceID: 'bb84179a-d15a-431e-a2e2-33a4b04b019a'
+  PropagateID: 'bb84179a-d15a-431e-a2e2-33a4b04b019a'
+  ReservedCode1: '81bcf671-ae68-4997-8b49-af0d96ef86ef'
+  ReservedCode2: '81bcf671-ae68-4997-8b49-af0d96ef86ef'
 ---
 
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
+## [1.1.0] - 2026-06-09
+
+### Features
+- 手机端底部导航栏（6个快捷入口 + 更多菜单弹窗）
+- 全局响应式布局：选项按钮、导航栏、弹窗适配小屏幕
+- 题目数据内置：515道题打包进前端，无后端也能刷题
+- localStorage 进度存储：做题记录保存在浏览器本地，无需服务器
+- 自动后端检测：有后端走 API，没后端自动切换本地数据
+- Netlify 部署配置：netlify.toml + SPA 路由重定向
+- 分享友好：纯静态部署，别人点链接直接刷题
+
+### Bug Fixes
+- Exam.vue startExam 改用 store 获取题目（修复转圈卡住）
+- WrongRetry 改用 store 获取错题 + 记录答案
+- 所有页面 axios 直接调用改为走 store 统一管理
+- Exam.vue resultMap reactive 误用 .value（12处全部修正）
+- Exam.vue poolInfo 数据结构与 API 返回不匹配
 
 ## [1.0.0] - 2026-06-09
 
