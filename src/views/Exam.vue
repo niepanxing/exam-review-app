@@ -338,7 +338,13 @@ function checkSingleCorrect(q, i) {
 function checkMultiCorrect(q, i) {
   const selected = (answers[i] || []).map(a => normalizeAnswer(a)).sort()
   const correct = (Array.isArray(q.answer) ? q.answer : [q.answer]).map(a => normalizeAnswer(a)).sort()
-  return selected.join(',') === correct.join(',')
+  // 三档: 'full'全对, 'partial'漏选, 'wrong'有错选或未选
+  const hasWrong = selected.some(s => !correct.includes(s))
+  const hasAll = correct.every(c => selected.includes(c))
+  if (hasAll && !hasWrong) return 'full'
+  if (hasWrong) return 'wrong'
+  if (selected.length > 0) return 'partial' // 漏选
+  return 'wrong'
 }
 
 function checkJudgeCorrect(q, i) {
@@ -382,8 +388,10 @@ function formatTime(seconds) {
 
 function getDotClass(i) {
   if (i === currentIndex.value) return 'active'
-  if (resultMap[i] === true) return 'correct'
-  if (resultMap[i] === false) return 'wrong'
+  const r = resultMap[i]
+  if (r === 'full' || r === true) return 'correct'
+  if (r === 'wrong' || r === false) return 'wrong'
+  if (r === 'partial') return 'partial'
   if (answers[i] !== undefined && answers[i] !== null && (!Array.isArray(answers[i]) || answers[i].length > 0)) return 'answered'
   return ''
 }
@@ -403,18 +411,15 @@ function getSubmittedOptionClass(opt) {
 function getPointScore(i) {
   const q = examQuestions.value[i]
   if (!q) return 0
-  if (q.type === 'single') return resultMap[i] ? 1 : 0
-  if (q.type === 'judge') return resultMap[i] ? 1 : 0
+  const r = resultMap[i]
+  if (q.type === 'single') return (r === 'full' || r === true) ? 1 : 0
+  if (q.type === 'judge') return (r === 'full' || r === true) ? 1 : 0
   if (q.type === 'multiple') {
-    if (resultMap[i]) {
-      const selected = (answers[i] || []).map(a => normalizeAnswer(a))
-      const correct = (Array.isArray(q.answer) ? q.answer : [q.answer]).map(a => normalizeAnswer(a))
-      const hasWrong = selected.some(s => !correct.includes(s))
-      const hasAll = correct.every(c => selected.includes(c))
-      if (hasAll && !hasWrong) return 2
-      if (hasWrong) return -2
-      if (selected.length > 0) return 1
-    }
+    if (r === 'full') return 2
+    if (r === 'partial') return 1
+    if (r === 'wrong') return -2
+    if (r === true) return 2  // 兼容旧数据
+    if (r === false) return -2
     return 0
   }
   return 0
@@ -422,6 +427,15 @@ function getPointScore(i) {
 
 function getItemScore(i) { return getPointScore(i) }
 function getResultClass(i) { const s = getItemScore(i); return s > 0 ? 'correct' : s < 0 ? 'wrong' : 'miss' }
+
+// 多选题结果文字
+function getMultiResultText(i) {
+  const r = resultMap[i]
+  if (r === 'full') return '全对 +2分'
+  if (r === 'partial') return '漏选 +1分'
+  if (r === 'wrong') return '错选 -2分'
+  return ''
+}
 
 // ===== 计分 =====
 function calcScores() {

@@ -201,7 +201,8 @@ const hasAnswer = computed(() => {
   if (currentQ.value.type === 'multiple') return userAnswers.multiple.length > 0
   return userAnswers.judge !== null
 })
-const correctCount = computed(() => practiceResults.value.filter(r => r.isCorrect).length)
+const correctCount = computed(() => practiceResults.value.filter(r => r.isCorrect === 'full' || r.isCorrect === true).length)
+const partialCount = computed(() => practiceResults.value.filter(r => r.isCorrect === 'partial').length)
 const accuracy = computed(() => practiceResults.value.length ? Math.round(correctCount.value / practiceResults.value.length * 100) : 0)
 
 // ===== 工具函数 =====
@@ -220,9 +221,14 @@ function normalizeAnswer(ans) {
 function checkAnswer(q) {
   if (q.type === 'single') return normalizeAnswer(userAnswers.single) === normalizeAnswer(q.answer)
   if (q.type === 'multiple') {
-    const a = [...userAnswers.multiple].map(normalizeAnswer).sort().join(',')
-    const b = [...q.answer].map(normalizeAnswer).sort().join(',')
-    return a === b
+    const selected = [...userAnswers.multiple].map(normalizeAnswer)
+    const correct = [...q.answer].map(normalizeAnswer)
+    const hasWrong = selected.some(s => !correct.includes(s))
+    const hasAll = correct.every(c => selected.includes(c))
+    if (hasAll && !hasWrong) return 'full'
+    if (hasWrong) return 'wrong'
+    if (selected.length > 0) return 'partial'
+    return 'wrong'
   }
   return normalizeAnswer(userAnswers.judge) === normalizeAnswer(q.answer)
 }
@@ -260,7 +266,12 @@ function getDotClass(i) {
   if (i === currentIndex.value) return 'active'
   const snap = answerSnapshots.value[i]
   if (!snap) return ''
-  if (snap.submitted) return snap.resultMap ? 'correct' : 'wrong'
+  if (snap.submitted) {
+    const r = snap.resultMap
+    if (r === 'full' || r === true) return 'correct'
+    if (r === 'partial') return 'partial'
+    return 'wrong'
+  }
   if (snap.submitted === false && hasAnyAnswer(snap)) return 'answered'
   return ''
 }
@@ -365,11 +376,12 @@ function submitAnswer() {
   else if (currentQ.value.type === 'multiple') userAnswer = userAnswers.multiple
   else userAnswer = userAnswers.judge
   practiceResults.value.push({ questionId: currentQ.value.id, isCorrect: correct, userAnswer })
-  store.recordAnswer(currentQ.value.id, correct, JSON.stringify(userAnswer), 'practice')
+  store.recordAnswer(currentQ.value.id, correct === 'full' || correct === true, JSON.stringify(userAnswer), 'practice')
 }
 
 function isAnswered(i) { return practiceResults.value.some(r => r.questionId === questions.value[i]?.id) }
-function isWrong(i) { return resultMap.value[i] === false }
+function isWrong(i) { const r = resultMap.value[i]; return r === 'wrong' || r === false }
+function isPartial(i) { return resultMap.value[i] === 'partial' }
 
 function finishPractice() {
   // 未答题的不算入结果

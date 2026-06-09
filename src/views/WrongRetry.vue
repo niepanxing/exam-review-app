@@ -260,9 +260,14 @@ function normalizeAnswer(ans) {
 function checkAnswer(q) {
   if (q.type === 'single') return normalizeAnswer(userAnswers.single) === normalizeAnswer(q.answer)
   if (q.type === 'multiple') {
-    const a = [...userAnswers.multiple].map(normalizeAnswer).sort().join(',')
-    const b = [...q.answer].map(normalizeAnswer).sort().join(',')
-    return a === b
+    const selected = [...userAnswers.multiple].map(normalizeAnswer)
+    const correct = [...q.answer].map(normalizeAnswer)
+    const hasWrong = selected.some(s => !correct.includes(s))
+    const hasAll = correct.every(c => selected.includes(c))
+    if (hasAll && !hasWrong) return 'full'
+    if (hasWrong) return 'wrong'
+    if (selected.length > 0) return 'partial'
+    return 'wrong'
   }
   return normalizeAnswer(userAnswers.judge) === normalizeAnswer(q.answer)
 }
@@ -325,9 +330,9 @@ function submitAnswer() {
   submitted.value = true
   const correct = checkAnswer(currentQ.value)
   resultMap.value[wrongIndex.value] = correct
-  if (correct) thisRoundCorrect.value++
+  if (correct === 'full' || correct === true) thisRoundCorrect.value++
   const ans = currentQ.value.type === 'single' ? userAnswers.single : currentQ.value.type === 'multiple' ? userAnswers.multiple : userAnswers.judge
-  store.recordAnswer(currentQ.value.id, correct, JSON.stringify(ans), 'retry')
+  store.recordAnswer(currentQ.value.id, correct === 'full' || correct === true, JSON.stringify(ans), 'retry')
 }
 
 function goTo(i) {
