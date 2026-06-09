@@ -41,7 +41,7 @@
         </div>
         <div class="score-summary">
           单选50题x1分(50分) + 多选20题x2分(40分) + 判断10题x1分(10分) = 满分100分<br>
-          多选评分：全对+2分 / 漏选+1分 / 错选-2分
+          多选评分：全对+2分 / 漏选+1分 / 错选得0分
         </div>
       </div>
 
@@ -473,12 +473,9 @@ function getPointScore(i) {
   if (q.type === 'single') return r === true ? 1 : 0
   if (q.type === 'judge') return r === true ? 1 : 0
   if (q.type === 'multiple') {
-    // 未作答（空选）= 0分，不算错选扣分
-    const hasAnswered = answers[i] !== undefined && answers[i] !== null && Array.isArray(answers[i]) && answers[i].length > 0
-    if (!hasAnswered && (r === 'wrong' || r === false)) return 0
     if (r === 'full' || r === true) return 2
     if (r === 'partial') return 1
-    if (r === 'wrong' || r === false) return -2
+    // 错选/多选/未答 = 0分（不扣分）
     return 0
   }
   return 0
