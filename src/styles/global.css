@@ -105,42 +105,55 @@ body {
 @media (max-width: 768px) {
   body { -webkit-text-size-adjust: 100%; }
   
+  /* 全局字体放大 */
+  html { font-size: 17px; }
+  body { font-size: 17px; }
+  
   /* 强制页面宽度不超过屏幕 */
-  .app-layout { max-width: 100vw; overflow-x: hidden; }
+  .app-layout { max-width: 100vw; overflow-x: hidden; width: 100%; }
+  .main-content { max-width: 100vw; overflow-x: hidden; }
   
   /* 首页快捷入口改为2列 */
   .quick-actions { grid-template-columns: repeat(2, 1fr) !important; }
   .stats-grid { grid-template-columns: repeat(3, 1fr) !important; }
   
   /* 做题页面全宽，严格限制溢出 */
-  .practice-page, .retry-page, .exam-page, .memorize-page { max-width: 100% !important; overflow-x: hidden; }
+  .practice-page, .retry-page, .exam-page, .memorize-page { max-width: 100% !important; overflow-x: hidden; width: 100%; }
   
-  /* 题目卡片禁止溢出 */
-  .question-card, .action-area, .explanation-panel, .result-banner { max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
+  /* 题目卡片禁止溢出 - 关键修复 */
+  .question-card { max-width: 100%; overflow-x: hidden; padding: 16px 14px !important; box-sizing: border-box; width: 100%; }
+  .action-area { max-width: 100%; overflow-wrap: break-word; word-break: break-word; overflow-x: hidden; width: 100%; }
+  .options-area { max-width: 100%; overflow-x: hidden; width: 100%; }
   
-  /* 大选项按钮更紧凑，严格宽度 */
-  .big-option { padding: 14px 16px !important; gap: 10px !important; max-width: 100%; box-sizing: border-box !important; }
-  .option-letter { width: 30px !important; height: 30px !important; font-size: 14px !important; flex-shrink: 0; }
-  .option-content { font-size: 14px !important; overflow-wrap: break-word; word-break: break-word; min-width: 0; }
-  .question-text { font-size: 16px !important; overflow-wrap: break-word; word-break: break-word; }
-  
-  /* 判断按钮更紧凑 */
-  .judge-btn { padding: 18px !important; font-size: 16px !important; }
-  .judge-icon { font-size: 24px !important; }
-  
-  /* 导航圆点更小 */
-  .nav-dot { min-width: 24px !important; height: 24px !important; font-size: 10px !important; }
-  .sticky-bar { padding: 10px 12px !important; }
-  
-  /* 解析面板严格限制 */
-  .explanation-panel { overflow-x: hidden; }
-  .exp-main, .term-def { overflow-wrap: break-word; word-break: break-word; }
-  .term-item { overflow-wrap: break-word; word-break: break-word; }
+  /* 解析面板 - 最关键的修复 */
+  .explanation-panel { overflow-x: hidden; max-width: 100%; width: 100%; box-sizing: border-box; padding: 16px 12px !important; }
+  .exp-main { overflow-wrap: break-word; word-break: break-word; font-size: 16px; line-height: 1.8; }
+  .term-def { overflow-wrap: break-word; word-break: break-word; font-size: 15px; }
+  .term-item { overflow-wrap: break-word; word-break: break-word; max-width: 100%; }
   .related-tags { flex-wrap: wrap; }
+  .term-name { word-break: keep-all; margin-right: 6px; }
+  .explanation-panel h4 { font-size: 17px; }
+  .explanation-panel h5 { font-size: 16px; }
   
   /* 结果横幅不溢出 */
-  .result-banner { flex-wrap: wrap; }
-  .correct-answer { margin-left: 0; width: 100%; margin-top: 4px; }
+  .result-banner { flex-wrap: wrap; max-width: 100%; overflow-x: hidden; width: 100%; box-sizing: border-box; padding: 14px 12px; font-size: 16px; }
+  .correct-answer { margin-left: 0; width: 100%; margin-top: 4px; font-size: 15px; }
+  .result-score { margin-left: auto; font-size: 17px; }
+  
+  /* 大选项按钮 - 严格宽度 + 字体放大 */
+  .big-option { padding: 14px 12px !important; gap: 10px !important; max-width: 100%; box-sizing: border-box !important; width: 100%; overflow: hidden; }
+  .option-letter { width: 32px !important; height: 32px !important; font-size: 15px !important; flex-shrink: 0; }
+  .option-content { font-size: 16px !important; overflow-wrap: break-word; word-break: break-word; min-width: 0; flex: 1; }
+  .option-check { font-size: 20px; flex-shrink: 0; }
+  .question-text { font-size: 17px !important; overflow-wrap: break-word; word-break: break-word; line-height: 1.7; }
+  
+  /* 判断按钮 */
+  .judge-btn { padding: 18px !important; font-size: 17px !important; }
+  .judge-icon { font-size: 24px !important; }
+  
+  /* 导航圆点 */
+  .nav-dot { min-width: 26px !important; height: 26px !important; font-size: 11px !important; }
+  .sticky-bar { padding: 10px 10px !important; }
   
   /* 底部导航区域预留 */
   .bottom-nav { padding-bottom: env(safe-area-inset-bottom, 0); }
@@ -152,8 +165,14 @@ body {
   .el-slider__button-wrapper { top: -14px !important; }
 
   /* 多选提示不溢出 */
-  .multi-hint { flex-wrap: wrap; }
+  .multi-hint { flex-wrap: wrap; font-size: 15px; }
 
-  /* 术语标签等长单词不撑开 */
-  .term-name { word-break: keep-all; }
+  /* 底部翻页按钮放大 */
+  .bottom-nav .el-button { font-size: 16px !important; padding: 12px 16px !important; }
+  
+  /* 提交按钮 */
+  .submit-btn { height: 48px; font-size: 17px; }
+
+  /* 进度文字、计时器放大 */
+  .progress-text, .retry-progress-text, .exam-timer { font-size: 16px !important; }
 }
