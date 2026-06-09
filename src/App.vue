@@ -59,7 +59,7 @@
     </main>
 
     <!-- 底部导航栏（手机端） -->
-    <nav class="bottom-nav mobile-only">
+    <nav class="bottom-nav mobile-only" :class="{ 'show-on-mobile': isMobile }">
       <div class="nav-item" :class="{ active: currentRoute === '/' }" @click="handleSelect('/')">
         <el-icon><HomeFilled /></el-icon>
         <span>首页</span>
@@ -87,7 +87,7 @@
     </nav>
 
     <!-- 更多菜单（手机端弹出） -->
-    <div class="more-overlay" v-if="showMoreMenu" @click="showMoreMenu = false">
+    <div class="more-overlay" v-if="showMoreMenu && isMobile" @click="showMoreMenu = false">
       <div class="more-menu" @click.stop>
         <div class="more-menu-item" @click="handleSelect('/upload'); showMoreMenu = false">
           <el-icon><UploadFilled /></el-icon><span>上传文档</span>
@@ -117,8 +117,12 @@ const route = useRoute()
 const store = useQuestionStore()
 const totalQuestions = ref(0)
 const showMoreMenu = ref(false)
+const isMobile = ref(window.innerWidth <= 768)
 
 const currentRoute = computed(() => route.path)
+
+// 监听窗口大小变化
+window.addEventListener('resize', () => { isMobile.value = window.innerWidth <= 768 })
 
 // 主题
 const isDark = ref(true)
@@ -160,8 +164,8 @@ onMounted(async () => {
   min-height: 100vh;
 }
 
-.desktop-only { display: flex; }
-.mobile-only { display: none; }
+.desktop-only { display: flex !important; }
+.mobile-only { display: none !important; }
 
 /* ===== 侧边栏（桌面端） ===== */
 .sidebar {
@@ -249,6 +253,7 @@ onMounted(async () => {
 
 /* ===== 底部导航（手机端） ===== */
 .bottom-nav {
+  display: none; /* 默认隐藏 */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -323,7 +328,8 @@ onMounted(async () => {
 /* ===== 响应式：手机端 ===== */
 @media (max-width: 768px) {
   .desktop-only { display: none !important; }
-  .mobile-only { display: flex !important; }
+
+  .bottom-nav.show-on-mobile { display: flex !important; }
 
   .main-content {
     margin-left: 0;
