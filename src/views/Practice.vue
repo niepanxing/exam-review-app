@@ -214,7 +214,15 @@ function getOptionLetter(opt) {
 function normalizeAnswer(ans) {
   if (ans === undefined || ans === null) return undefined
   if (typeof ans === 'boolean') return ans
-  if (typeof ans === 'string') return ans.trim().charAt(0).toUpperCase()
+  if (typeof ans === 'string') {
+    const s = ans.trim().toLowerCase()
+    // 判断题字符串转boolean
+    if (s === 'true' || s === '正确' || s === '对' || s === '√') return true
+    if (s === 'false' || s === '错误' || s === '错' || s === '×') return false
+    if (s === 'a') return true  // A通常=正确
+    if (s === 'b') return false // B通常=错误
+    return s.trim().charAt(0).toUpperCase()
+  }
   return ans
 }
 

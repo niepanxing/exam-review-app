@@ -253,7 +253,14 @@ function startRetry(mode) {
 function normalizeAnswer(ans) {
   if (ans === undefined || ans === null) return undefined
   if (typeof ans === 'boolean') return ans
-  if (typeof ans === 'string') return ans.trim().charAt(0).toUpperCase()
+  if (typeof ans === 'string') {
+    const s = ans.trim().toLowerCase()
+    if (s === 'true' || s === '正确' || s === '对' || s === '√') return true
+    if (s === 'false' || s === '错误' || s === '错' || s === '×') return false
+    if (s === 'a') return true
+    if (s === 'b') return false
+    return s.trim().charAt(0).toUpperCase()
+  }
   return ans
 }
 
