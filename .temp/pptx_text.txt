@@ -1,0 +1,818 @@
+开发交付中心
+2026
+年
+03
+月
+中电信人工智能科技有限公司
+智能体开源
+支撑与培训体系
+AI生成
+生成时间: 2026-06-09
+集团买断模式下的规模
+化推广
+开源买断
+模式
+集团向
+AI
+公司买断制授权，
+面向其余省
+/
+专公司开放源代码，内部单位免费使用
+省
+/
+专公司可基于开源版二开交付外部项目
+省公司、专业公司对外转售，
+与AI公司结算0元
+知识产权归属
+智能体平台产品知识产权归AI公司
+项目产出物知识产权归集团
+专业服务
+集团级智能体二开
+生态：
+福建福富、上海理想、江苏鸿信等
+全国运营服务支撑体系专业服务：
+基础服务：培训、认证、答疑等
+高阶服务：
+架构、部署、运维等
+专家服务：
+排障、调优、定制等
+服务费用
+基础服务统一定价，实现标准化服务；
+高阶、专家服务可根据实际业务需求，独立输出报价
+灵活销售
+星辰智能体平台
+POC
+试用：省公司对外部客户
+POC
+部署，支持
+POC
+试用
+90
+天
+企业版：省公司对外部客户正式销售，提供私有化高可用版本的永久授权。
+智能体应用
+省公司基于轻量版工具，面向客户开发交付智能体应用
+省公司自行定价，
+与
+AI
+公司结算
+0
+元
+<a:tblPr firstRow="1" bandRow="1"><a:tableStyleId>{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}</a:tableStyleId></a:tblPr><a:tblGrid><a:gridCol w="961200"/><a:gridCol w="961200"/><a:gridCol w="961200"/><a:gridCol w="961200"/></a:tblGrid><a:tr h="492692"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="1" dirty="0"><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/></a:rPr><a:t>竞品参考价
+<a:solidFill><a:srgbClr val="C00000"/></a:solidFill></a:tcPr></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="1" dirty="0"><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/></a:rPr><a:t>指导刊例价
+<a:solidFill><a:srgbClr val="C00000"/></a:solidFill></a:tcPr></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="1" dirty="0"><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/></a:rPr><a:t>指导优惠价
+<a:solidFill><a:srgbClr val="C00000"/></a:solidFill></a:tcPr></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="1" dirty="0"><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/></a:rPr><a:t>管控最低价
+<a:solidFill><a:srgbClr val="C00000"/></a:solidFill></a:tcPr></a:tc></a:tr><a:tr h="527028"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1200" b="0" dirty="0"><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/></a:rPr><a:t>80~120
+万
+<a:solidFill><a:schemeClr val="bg1"><a:lumMod val="85000"/></a:schemeClr></a:solidFill></a:tcPr></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1200" b="0" dirty="0"><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/><a:cs typeface="等线" panose="02010600030101010101" charset="-122"/></a:rPr><a:t>120
+万
+<a:solidFill><a:schemeClr val="bg1"><a:lumMod val="85000"/></a:schemeClr></a:solidFill></a:tcPr></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1200" b="0" dirty="0"><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/><a:cs typeface="等线" panose="02010600030101010101" charset="-122"/></a:rPr><a:t>80
+万
+<a:solidFill><a:schemeClr val="bg1"><a:lumMod val="85000"/></a:schemeClr></a:solidFill></a:tcPr></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1200" b="0" dirty="0"><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:latin typeface="+mn-ea"/><a:ea typeface="+mn-ea"/><a:cs typeface="等线" panose="02010600030101010101" charset="-122"/></a:rPr><a:t>40
+万
+<a:solidFill><a:schemeClr val="bg1"><a:lumMod val="85000"/></a:schemeClr></a:solidFill></a:tcPr></a:tc></a:tr></a:tbl></a:graphicData></a:graphic></p:graphicFrame></p:grpSp></p:grpSp><p:sp><p:nvSpPr><p:cNvPr id="9999" name="TeleWaxWatermark"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="9540240" y="5886450"/><a:ext cx="2286000" cy="731520"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0" anchor="ctr" lIns="0" tIns="0" rIns="0" bIns="0"/><a:lstStyle/><a:p><a:pPr algn="r"/><a:r><a:rPr lang="zh-CN" sz="1500" b="0"><a:solidFill><a:srgbClr val="808080"/></a:solidFill><a:latin typeface="Noto Serif SC"/><a:ea typeface="Noto Serif SC"/><a:cs typeface="Noto Serif SC"/></a:rPr><a:t>AI生成
+生成时间: 2026-06-09
+2026
+年智能体二开专项行动运营支撑
+体系
+1
+、物料和课程
+2
+、两极协同支撑
+体系
+部署及架构材料：
+提供
+3
+套常见场景的硬件资源，网络环境和部署架构
+/
+手册等参考材料。
+开源技术手册：
+提供平台使用手册，开源服务架构手册，开源代码使用手册，开源
+API
+文档等。
+定开案例材料：
+提供常见场景的改造案例及改造案例。
+沙龙
+：定期组织线上课堂，聚焦标杆项目和典型场景，宣讲推广和交付方案；
+分级培训认证：
+一线人员：
+以解决方案、部署实施为主，地市组织规模培训，不设认证等级；
+省端二线：
+以部署实施和应用开发为主，由集团组织统一培训，以
+L2
+为主，部分优秀人员
+L3
+。
+集成及部分省公司：
+由集成
+/
+省公司申报，
+AI
+公司组织培训
++
+带训，聚焦打造不少于
+20
+人的
+L3
+以上队伍。主要覆盖软件开发、应用开发和部署实施。
+省端
+AI
+公司
+铁三角
+省公司
+技术支持
+/
+运营
+培训
+应用定制
+智能体研发
+</a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent3"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="2" name="直接箭头连接符 1"/><p:cNvCxnSpPr><a:stCxn id="64" idx="3"/><a:endCxn id="65" idx="1"/></p:cNvCxnSpPr><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm><a:off x="12027" y="5809"/><a:ext cx="635" cy="4"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:ln><a:tailEnd type="arrow" w="med" len="med"/></a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent3"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="3" name="直接箭头连接符 2"/><p:cNvCxnSpPr/><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm><a:off x="9137" y="5809"/><a:ext cx="756" cy="971"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:ln><a:tailEnd type="arrow" w="med" len="med"/></a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent3"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="4" name="直接箭头连接符 3"/><p:cNvCxnSpPr><a:stCxn id="67" idx="3"/><a:endCxn id="66" idx="1"/></p:cNvCxnSpPr><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm><a:off x="12027" y="6780"/><a:ext cx="645" cy="16"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:ln><a:tailEnd type="arrow" w="med" len="med"/></a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent3"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:sp><p:nvSpPr><p:cNvPr id="5" name="文本框 4"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="7690" y="4985"/><a:ext cx="1808" cy="533"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0"><a:spAutoFit/></a:bodyPr><a:p><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1000"/><a:t>按项目调用支持
+推动产品持续迭代
+产品迭代
+</a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent1"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:sp><p:nvSpPr><p:cNvPr id="9" name="圆角矩形 8"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="10208" y="4734"/><a:ext cx="1527" cy="404"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 16862"/></a:avLst></a:prstGeom><a:ln w="6350" cap="flat" cmpd="sng" algn="ctr"><a:solidFill><a:schemeClr val="accent1"/></a:solidFill><a:prstDash val="dash"/><a:miter lim="800000"/></a:ln></p:spPr><p:style><a:lnRef idx="0"><a:schemeClr val="accent1"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style><p:txBody><a:bodyPr rtlCol="0" anchor="ctr"/><a:p><a:pPr algn="ctr"/><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="900"/><a:t>派驻支撑团队
+省内团队
+省级二开团队
+</a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent1"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="13" name="直接箭头连接符 12"/><p:cNvCxnSpPr/><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm flipH="1"><a:off x="10959" y="5162"/><a:ext cx="3" cy="445"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:ln><a:headEnd type="arrow"/><a:tailEnd type="arrow"/></a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent1"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:sp><p:nvSpPr><p:cNvPr id="14" name="文本框 13"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="10911" y="5121"/><a:ext cx="1881" cy="533"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0"><a:spAutoFit/></a:bodyPr><a:p><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1000"/><a:t>培训
++
+日常答疑
+</a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent1"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:sp><p:nvSpPr><p:cNvPr id="89" name="文本框 88"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="10915" y="5937"/><a:ext cx="1689" cy="899"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0"><a:spAutoFit/></a:bodyPr><a:p><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1000"/><a:t>协同构建
+行应用方案
+</a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent1"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:sp><p:nvSpPr><p:cNvPr id="16" name="圆角矩形 15"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="12662" y="4558"/><a:ext cx="1299" cy="408"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom></p:spPr><p:style><a:lnRef idx="0"><a:srgbClr val="FFFFFF"/></a:lnRef><a:fillRef idx="2"><a:schemeClr val="accent1"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="lt1"/></a:fontRef></p:style><p:txBody><a:bodyPr rtlCol="0" anchor="ctr"/><a:p><a:pPr algn="ctr"/><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1000"/><a:t>省端交付
+</a:ln></p:spPr><p:style><a:lnRef idx="2"><a:schemeClr val="accent3"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp></p:grpSp><p:sp><p:nvSpPr><p:cNvPr id="98" name="文本框 97"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="8554085" y="1986915"/><a:ext cx="3440430" cy="2772410"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0"><a:noAutofit/></a:bodyPr><a:p><a:pPr indent="0"><a:lnSpc><a:spcPct val="150000"/></a:lnSpc><a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1400" b="1"/><a:t>1
+、问题反馈及支持（蓝色路径流程）
+AI
+公司将统一建设
+技术支撑
+/
+运营支撑
+团队，提供培训、答疑、行业方案
+/
+开发案例支持等服务，解决日常开发问题。同时梳理共性需求，
+推动周期迭代
+。
+2
+、项目联合开发（
+黄色路径流程）
+针对
+重点目，
+AI
+公司支持按项目进行
+联合定制开发
+，
+基于实战培养省内复杂项目攻坚能力。
+推动从物料和课程培训体系、技术支持和问题反馈体系、二开和交付工具体系三方面构建完整支撑体系
+3
+、支撑工具
+1
+、方案
+/
+推广：
+PRD
+生成、合同方案生成等
+2
+、建设
+/
+实施：
+软件工厂、
+交付平台、自助
+License
+申请
+等
+AI生成
+生成时间: 2026-06-09
+2026
+年智能体二开专项行动开源项目问题支撑方式
+2
+.
+AI公司支持路径
+在各省组织成立省内的二开团队之后，省内问题优先由省内二开团队提供技术支持，省内无法解决的问题可以上升，由AI公司进行解决。
+1
+、工单
+支撑
+2
+、运维
+支撑
+值班时间：
+工作日
+8:30~18:00
+响应时间：
+提单后当天响应问题，根据问题不同按如下周期推进问题处理。
+使用问题：
+24
+小时内响应并给出处理方案。
+部署问题：
+24
+小时内响应并安排人员协助支撑。
+Bug
+问题：
+双周迭代，发布
+bugfix
+版本，如
+open-2.1.x
+等；
+需求
+/
+其他：
+按季度推进迭代新开源版本，如
+open-2.x
+；
+提单方式：
+工单：
+故障工单
+联系人：
+马晓亮
+18406590896
+娄全超
+13522146112
+值班时间：
+7d * 24h
+主要支撑内容：
+重大项目
+的应急故障处理及支持；
+申报条件：
+本地设置专项运维支撑人员
+，可以配合响应支撑；
+项目已经
+进入维保状态
+，不存在频繁更新迭代；
+完成项目申报
+，协同搭建好支撑访问环境
+申报方式：
+邮件发送项目信息到
+李孝东
+lixd1@chinatelecom.cn
+朱嘉皓
+zhujh12@chinatelecom.cn
+鞠小龙
+juxl@chinatelecom.cn
+项目审核确认后安排专人对接支持；
+AI生成
+生成时间: 2026-06-09
+2026年智能体二开专项行动运营体系规划
+省公司二开团队
+&amp;
+集团级
+智能体二开生态公司
+（
+如福建福富、上海理想、江苏鸿信等
+）
+解决方案经理
+解决方案介绍
+客户需求交流
+项目解决方案制定
+智能体平台二开研发
+智能体平台前端二开
+智能体平台后端服务二开
+智能体平台系统集成二开
+智能体应用二开研发
+面向客户应用场景的智能体应用开发、调试
+相应的知识调优、数据治理调优等
+智能体运维实施
+智能体平台资源评估、部署实施交付
+智能体运维、监控、问题处理等
+智能体运营服务
+面向客户业务场景的持续运营服务支撑
+面向客户的基础培训、指导问答等服务支撑
+智能体产品经理
+智能体平台二开需求产品设计
+智能体应用二开需求产品设计
+AI
+公司
+-
+智能体二开专项服务运营团队：专项服务支撑
+智能体产线
+-
+产品与技术能力兜底
+智能体产品与解决方案
+智能体平台二开技术支持
+智能体应用二开技术支持
+智能体产品问题反馈与处理
+培训赋能：
+建设实训基地，常态化组织全国培训；包含：解决方案、智能体二开、平台二开、运维部署等
+人才认证：
+设立覆盖解决方案、智能体二开、智能体交付人才认证体系；实现从人才培养→省二开团队建设→项目落地的人才培养闭环
+试点项目代练
+：面向各省提供试点项目手把手全流程代练赋能，确保各省培养的二开团队，在真实且完整项目落地过程中培养二开落地能力
+运维运营
+：各类需求
+/
+问题常态化运营对接，确保及时处理各类反馈
+平台二开技术支撑
+智能体应用二开技术支撑
+产品与解决方案支撑
+交付运维技术支撑
+培训服务支撑
+运维运营
+省市公司：本地化
+智能体二开
+商机与项目
+商机触达
+POC
+试用
+场景应用验证
+二开交付
+项目验收
+项目维保
+</a:ln><a:effectLst/></p:spPr></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="91" name="直接箭头连接符 90"/><p:cNvCxnSpPr><a:stCxn id="85" idx="3"/><a:endCxn id="86" idx="1"/></p:cNvCxnSpPr><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm><a:off x="5042" y="2708"/><a:ext cx="559" cy="0"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="15875" cap="flat" cmpd="sng" algn="ctr"><a:solidFill><a:srgbClr val="2972F4"><a:lumMod val="50000"/></a:srgbClr></a:solidFill><a:prstDash val="solid"/><a:miter lim="800000"/><a:tailEnd type="triangle"/></a:ln><a:effectLst/></p:spPr></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="92" name="直接箭头连接符 91"/><p:cNvCxnSpPr><a:stCxn id="86" idx="3"/><a:endCxn id="87" idx="1"/></p:cNvCxnSpPr><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm><a:off x="8150" y="2708"/><a:ext cx="600" cy="0"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="15875" cap="flat" cmpd="sng" algn="ctr"><a:solidFill><a:srgbClr val="2972F4"><a:lumMod val="50000"/></a:srgbClr></a:solidFill><a:prstDash val="solid"/><a:miter lim="800000"/><a:tailEnd type="triangle"/></a:ln><a:effectLst/></p:spPr></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="93" name="直接箭头连接符 92"/><p:cNvCxnSpPr><a:stCxn id="87" idx="3"/><a:endCxn id="88" idx="1"/></p:cNvCxnSpPr><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm><a:off x="10652" y="2708"/><a:ext cx="534" cy="0"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="15875" cap="flat" cmpd="sng" algn="ctr"><a:solidFill><a:srgbClr val="2972F4"><a:lumMod val="50000"/></a:srgbClr></a:solidFill><a:prstDash val="solid"/><a:miter lim="800000"/><a:tailEnd type="triangle"/></a:ln><a:effectLst/></p:spPr></p:cxnSp><p:cxnSp><p:nvCxnSpPr><p:cNvPr id="94" name="直接箭头连接符 93"/><p:cNvCxnSpPr><a:stCxn id="88" idx="3"/><a:endCxn id="89" idx="1"/></p:cNvCxnSpPr><p:nvPr/></p:nvCxnSpPr><p:spPr><a:xfrm><a:off x="13088" y="2708"/><a:ext cx="709" cy="0"/></a:xfrm><a:prstGeom prst="straightConnector1"><a:avLst/></a:prstGeom><a:noFill/><a:ln w="15875" cap="flat" cmpd="sng" algn="ctr"><a:solidFill><a:srgbClr val="2972F4"><a:lumMod val="50000"/></a:srgbClr></a:solidFill><a:prstDash val="solid"/><a:miter lim="800000"/><a:tailEnd type="triangle"/></a:ln><a:effectLst/></p:spPr></p:cxnSp></p:grpSp></p:grpSp><p:sp><p:nvSpPr><p:cNvPr id="9999" name="TeleWaxWatermark"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="9540240" y="5886450"/><a:ext cx="2286000" cy="731520"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0" anchor="ctr" lIns="0" tIns="0" rIns="0" bIns="0"/><a:lstStyle/><a:p><a:pPr algn="r"/><a:r><a:rPr lang="zh-CN" sz="1500" b="0"><a:solidFill><a:srgbClr val="808080"/></a:solidFill><a:latin typeface="Noto Serif SC"/><a:ea typeface="Noto Serif SC"/><a:cs typeface="Noto Serif SC"/></a:rPr><a:t>AI生成
+生成时间: 2026-06-09
+省内队伍建设
+建议
+各省
+/
+专公司可以参考如上队伍配置，结合省内业务情况，建设相关队伍
+软件二开
+队伍
+团队构成：
+团队
+6
+人
+，产品经理
+1
+人，前端开发
+1
+人，后端开发
+4
+人（
+java/python
+方向、
+GO
+方向
+/
+架构
+设计）
+主要职责：
+对接重要项目，配合项目经理完成项目需求梳理、技术
+方案评估
+工作；
+设计原型并支撑完成功能开发和
+建设。
+能力标准：
+GO
+方向（
+架构师）：
+具备较强的开发和架构设计能力，可以基于平台既有功能，拟定定制开发建设
+方案。
+其他方向：
+具备专业能力，可以配合完成专业方向的
+工作。
+预期产出：
+预期每月可以完成
+10~15
+个需求的开发建设（对应
+1
+个大型项目或
+2~3
+个小型项目的月开发
+工作量）
+运维实施
+队伍
+应用开发
+队伍
+团队构成：
+运维工程师
+4~5
+人
+；
+主要职责：
+平台部署实施、
+7
+✖
+24
+小时
+运维；
+能力标准：
+熟悉
+Linux
+系统运维，熟练掌握
+k8s
+、
+MySQL
+、
+Redis
+、
+Kafka
+等核心组建的监控和排障，掌握
+Prometheus
+、
+Grafana
+等监控
+组件；
+预期产出：
+维护
+20
+个左右的项目日常巡检维护，月均完成
+20
+个项目的额交付
+部署；
+团队构成：
+智能体应用开发
+/
+运营
+3~4
+人
+；
+主要职责：
+智能体应用开发调优、用户售后答疑、培训
+赋能；
+能力标准：
+深度理解大模型原理、掌握
+Python
+等编程语言，具备业务梳理和分析
+能力
+预期产出：
+支撑
+10+
+项目的支撑和应用开发
+工作；
+AI生成
+生成时间: 2026-06-09
+2026年智能体二开专项行动培训运营计划
+</a:ln></p:spPr><p:style><a:lnRef idx="0"><a:srgbClr val="FFFFFF"/></a:lnRef><a:fillRef idx="0"><a:srgbClr val="FFFFFF"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="tx1"/></a:fontRef></p:style></p:cxnSp><p:sp><p:nvSpPr><p:cNvPr id="10" name="椭圆 9"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="2044065" y="1967865"/><a:ext cx="213360" cy="213360"/></a:xfrm><a:prstGeom prst="ellipse"><a:avLst/></a:prstGeom></p:spPr><p:style><a:lnRef idx="0"><a:srgbClr val="FFFFFF"/></a:lnRef><a:fillRef idx="1"><a:schemeClr val="accent6"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="lt1"/></a:fontRef></p:style><p:txBody><a:bodyPr rtlCol="0" anchor="ctr"/><a:p><a:pPr algn="ctr"/><a:endParaRPr lang="zh-CN" altLang="en-US"/></a:p></p:txBody></p:sp><p:sp><p:nvSpPr><p:cNvPr id="11" name="椭圆 10"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="5814060" y="1967865"/><a:ext cx="213360" cy="213360"/></a:xfrm><a:prstGeom prst="ellipse"><a:avLst/></a:prstGeom></p:spPr><p:style><a:lnRef idx="0"><a:srgbClr val="FFFFFF"/></a:lnRef><a:fillRef idx="1"><a:schemeClr val="accent6"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="lt1"/></a:fontRef></p:style><p:txBody><a:bodyPr rtlCol="0" anchor="ctr"/><a:p><a:pPr algn="ctr"/><a:endParaRPr lang="zh-CN" altLang="en-US"/></a:p></p:txBody></p:sp><p:sp><p:nvSpPr><p:cNvPr id="12" name="椭圆 11"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="9584055" y="1967865"/><a:ext cx="213360" cy="213360"/></a:xfrm><a:prstGeom prst="ellipse"><a:avLst/></a:prstGeom></p:spPr><p:style><a:lnRef idx="0"><a:srgbClr val="FFFFFF"/></a:lnRef><a:fillRef idx="1"><a:schemeClr val="accent6"/></a:fillRef><a:effectRef idx="0"><a:srgbClr val="FFFFFF"/></a:effectRef><a:fontRef idx="minor"><a:schemeClr val="lt1"/></a:fontRef></p:style><p:txBody><a:bodyPr rtlCol="0" anchor="ctr"/><a:p><a:pPr algn="ctr"/><a:endParaRPr lang="zh-CN" altLang="en-US"/></a:p></p:txBody></p:sp><p:sp><p:nvSpPr><p:cNvPr id="14" name="文本框 13"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="635" y="1279525"/><a:ext cx="12190730" cy="368300"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0"><a:spAutoFit/></a:bodyPr><a:p><a:pPr algn="ctr"/><a:r><a:rPr lang="zh-CN" altLang="en-US"/><a:t>三个方向着手，配合省市做好
+全年人才队伍建设和赋能
+工作
+集约
+培训
+专项
+赋能
+技术
+沙龙
+8
+全年
+场次
+骨干
+技术
+赋能
+人群
+N
+全年
+场次
+成熟
+团队
+赋能
+人群
+8
+全年
+场次
+全体
+人员
+赋能
+人群
+集约培训是
+AI
+公司和集团科创联合组织，面向
+核心骨干研发
+人员的技能培训和认证。主要培养
+智能体应用开发
+和
+部署实施
+人员。根据技术评测和项目考核，最终分发
+L2~L3
+人才证书
+专项赋能重点是面向
+专业公司
+/
+研发支撑部门
+的专项培训赋能。主要是培养具备软件二开能力的成熟研发团队。根据认证和实战情况，添加到
+“
+人才工作站
+”
+和
+“
+推荐生态名单
+”
+参与后续跨省重点项目支撑。
+技术沙龙是面向电信体系内所有人员的沙龙活动，重点是介绍
+近期热点技术、标杆案例、行业方案
+等，
+销售、解决方案及二开队伍
+更好的把握行业动态，推进案例
+复制。
+AI生成
+生成时间: 2026-06-09
+2026年智能体二开专项行动
+专项认证
+方案
+通过建立标准化的培训、认证及入库机制，快速孵化省公司及专业公司（生态公司）的二开队伍，构建“平台+生态+服务”的一体化支撑体系，推动生态
+/
+业务方直接
+“
+握手
+”
+，支撑力量赋能
+省市。
+<a:tblPr firstRow="1"><a:tableStyleId>{AE053D9F-7D31-4F17-857D-88EE39C89124}</a:tableStyleId></a:tblPr><a:tblGrid><a:gridCol w="1503045"/><a:gridCol w="4613275"/></a:tblGrid><a:tr h="371475"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="120"><a:solidFill><a:schemeClr val="tx1"/></a:solidFill></a:rPr><a:t>类别
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="120"><a:solidFill><a:schemeClr val="tx1"/></a:solidFill></a:rPr><a:t>准入条件
+</a:tc></a:tr><a:tr h="631190"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>报名
+团队
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="l"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="000000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>专业公司、省内专业部门、省市推荐
+的核心生态
+厂商
+</a:tc></a:tr><a:tr h="136525"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:endParaRPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:endParaRPr></a:p><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>团队要求
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="l"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="000000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>以团队方式开展认证工作，最小队伍要求
+如下
+软件开发方向：
+6人（产品
+1
+、前端
+1
+、后端
+4
+）
+应用开发方向：
+3人（策略开发、测试）
+部署实施方向：
+3人（运维工程师）
+</a:tc></a:tr><a:tr h="670560"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:endParaRPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:endParaRPr></a:p><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>投入标准
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="l"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="000000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>受训人员需要可以集中培训认证，最小培训
+周期：
+部署实施方向：
+相关人员可集中工作最少一周；
+软件
+/
+应用开发方向：
+相关人员可集中工作最少两周。
+</a:tc></a:tr><a:tr h="731520"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:endParaRPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:endParaRPr></a:p><a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="C00000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>开班要求
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="l"><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1400" spc="60" smtClean="0"><a:ln w="3175"><a:noFill/><a:prstDash val="dash"/></a:ln><a:solidFill><a:srgbClr val="000000"/></a:solidFill><a:effectLst/><a:uFillTx/><a:latin typeface="黑体" panose="02010609060101010101" charset="-122"/><a:ea typeface="黑体" panose="02010609060101010101" charset="-122"/><a:cs typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>20
+人以上，可以专项
+申报
+</a:tc></a:tr></a:tbl></a:graphicData></a:graphic></p:graphicFrame><p:sp><p:nvSpPr><p:cNvPr id="6" name="文本框 5"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="694690" y="6264275"/><a:ext cx="10628630" cy="414020"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></p:spPr><p:txBody><a:bodyPr wrap="square"><a:spAutoFit/></a:bodyPr><a:p><a:pPr marL="0" indent="0" algn="just" defTabSz="266700"><a:lnSpc><a:spcPct val="150000"/></a:lnSpc><a:spcBef><a:spcPct val="0"/></a:spcBef><a:spcAft><a:spcPct val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1400" b="1" spc="100" smtClean="0"><a:ln w="3175"><a:noFill/></a:ln><a:solidFill><a:schemeClr val="tx1"/></a:solidFill><a:effectLst/><a:latin typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/><a:ea typeface="微软雅黑" panose="020B0503020204020204" charset="-122"/></a:rPr><a:t>
+满足以上要求的身份，经上审核通过后，会派驻对应方向老师，按照联合培训周期赴现场协同培训、认证。
+专项
+培训申请
+条件
+合作
+方案
+AI
+公司项目
+合作
+通过认证的队伍，会在
+AI
+公司生态招募中被优先推荐。
+集团生态
+推荐
+会联合集团科创，推动
+“
+人才工作站
+”
+和
+“
+内部生态推荐名单
+”
+，将通过认证的队伍面相全国省市公司进行
+推荐。
+AI生成
+生成时间: 2026-06-09
+2026年智能体二开专项行动培训计划
+<a:tblPr firstRow="1" bandRow="1"><a:tableStyleId>{073A0DAA-6AF3-43AB-8588-CEC1D06C72B9}</a:tableStyleId></a:tblPr><a:tblGrid><a:gridCol w="819150"/><a:gridCol w="2583180"/><a:gridCol w="819150"/><a:gridCol w="2188845"/><a:gridCol w="819150"/><a:gridCol w="2965450"/></a:tblGrid><a:tr h="289560"><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1300" spc="120"/><a:t>序号
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1300" spc="120"/><a:t>期次
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1300" spc="120"/><a:t>月份
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1300" spc="120"/><a:t>时间段
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buClrTx/><a:buSzTx/><a:buFontTx/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1300" spc="120"/><a:t>天数
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1300" spc="120"/><a:t>备注
+</a:tc></a:tr><a:tr h="254000"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>1
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+1
+期（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>4
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>4
+月
+20
+日
+-24
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>4
+月
+19
+日报到（周日）
+</a:tc></a:tr><a:tr h="252730"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>4
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>4
+月
+08
+日
+am
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>4
+月
+08
+日
+</a:tc></a:tr><a:tr h="252730"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>2
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+2
+期
+（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+月
+25
+日
+-29
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+月
+24
+日报到（周日）
+</a:tc></a:tr><a:tr h="253365"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+月
+15
+日
+am
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+月
+15
+日
+</a:tc></a:tr><a:tr h="252730"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>3
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+3
+期
+（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>6
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>6
+月
+22
+日
+-26
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>6
+月
+21
+日报到（周日）
+</a:tc></a:tr><a:tr h="252730"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>6
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>6
+月
+12
+日
+am
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>6
+月
+12
+日
+</a:tc></a:tr><a:tr h="253365"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>4
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+4
+期
+（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>7
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>7
+月
+20
+日
+-24
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>7
+月
+19
+日报到（周日）
+</a:tc></a:tr><a:tr h="253365"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>7
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>7
+月
+10
+日
+am
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>7
+月
+10
+日
+</a:tc></a:tr><a:tr h="252730"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+5
+期（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>8
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>8
+月
+24
+日
+-28
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>8
+月
+23
+日报到（周日）
+</a:tc></a:tr><a:tr h="252730"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>8
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>8
+月
+14
+日
+am
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>8
+月
+14
+日
+</a:tc></a:tr><a:tr h="253365"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>6
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+6
+期（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>9
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>9
+月
+14
+日
+-18
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>9
+月
+13
+日报到（周日）
+</a:tc></a:tr><a:tr h="252730"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>9
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>9
+月
+11
+日
+am’
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>9
+月
+11
+日
+</a:tc></a:tr><a:tr h="253365"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>7
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+7
+期
+（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>10
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>10
+月
+19
+日
+-23
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>10
+月
+18
+日报到（周日）
+</a:tc></a:tr><a:tr h="252730"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>10
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>10
+月
+16
+日
+am
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>10
+月
+16
+日
+</a:tc></a:tr><a:tr h="253365"><a:tc rowSpan="2"><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>8
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>第
+8
+期
+（含线下沙龙）
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>11
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>11
+月
+2
+日
+-6
+日
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>11
+月
+1
+日报到（周日）
+</a:tc></a:tr><a:tr h="252730"><a:tc vMerge="1"><a:tcPr marL="177800" marR="177800" marT="25400" marB="25400" anchor="ctr" anchorCtr="0"/></a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="zh-CN" altLang="en-US" sz="1100" spc="60"/><a:t>线上沙龙
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>11
+月
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>11
+月
+13
+日
+am
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>0.5
+</a:tc><a:tc><a:txBody><a:bodyPr/><a:p><a:pPr indent="0" algn="ctr" fontAlgn="ctr"><a:lnSpc><a:spcPct val="120000"/></a:lnSpc><a:spcBef><a:spcPts val="0"/></a:spcBef><a:spcAft><a:spcPts val="0"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-US" altLang="zh-CN" sz="1100" spc="60"/><a:t>11
+月
+13
+日
+</a:tc></a:tr></a:tbl></a:graphicData></a:graphic></p:graphicFrame><p:sp><p:nvSpPr><p:cNvPr id="9999" name="TeleWaxWatermark"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="9540240" y="5886450"/><a:ext cx="2286000" cy="731520"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0" anchor="ctr" lIns="0" tIns="0" rIns="0" bIns="0"/><a:lstStyle/><a:p><a:pPr algn="r"/><a:r><a:rPr lang="zh-CN" sz="1500" b="0"><a:solidFill><a:srgbClr val="808080"/></a:solidFill><a:latin typeface="Noto Serif SC"/><a:ea typeface="Noto Serif SC"/><a:cs typeface="Noto Serif SC"/></a:rPr><a:t>AI生成
+生成时间: 2026-06-09

@@ -3,15 +3,28 @@ AIGC:
   ContentProducer: '001191110102MAD55U9H0F10002'
   ContentPropagator: '001191110102MAD55U9H0F10002'
   Label: '1'
-  ProduceID: 'bb84179a-d15a-431e-a2e2-33a4b04b019a'
-  PropagateID: 'bb84179a-d15a-431e-a2e2-33a4b04b019a'
-  ReservedCode1: '81bcf671-ae68-4997-8b49-af0d96ef86ef'
-  ReservedCode2: '81bcf671-ae68-4997-8b49-af0d96ef86ef'
+  ProduceID: '42c18e22-debd-4a38-ba76-136e2ac1266e'
+  PropagateID: '42c18e22-debd-4a38-ba76-136e2ac1266e'
+  ReservedCode1: '0ac371df-6b5d-46bb-a2c7-95967611b28f'
+  ReservedCode2: '0ac371df-6b5d-46bb-a2c7-95967611b28f'
 ---
 
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
+## [1.2.0] - 2026-06-09
+
+### Features
+- 试卷模式全新分配：80题按主题分配
+  - 研发云 25题 + 智能体 25题 + 产品思维 10题 + 项目管理 10题 + Claude Code 5题 + AI Coding 5题
+- 新增2篇文档解析：开源支撑和培训方案.pptx、毛剑-AI Coding.pdf
+- 题库扩充至 808 题（新增 293 题，覆盖12篇文档）
+- 主题分类匹配：按文档名+题目关键词双重匹配
+
+### Bug Fixes
+- 电脑端侧边栏主题切换和题库数量移到header，不再被遮挡
+- 手机端解析面板撑宽页面修复（overflow控制+防横滚）
 
 ## [1.1.0] - 2026-06-09
 

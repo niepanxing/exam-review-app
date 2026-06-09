@@ -3,40 +3,61 @@
     <!-- 配置页 -->
     <div class="config-bar" v-if="!started && !showResult">
       <h2>📝 试卷模式</h2>
-      <p class="page-desc">模拟真实考试：单选50题(1分) + 多选20题(2分) + 判断10题(1分)，满分100分，限时60分钟</p>
+      <p class="page-desc">80道题满分100分，限时60分钟，60分及格</p>
 
       <div class="score-rule">
-        <h3>评分规则</h3>
+        <h3>题目分配</h3>
         <div class="rule-grid">
           <div class="rule-item">
-            <span class="rule-type">单选题 x50</span>
-            <span class="rule-score">每题 1 分，共 50 分</span>
-            <span class="rule-detail">对得分，错不得分</span>
+            <span class="rule-type">研发云</span>
+            <span class="rule-score">25 题 x 1 分</span>
+            <span class="rule-detail">共 25 分</span>
           </div>
           <div class="rule-item">
-            <span class="rule-type">多选题 x20</span>
-            <span class="rule-score">每题 2 分，共 40 分</span>
-            <span class="rule-detail">全对 +2 / 漏选 +1 / 错选 -2</span>
+            <span class="rule-type">智能体</span>
+            <span class="rule-score">25 题 x 1 分</span>
+            <span class="rule-detail">共 25 分</span>
           </div>
           <div class="rule-item">
-            <span class="rule-type">判断题 x10</span>
-            <span class="rule-score">每题 1 分，共 10 分</span>
-            <span class="rule-detail">对得分，错不得分</span>
+            <span class="rule-type">产品思维</span>
+            <span class="rule-score">10 题 x 1 分</span>
+            <span class="rule-detail">共 10 分</span>
           </div>
+          <div class="rule-item">
+            <span class="rule-type">项目管理</span>
+            <span class="rule-score">10 题 x 1 分</span>
+            <span class="rule-detail">共 10 分</span>
+          </div>
+          <div class="rule-item">
+            <span class="rule-type">Claude Code</span>
+            <span class="rule-score">5 题 x 1 分</span>
+            <span class="rule-detail">共 5 分</span>
+          </div>
+          <div class="rule-item">
+            <span class="rule-type">AI Coding</span>
+            <span class="rule-score">5 题 x 1 分</span>
+            <span class="rule-detail">共 5 分</span>
+          </div>
+        </div>
+        <div class="score-summary">
+          总计 80 题，满分 100 分（含多选题加权：多选全对+2/漏选+1/错选-2）
         </div>
       </div>
 
       <div class="pool-info">
         <span>当前题库：</span>
-        <el-tag type="info">{{ poolInfo.single }} 单选</el-tag>
-        <el-tag type="warning">{{ poolInfo.multiple }} 多选</el-tag>
-        <el-tag type="success">{{ poolInfo.judge }} 判断</el-tag>
         <el-tag>共 {{ poolInfo.total }} 题</el-tag>
+        <el-tag type="primary">{{ poolInfo.yanfayun }} 研发云</el-tag>
+        <el-tag type="success">{{ poolInfo.zhinengeti }} 智能体</el-tag>
+        <el-tag type="warning">{{ poolInfo.chanpin }} 产品</el-tag>
+        <el-tag type="info">{{ poolInfo.xiangmu }} 项目管理</el-tag>
+        <el-tag>{{ poolInfo.claude }} Claude Code</el-tag>
+        <el-tag type="danger">{{ poolInfo.aicoding }} AI Coding</el-tag>
       </div>
 
       <div class="config-form">
         <el-form :model="config" label-position="top">
-          <el-form-item label="不足80题时">
+          <el-form-item label="主题不足时">
             <el-radio-group v-model="config.fillMode">
               <el-radio-button value="repeat">允许重复出题</el-radio-button>
               <el-radio-button value="less">有多少出多少</el-radio-button>
@@ -187,7 +208,7 @@
       <div class="score-display">
         <div class="total-score" :class="{ pass: totalScore >= 60, fail: totalScore < 60 }">
           <div class="score-number">{{ totalScore }}</div>
-          <div class="score-total">/ 100 分</div>
+          <div class="score-total">/ {{ examQuestions.length }} 分</div>
         </div>
         <div class="score-breakdown">
           <div class="breakdown-item"><span>单选题</span><span>{{ scoreDetail.singleEarned }} / 50 分</span></div>
@@ -220,7 +241,7 @@ import { useQuestionStore } from '../stores/questions.js'
 import { ElMessage, ElMessageBox } from 'element-plus'
 
 const store = useQuestionStore()
-const poolInfo = ref({ total: 0, single: 0, multiple: 0, judge: 0 })
+const poolInfo = ref({ total: 0, yanfayun: 0, zhinengeti: 0, chanpin: 0, xiangmu: 0, claude: 0, aicoding: 0 })
 const started = ref(false)
 const showResult = ref(false)
 const loading = ref(false)
@@ -247,17 +268,47 @@ const hasAnswer = computed(() => {
   return true
 })
 
-// 页面加载时获取题库统计
+// ===== 主题分类 =====
+// 将题目按来源文档归类到6个主题
+function getCategory(q) {
+  const doc = (q.sourceDoc || '').toLowerCase()
+  // 优先匹配文档名
+  if (doc.includes('codefree') || doc.includes('研发云')) return 'yanfayun'
+  if (doc.includes('claude code') || doc.includes('基于 vibe coding')) return 'claude'
+  if (doc.includes('ai coding') || doc.includes('毛剑')) return 'aicoding'
+  if (doc.includes('ipd') || doc.includes('项目管理')) return 'xiangmu'
+  if (doc.includes('产品') || doc.includes('端到端')) return 'chanpin'
+  // 智能体大类：智能体、teleclaw、星辰、开源支撑、行业洞察、笔记
+  if (doc.includes('智能体') || doc.includes('teleclaw') || doc.includes('星辰超级') || doc.includes('开源支撑') || doc.includes('行业') || doc.includes('笔记')) return 'zhinengeti'
+  // 默认按关键词再匹配题目内容
+  const text = (q.question || '').toLowerCase()
+  if (text.includes('研发云') || text.includes('codefree')) return 'yanfayun'
+  if (text.includes('claude code') || text.includes('claude')) return 'claude'
+  if (text.includes('ai coding') || text.includes('毛剑')) return 'aicoding'
+  if (text.includes('ipd') || text.includes('项目管理') || text.includes('研发管理')) return 'xiangmu'
+  if (text.includes('产品') || text.includes('用户体验')) return 'chanpin'
+  if (text.includes('智能体') || text.includes('agent')) return 'zhinengeti'
+  return 'zhinengeti' // 默认归入智能体
+}
+
+// 主题配置：每个主题抽多少题
+const categoryConfig = [
+  { key: 'yanfayun', label: '研发云', count: 25 },
+  { key: 'zhinengeti', label: '智能体', count: 25 },
+  { key: 'chanpin', label: '产品思维', count: 10 },
+  { key: 'xiangmu', label: '项目管理', count: 10 },
+  { key: 'claude', label: 'Claude Code', count: 5 },
+  { key: 'aicoding', label: 'AI Coding', count: 5 },
+]
 onMounted(async () => {
   try {
-    await store.fetchStats()
-    const data = store.stats
-    poolInfo.value = {
-      total: data.total || 0,
-      single: data.byType?.single || 0,
-      multiple: data.byType?.multiple || 0,
-      judge: data.byType?.judge || 0
-    }
+    const allQ = await store.fetchQuestions()
+    const stats = { total: allQ.length, yanfayun: 0, zhinengeti: 0, chanpin: 0, xiangmu: 0, claude: 0, aicoding: 0 }
+    allQ.forEach(q => {
+      const cat = getCategory(q)
+      if (stats[cat] !== undefined) stats[cat]++
+    })
+    poolInfo.value = stats
   } catch (e) {
     console.error('[Exam] 加载题库统计失败:', e)
   }
@@ -319,7 +370,7 @@ function formatUserAnswer(i) {
 }
 
 function getScoreLabel(q) {
-  if (q.type === 'multiple') return '2分'
+  if (q.type === 'multiple') return '1-2分'
   return '1分'
 }
 
@@ -378,7 +429,7 @@ function calcScores() {
   examQuestions.value.forEach((q, i) => {
     const score = getPointScore(i)
     if (q.type === 'single') { detail.singleMax += 1; detail.singleEarned += Math.max(0, score) }
-    else if (q.type === 'multiple') { detail.multiMax += 2; detail.multiEarned += score }
+    else if (q.type === 'multiple') { detail.multiMax += 1; detail.multiEarned += score }
     else if (q.type === 'judge') { detail.judgeMax += 1; detail.judgeEarned += Math.max(0, score) }
     detail.items.push({ score })
   })
@@ -386,7 +437,15 @@ function calcScores() {
 }
 
 const scoreDetail = computed(() => calcScores())
-const totalScore = computed(() => Math.max(0, scoreDetail.value.singleEarned + scoreDetail.value.multiEarned + scoreDetail.value.judgeEarned))
+const totalScore = computed(() => {
+  // 基础分: 每题1分, 多选全对额外+1
+  let base = 0
+  examQuestions.value.forEach((q, i) => {
+    const s = getPointScore(i)
+    base += s
+  })
+  return Math.max(0, base)
+})
 
 // ===== 操作 =====
 function toggleMulti(letter) {
@@ -405,10 +464,14 @@ async function startExam() {
     const allQ = await store.fetchQuestions()
     console.log('[Exam] 获取到题目:', allQ.length, '道')
 
-    const singles = allQ.filter(q => q.type === 'single')
-    const multiples = allQ.filter(q => q.type === 'multiple')
-    const judges = allQ.filter(q => q.type === 'judge')
-    console.log('[Exam] 分类:', { single: singles.length, multiple: multiples.length, judge: judges.length })
+    // 按主题分类
+    const byCategory = {}
+    allQ.forEach(q => {
+      const cat = getCategory(q)
+      if (!byCategory[cat]) byCategory[cat] = []
+      byCategory[cat].push(q)
+    })
+    console.log('[Exam] 分类:', Object.fromEntries(Object.entries(byCategory).map(([k,v]) => [k, v.length])))
 
     const fill = (pool, count) => {
       if (pool.length === 0) return []
@@ -417,15 +480,15 @@ async function startExam() {
       return result
     }
 
-    const singleCount = config.fillMode === 'less' ? Math.min(50, singles.length) : 50
-    const multiCount = config.fillMode === 'less' ? Math.min(20, multiples.length) : 20
-    const judgeCount = config.fillMode === 'less' ? Math.min(10, judges.length) : 10
-
-    const exam = [
-      ...fill(singles, singleCount),
-      ...fill(multiples, multiCount),
-      ...fill(judges, judgeCount)
-    ]
+    const exam = []
+    for (const cfg of categoryConfig) {
+      const pool = byCategory[cfg.key] || []
+      let count = cfg.count
+      if (config.fillMode === 'less') count = Math.min(count, pool.length)
+      const picked = fill(pool, count)
+      console.log(`[Exam] ${cfg.label}: 需${cfg.count}题, 池${pool.length}题, 抽${picked.length}题`)
+      exam.push(...picked)
+    }
 
     console.log('[Exam] 组卷完成:', exam.length, '题')
     examQuestions.value = exam.sort(() => Math.random() - 0.5)
