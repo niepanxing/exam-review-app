@@ -161,10 +161,10 @@ const genForm = ref({ questionCount: 5, difficulty: 'mixed' })
 
 async function loadDocuments() {
   try {
-    const res = await axios.get('/api/upload/documents')
+    const res = await axios.get('/api/upload/documents', { timeout: 5000 })
     documents.value = res.data
   } catch (e) {
-    console.error('获取文档列表失败:', e)
+    documents.value = [] // 后端不可用时静默失败
   }
 }
 

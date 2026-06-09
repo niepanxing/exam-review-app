@@ -1,7 +1,7 @@
 <template>
   <div class="app-layout">
-    <!-- 侧边栏 -->
-    <aside class="sidebar">
+    <!-- 侧边栏（桌面端） -->
+    <aside class="sidebar desktop-only">
       <div class="sidebar-header">
         <div class="logo">🎯 突击复习</div>
         <div class="subtitle">考试出题助手</div>
@@ -57,6 +57,53 @@
     <main class="main-content">
       <router-view />
     </main>
+
+    <!-- 底部导航栏（手机端） -->
+    <nav class="bottom-nav mobile-only">
+      <div class="nav-item" :class="{ active: currentRoute === '/' }" @click="handleSelect('/')">
+        <el-icon><HomeFilled /></el-icon>
+        <span>首页</span>
+      </div>
+      <div class="nav-item" :class="{ active: currentRoute === '/practice' }" @click="handleSelect('/practice')">
+        <el-icon><EditPen /></el-icon>
+        <span>做题</span>
+      </div>
+      <div class="nav-item" :class="{ active: currentRoute === '/memorize' }" @click="handleSelect('/memorize')">
+        <el-icon><Reading /></el-icon>
+        <span>背题</span>
+      </div>
+      <div class="nav-item" :class="{ active: currentRoute === '/exam' }" @click="handleSelect('/exam')">
+        <el-icon><Document /></el-icon>
+        <span>考试</span>
+      </div>
+      <div class="nav-item" :class="{ active: currentRoute === '/retry' }" @click="handleSelect('/retry')">
+        <el-icon><RefreshRight /></el-icon>
+        <span>错题</span>
+      </div>
+      <div class="nav-item" :class="{ active: ['/bank', '/settings', '/upload'].includes(currentRoute) }" @click="showMoreMenu = true">
+        <el-icon><More /></el-icon>
+        <span>更多</span>
+      </div>
+    </nav>
+
+    <!-- 更多菜单（手机端弹出） -->
+    <div class="more-overlay" v-if="showMoreMenu" @click="showMoreMenu = false">
+      <div class="more-menu" @click.stop>
+        <div class="more-menu-item" @click="handleSelect('/upload'); showMoreMenu = false">
+          <el-icon><UploadFilled /></el-icon><span>上传文档</span>
+        </div>
+        <div class="more-menu-item" @click="handleSelect('/bank'); showMoreMenu = false">
+          <el-icon><FolderOpened /></el-icon><span>题库管理</span>
+        </div>
+        <div class="more-menu-item" @click="handleSelect('/settings'); showMoreMenu = false">
+          <el-icon><Setting /></el-icon><span>设置</span>
+        </div>
+        <div class="more-menu-item" @click="toggleTheme">
+          <span class="theme-icon">{{ isDark ? '🌙' : '☀️' }}</span>
+          <span>{{ isDark ? '亮色模式' : '暗色模式' }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,6 +116,7 @@ const router = useRouter()
 const route = useRoute()
 const store = useQuestionStore()
 const totalQuestions = ref(0)
+const showMoreMenu = ref(false)
 
 const currentRoute = computed(() => route.path)
 
@@ -112,6 +160,10 @@ onMounted(async () => {
   min-height: 100vh;
 }
 
+.desktop-only { display: flex; }
+.mobile-only { display: none; }
+
+/* ===== 侧边栏（桌面端） ===== */
 .sidebar {
   width: 220px;
   background: var(--bg-card);
@@ -190,5 +242,89 @@ onMounted(async () => {
   padding: 24px;
   min-height: 100vh;
   transition: background 0.3s;
+}
+
+/* ===== 底部导航（手机端） ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.nav-item .el-icon { font-size: 20px; }
+.nav-item.active { color: var(--primary-light); }
+
+/* 更多菜单弹出层 */
+.more-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 68px;
+}
+
+.more-menu {
+  background: var(--bg-card);
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.more-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.more-menu-item:hover { background: var(--bg-card-hover); }
+.more-menu-item .el-icon { font-size: 20px; }
+.more-menu-item .theme-icon { font-size: 20px; }
+
+/* ===== 响应式：手机端 ===== */
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: flex !important; }
+
+  .main-content {
+    margin-left: 0;
+    padding: 16px 12px 80px 12px;
+  }
 }
 </style>

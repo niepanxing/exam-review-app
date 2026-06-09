@@ -216,9 +216,10 @@
 
 <script setup>
 import { ref, computed, reactive, onMounted, onUnmounted, nextTick } from 'vue'
-import axios from 'axios'
+import { useQuestionStore } from '../stores/questions.js'
 import { ElMessage, ElMessageBox } from 'element-plus'
 
+const store = useQuestionStore()
 const poolInfo = ref({ total: 0, single: 0, multiple: 0, judge: 0 })
 const started = ref(false)
 const showResult = ref(false)
@@ -249,9 +250,8 @@ const hasAnswer = computed(() => {
 // 页面加载时获取题库统计
 onMounted(async () => {
   try {
-    const res = await axios.get('/api/questions/stats')
-    const data = res.data
-    // API 返回 { total, byType: { single, multiple, judge }, ... }，模板直接用 poolInfo.single
+    await store.fetchStats()
+    const data = store.stats
     poolInfo.value = {
       total: data.total || 0,
       single: data.byType?.single || 0,
@@ -402,8 +402,7 @@ async function startExam() {
   loading.value = true; showResult.value = false
   try {
     console.log('[Exam] 开始获取题目...')
-    const res = await axios.get('/api/questions', { timeout: 30000 })
-    const allQ = res.data
+    const allQ = await store.fetchQuestions()
     console.log('[Exam] 获取到题目:', allQ.length, '道')
 
     const singles = allQ.filter(q => q.type === 'single')
@@ -451,10 +450,7 @@ function submitCurrentAnswer() {
   submitted.value = true
 
   // 记录
-  axios.post('/api/questions/record', {
-    questionId: currentQ.value.id, isCorrect: correct,
-    userAnswer: JSON.stringify(answers[currentIndex.value]), mode: 'exam'
-  }).catch(() => {})
+  store.recordAnswer(currentQ.value.id, correct, JSON.stringify(answers[currentIndex.value]), 'exam')
 }
 
 function nextAndAutoScroll() {
@@ -492,7 +488,7 @@ function submitExam() {
   examQuestions.value.forEach((q, i) => {
     if (resultMap[i] === undefined) {
       resultMap[i] = checkCorrect(q, i)
-      axios.post('/api/questions/record', { questionId: q.id, isCorrect: resultMap[i], userAnswer: JSON.stringify(answers[i]), mode: 'exam' }).catch(() => {})
+      store.recordAnswer(q.id, resultMap[i], JSON.stringify(answers[i]), 'exam')
     }
   })
   started.value = false; showResult.value = true; window.scrollTo({ top: 0 })

@@ -6,3 +6,6 @@ server/uploads/
 .env
 .DS_Store
 Thumbs.db
+
+# Netlify
+.netlify/

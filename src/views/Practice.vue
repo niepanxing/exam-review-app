@@ -335,8 +335,8 @@ async function startPractice() {
       for (const type of config.types) { const res = await store.fetchQuestions({ type, random: params.random }); all = all.concat(res) }
       questions.value = all.sort(() => Math.random() - 0.5).slice(0, config.limit)
     } else if (config.scope === 'wrong') {
-      const progressRes = await fetch('/api/questions/progress/detail').then(r => r.json())
-      const wrongIds = progressRes.wrongQuestions?.map(w => w.questionId) || []
+      const detail = store.getProgressDetail()
+      const wrongIds = detail.wrongQuestions?.map(w => w.questionId) || []
       if (!wrongIds.length) { ElMessage.info('没有错题！全部都对了 👍'); loading.value = false; return }
       const res = await store.fetchQuestions({ random: params.random })
       questions.value = res.filter(q => wrongIds.includes(q.id))

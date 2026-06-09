@@ -100,3 +100,35 @@ body {
 :root.light .el-textarea__inner { background: #f8fafc !important; }
 :root.light .el-upload-dragger { background: #f8fafc !important; border-color: #cbd5e1 !important; }
 :root.light .el-select-dropdown { background: #ffffff !important; border-color: #e2e8f0 !important; }
+
+/* ========== 手机端响应式 ========== */
+@media (max-width: 768px) {
+  body { -webkit-text-size-adjust: 100%; }
+  
+  /* 首页快捷入口改为2列 */
+  .quick-actions { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  
+  /* 做题页面全宽 */
+  .practice-page, .retry-page, .exam-page, .memorize-page { max-width: 100% !important; }
+  
+  /* 大选项按钮更紧凑 */
+  .big-option { padding: 14px 16px !important; gap: 10px !important; }
+  .option-letter { width: 30px !important; height: 30px !important; font-size: 14px !important; }
+  .option-content { font-size: 14px !important; }
+  .question-text { font-size: 16px !important; }
+  
+  /* 判断按钮更紧凑 */
+  .judge-btn { padding: 18px !important; font-size: 16px !important; }
+  .judge-icon { font-size: 24px !important; }
+  
+  /* 导航圆点更小 */
+  .nav-dot { min-width: 24px !important; height: 24px !important; font-size: 10px !important; }
+  .sticky-bar { padding: 10px 12px !important; }
+  
+  /* 弹窗全宽 */
+  .el-dialog { width: 95% !important; margin: 10px auto !important; }
+  
+  /* 滑块数字输入缩小 */
+  .el-slider__button-wrapper { top: -14px !important; }
+}

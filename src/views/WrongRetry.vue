@@ -189,7 +189,6 @@
 
 <script setup>
 import { ref, computed, reactive, nextTick } from 'vue'
-import axios from 'axios'
 import { useQuestionStore } from '../stores/questions.js'
 import { ElMessage } from 'element-plus'
 
@@ -225,10 +224,9 @@ const hasAnswer = computed(() => {
 async function loadWrongQuestions() {
   loading.value = true
   try {
-    const res = await axios.get('/api/questions')
-    const allQuestions = res.data
-    const progressRes = await axios.get('/api/questions/progress/detail')
-    const wrongIds = new Set(progressRes.data.wrongQuestions?.map(w => w.questionId) || [])
+    const allQuestions = await store.fetchQuestions()
+    const detail = store.getProgressDetail()
+    const wrongIds = new Set(detail.wrongQuestions?.map(w => w.questionId) || [])
     wrongQuestions.value = allQuestions.filter(q => wrongIds.has(q.id))
   } catch { wrongQuestions.value = [] } finally { loading.value = false }
 }
@@ -329,7 +327,7 @@ function submitAnswer() {
   resultMap.value[wrongIndex.value] = correct
   if (correct) thisRoundCorrect.value++
   const ans = currentQ.value.type === 'single' ? userAnswers.single : currentQ.value.type === 'multiple' ? userAnswers.multiple : userAnswers.judge
-  axios.post('/api/questions/record', { questionId: currentQ.value.id, isCorrect: correct, userAnswer: JSON.stringify(ans), mode: 'retry' }).catch(() => {})
+  store.recordAnswer(currentQ.value.id, correct, JSON.stringify(ans), 'retry')
 }
 
 function goTo(i) {
