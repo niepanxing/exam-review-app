@@ -258,6 +258,102 @@ const timerInterval = ref(null)
 const config = reactive({ fillMode: 'repeat' })
 const examHistory = ref([])
 
+const EXAM_STATE_KEY = 'exam-state'
+
+// ===== 考试状态持久化 =====
+function saveExamState() {
+  try {
+    const state = {
+      examQuestions: examQuestions.value.map(q => q.id),
+      answers: JSON.parse(JSON.stringify(answers)),
+      resultMap: JSON.parse(JSON.stringify(resultMap)),
+      currentIndex: currentIndex.value,
+      remainingTime: remainingTime.value,
+      reviewMode: reviewMode.value,
+      submitted: submitted.value,
+      savedAt: Date.now(),
+    }
+    localStorage.setItem(EXAM_STATE_KEY, JSON.stringify(state))
+  } catch (e) { console.warn('[Exam] 保存状态失败:', e) }
+}
+
+function clearExamState() {
+  try { localStorage.removeItem(EXAM_STATE_KEY) } catch {}
+}
+
+async function restoreExamState() {
+  try {
+    const raw = localStorage.getItem(EXAM_STATE_KEY)
+    if (!raw) return false
+    const state = JSON.parse(raw)
+
+    // 恢复题目（根据id从题库中找）
+    const allQ = await store.fetchQuestions()
+    const qMap = {}
+    allQ.forEach(q => { qMap[q.id] = q })
+
+    const restored = []
+    for (const id of state.examQuestions) {
+      if (qMap[id]) restored.push(qMap[id])
+    }
+    if (restored.length !== state.examQuestions.length) {
+      console.warn('[Exam] 题目恢复不完整，放弃恢复')
+      clearExamState()
+      return false
+    }
+
+    examQuestions.value = restored
+    // 恢复answers（确保key是数字）
+    Object.keys(answers).forEach(k => delete answers[k])
+    Object.entries(state.answers).forEach(([k, v]) => { answers[Number(k)] = v })
+    // 恢复resultMap
+    Object.keys(resultMap).forEach(k => delete resultMap[k])
+    Object.entries(state.resultMap).forEach(([k, v]) => { resultMap[Number(k)] = v })
+
+    currentIndex.value = state.currentIndex
+
+    // 计算切走期间流逝的时间
+    if (!state.reviewMode) {
+      const elapsed = Math.floor((Date.now() - state.savedAt) / 1000)
+      remainingTime.value = Math.max(0, state.remainingTime - elapsed)
+      if (remainingTime.value <= 0) {
+        // 时间已耗尽，自动交卷
+        started.value = true
+        reviewMode.value = false
+        doSubmitExam()
+        return true
+      }
+    } else {
+      remainingTime.value = state.remainingTime
+    }
+
+    reviewMode.value = state.reviewMode
+    submitted.value = state.submitted !== undefined ? state.submitted : (resultMap[currentIndex.value] !== undefined)
+    started.value = true
+
+    // 恢复计时器
+    if (!state.reviewMode) {
+      if (timerInterval.value) clearInterval(timerInterval.value)
+      timerInterval.value = setInterval(() => {
+        remainingTime.value--
+        saveExamState() // 每秒保存一次
+        if (remainingTime.value <= 0) {
+          clearInterval(timerInterval.value)
+          timerInterval.value = null
+          doSubmitExam()
+        }
+      }, 1000)
+    }
+
+    console.log('[Exam] 恢复考试状态成功，剩余时间:', remainingTime.value, '秒')
+    return true
+  } catch (e) {
+    console.warn('[Exam] 恢复状态失败:', e)
+    clearExamState()
+    return false
+  }
+}
+
 const typeTagMap = { single: '', multiple: 'warning', judge: 'success' }
 const typeLabelMap = { single: '单选', multiple: '多选', judge: '判断' }
 
@@ -321,6 +417,11 @@ onMounted(async () => {
     poolInfo.value = stats
   } catch (e) {
     console.error('[Exam] 加载题库统计失败:', e)
+  }
+  // 尝试恢复未完成的考试
+  const restored = await restoreExamState()
+  if (restored) {
+    ElMessage.success('已恢复上次考试进度')
   }
   // 加载历史记录
   loadExamHistory()
@@ -512,6 +613,7 @@ function toggleMulti(letter) {
   if (idx === -1) arr.push(letter)
   else arr.splice(idx, 1)
   if (arr.length === 0) delete answers[currentIndex.value]
+  saveExamState()
 }
 
 async function startExam() {
@@ -559,6 +661,7 @@ async function startExam() {
     reviewMode.value = false
     remainingTime.value = 3600
     started.value = true
+    saveExamState()
     console.log('[Exam] 考试开始')
 
     if (timerInterval.value) clearInterval(timerInterval.value)
@@ -581,6 +684,7 @@ function submitCurrentAnswer() {
   const correct = checkCorrect(currentQ.value, currentIndex.value)
   resultMap[currentIndex.value] = correct
   submitted.value = true
+  saveExamState()
 
   store.recordAnswer(currentQ.value.id, correct === true || correct === 'full', JSON.stringify(answers[currentIndex.value]), 'exam')
 }
@@ -589,6 +693,7 @@ function nextAndAutoScroll() {
   if (currentIndex.value < examQuestions.value.length - 1) {
     currentIndex.value++
     if (!reviewMode.value) submitted.value = resultMap[currentIndex.value] !== undefined
+    saveExamState()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
@@ -597,6 +702,7 @@ function prevQ() {
   if (currentIndex.value > 0) {
     currentIndex.value--
     if (!reviewMode.value) submitted.value = resultMap[currentIndex.value] !== undefined
+    saveExamState()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
@@ -605,6 +711,7 @@ function goToQ(i) {
   if (i >= 0 && i < examQuestions.value.length) {
     currentIndex.value = i
     if (!reviewMode.value) submitted.value = resultMap[i] !== undefined
+    saveExamState()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
@@ -633,6 +740,8 @@ function doSubmitExam() {
   reviewMode.value = true
   submitted.value = true
   currentIndex.value = 0
+  clearExamState()
+  saveExamState()
   window.scrollTo({ top: 0 })
 
   // 保存历史记录
@@ -643,6 +752,7 @@ function resetExam() {
   started.value = false
   reviewMode.value = false
   submitted.value = false
+  clearExamState()
 }
 
 onUnmounted(() => { if (timerInterval.value) clearInterval(timerInterval.value) })
