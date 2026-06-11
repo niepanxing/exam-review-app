@@ -75,7 +75,7 @@
         </div>
         <div class="sticky-dots">
           <div class="nav-dot" v-for="(q, i) in questions" :key="q.id"
-            :class="{ active: i === wrongIndex, correct: resultMap[i] === true, wrong: resultMap[i] === false }"
+            :class="{ active: i === wrongIndex, correct: resultMap[i] === 'full' || resultMap[i] === true, partial: resultMap[i] === 'partial', wrong: resultMap[i] === 'wrong' || resultMap[i] === false }"
             @click="goTo(i)">{{ i + 1 }}</div>
         </div>
       </div>
@@ -128,8 +128,10 @@
           <el-button v-if="!submitted" type="primary" size="large" class="submit-btn" @click="submitAnswer" :disabled="!hasAnswer">提交答案</el-button>
 
           <template v-if="submitted">
-            <div :class="['result-banner', isCorrect ? 'correct' : 'still-wrong']">
-              <span>{{ isCorrect ? '🎉 这次对了！' : '😓 还是错了' }}</span>
+            <div :class="['result-banner', isCorrect ? 'correct' : (isPartial ? 'partial' : 'still-wrong')]">
+              <span v-if="isCorrect">🎉 这次对了！</span>
+              <span v-else-if="isPartial">😅 漏选（部分正确）</span>
+              <span v-else>😓 还是错了</span>
               <span class="correct-answer" v-if="!isCorrect">正确答案: {{ formatAnswer(currentQ) }}</span>
             </div>
 
@@ -212,7 +214,15 @@ const typeLabelMap = { single: '单选', multiple: '多选', judge: '判断' }
 const diffTagMap = { 1: 'success', 2: 'warning', 3: 'danger' }
 
 const currentQ = computed(() => questions.value[wrongIndex.value])
-const isCorrect = computed(() => currentQ.value && submitted.value ? checkAnswer(currentQ.value) : false)
+const isCorrect = computed(() => {
+  if (!currentQ.value || !submitted.value) return false
+  const result = checkAnswer(currentQ.value)
+  return result === 'full' || result === true
+})
+const isPartial = computed(() => {
+  if (!currentQ.value || !submitted.value) return false
+  return checkAnswer(currentQ.value) === 'partial'
+})
 const allCorrect = computed(() => questions.value.length > 0 && thisRoundCorrect.value === questions.value.length)
 const hasAnswer = computed(() => {
   if (!currentQ.value) return false
@@ -391,6 +401,7 @@ loadWrongQuestions()
 .nav-dot { min-width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 11px; background: var(--bg-dark); color: var(--text-muted); cursor: pointer; transition: all 0.15s; padding: 0 4px; }
 .nav-dot.active { background: var(--primary); color: #fff; }
 .nav-dot.correct { background: rgba(34,197,94,0.2); color: var(--success); }
+.nav-dot.partial { background: rgba(245,158,11,0.2); color: var(--warning); }
 .nav-dot.wrong { background: rgba(239,68,68,0.2); color: var(--danger); }
 
 .question-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 24px; }
@@ -423,6 +434,7 @@ loadWrongQuestions()
 
 .result-banner { padding: 16px 20px; border-radius: 10px; display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; margin-bottom: 20px; }
 .result-banner.correct { background: rgba(34,197,94,0.15); color: var(--success); }
+.result-banner.partial { background: rgba(245,158,11,0.15); color: var(--warning); }
 .result-banner.still-wrong { background: rgba(239,68,68,0.15); color: var(--danger); }
 .correct-answer { font-weight: 400; font-size: 14px; margin-left: auto; }
 
