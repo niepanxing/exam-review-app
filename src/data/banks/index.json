@@ -1,0 +1,42 @@
+[
+  {
+    "name": "AI生成",
+    "file": "AI生成.json",
+    "total": 1152,
+    "single": 591,
+    "multiple": 337,
+    "judge": 224
+  },
+  {
+    "name": "模拟题1",
+    "file": "模拟题1.json",
+    "total": 80,
+    "single": 50,
+    "multiple": 20,
+    "judge": 10
+  },
+  {
+    "name": "模拟题2",
+    "file": "模拟题2.json",
+    "total": 80,
+    "single": 50,
+    "multiple": 20,
+    "judge": 10
+  },
+  {
+    "name": "精华80题",
+    "file": "精华80题.json",
+    "total": 80,
+    "single": 50,
+    "multiple": 20,
+    "judge": 10
+  },
+  {
+    "name": "题库300题",
+    "file": "题库300题.json",
+    "total": 300,
+    "single": 188,
+    "multiple": 75,
+    "judge": 37
+  }
+]

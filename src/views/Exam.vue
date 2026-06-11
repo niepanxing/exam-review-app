@@ -47,13 +47,37 @@
 
       <div class="pool-info">
         <span>当前题库：</span>
-        <el-tag>共 {{ poolInfo.total }} 题</el-tag>
-        <el-tag type="primary">{{ poolInfo.yanfayun }} 研发云</el-tag>
-        <el-tag type="success">{{ poolInfo.zhinengeti }} 智能体</el-tag>
-        <el-tag type="warning">{{ poolInfo.chanpin }} 产品</el-tag>
-        <el-tag type="info">{{ poolInfo.xiangmu }} 项目管理</el-tag>
-        <el-tag>{{ poolInfo.claude }} Claude Code</el-tag>
-        <el-tag type="danger">{{ poolInfo.aicoding }} AI Coding</el-tag>
+        <template v-if="config.bankName === '全部题库'">
+          <el-tag>共 {{ poolInfo.total }} 题</el-tag>
+          <el-tag type="primary">{{ poolInfo.yanfayun }} 研发云</el-tag>
+          <el-tag type="success">{{ poolInfo.zhinengeti }} 智能体</el-tag>
+          <el-tag type="warning">{{ poolInfo.chanpin }} 产品</el-tag>
+          <el-tag type="info">{{ poolInfo.xiangmu }} 项目管理</el-tag>
+          <el-tag>{{ poolInfo.claude }} Claude Code</el-tag>
+          <el-tag type="danger">{{ poolInfo.aicoding }} AI Coding</el-tag>
+        </template>
+        <template v-else>
+          <el-tag type="primary">{{ currentBankInfo.total }} 题</el-tag>
+          <el-tag type="success">{{ currentBankInfo.single }} 单选</el-tag>
+          <el-tag type="warning">{{ currentBankInfo.multiple }} 多选</el-tag>
+          <el-tag type="info">{{ currentBankInfo.judge }} 判断</el-tag>
+        </template>
+      </div>
+
+      <!-- 题库选择 -->
+      <div class="bank-selector">
+        <div class="bank-label">选择题库</div>
+        <div class="bank-list">
+          <div class="bank-card" :class="{ active: config.bankName === '全部题库' }" @click="selectBank('全部题库')">
+            <div class="bank-name">全部题库</div>
+            <div class="bank-meta">{{ poolInfo.total }} 题</div>
+          </div>
+          <div class="bank-card" v-for="bank in bankList" :key="bank.name"
+            :class="{ active: config.bankName === bank.name }" @click="selectBank(bank.name)">
+            <div class="bank-name">{{ bank.name }}</div>
+            <div class="bank-meta">{{ bank.total }}题 (单选{{ bank.single }}/多选{{ bank.multiple }}/判断{{ bank.judge }})</div>
+          </div>
+        </div>
       </div>
 
       <div class="config-form">
@@ -241,6 +265,7 @@
 <script setup>
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue'
 import { useQuestionStore } from '../stores/questions.js'
+import banksIndex from '../data/banks/index.json'
 import { ElMessage, ElMessageBox } from 'element-plus'
 
 const store = useQuestionStore()
@@ -255,10 +280,42 @@ const submitted = ref(false)
 const reviewMode = ref(false)    // 交卷后的review模式
 const remainingTime = ref(3600)
 const timerInterval = ref(null)
-const config = reactive({ fillMode: 'repeat' })
+const config = reactive({ fillMode: 'repeat', bankName: '全部题库' })
 const examHistory = ref([])
+const bankList = ref(banksIndex)
+
+// 按题库过滤后的题目缓存
+const bankQuestionsCache = ref({})
 
 const EXAM_STATE_KEY = 'exam-state'
+
+// ===== 题库选择 =====
+const currentBankInfo = computed(() => {
+  if (config.bankName === '全部题库') return poolInfo.value
+  const bank = bankList.value.find(b => b.name === config.bankName)
+  return bank || { total: 0, single: 0, multiple: 0, judge: 0 }
+})
+
+async function selectBank(name) {
+  config.bankName = name
+  // 重新统计该题库的按主题分布
+  const allQ = await getQuestionsForBank(name)
+  const stats = { total: allQ.length, yanfayun: 0, zhinengeti: 0, chanpin: 0, xiangmu: 0, claude: 0, aicoding: 0 }
+  allQ.forEach(q => {
+    const cat = getCategory(q)
+    if (stats[cat] !== undefined) stats[cat]++
+  })
+  if (name === '全部题库') poolInfo.value = stats
+}
+
+async function getQuestionsForBank(bankName) {
+  if (bankName === '全部题库') {
+    return await store.fetchQuestions()
+  }
+  // 按题库名过滤
+  const allQ = await store.fetchQuestions()
+  return allQ.filter(q => q.bank === bankName)
+}
 
 // ===== 考试状态持久化 =====
 function saveExamState() {
@@ -619,11 +676,34 @@ function toggleMulti(letter) {
 async function startExam() {
   loading.value = true
   try {
-    console.log('[Exam] 开始获取题目...')
-    const allQ = await store.fetchQuestions()
+    console.log('[Exam] 开始获取题目, 题库:', config.bankName)
+    const allQ = await getQuestionsForBank(config.bankName)
     console.log('[Exam] 获取到题目:', allQ.length, '道')
 
-    const byCategory = {}
+    // 按题型分池
+    const byType = { single: [], multiple: [], judge: [] }
+    allQ.forEach(q => { if (byType[q.type]) byType[q.type].push(q) })
+
+    // 如果是特定题库且题型恰好满足 50/20/10，直接按题型抽题（不按主题分）
+    const useDirectTypePick = config.bankName !== '全部题库'
+      && byType.single.length >= 50 && byType.multiple.length >= 20 && byType.judge.length >= 10
+
+    if (useDirectTypePick) {
+      // 直接按题型随机抽50/20/10
+      const fill = (pool, count) => {
+        const shuffled = [...pool].sort(() => Math.random() - 0.5)
+        return shuffled.slice(0, count)
+      }
+      const exam = [
+        ...fill(byType.single, 50),
+        ...fill(byType.multiple, 20),
+        ...fill(byType.judge, 10),
+      ]
+      console.log(`[Exam] 题库"${config.bankName}"直接按题型抽: 50单选+20多选+10判断=${exam.length}题`)
+      examQuestions.value = exam.sort(() => Math.random() - 0.5)
+    } else {
+      // 按主题分类（原有逻辑）
+      const byCategory = {}
     allQ.forEach(q => {
       const cat = getCategory(q)
       if (!byCategory[cat]) byCategory[cat] = { single: [], multiple: [], judge: [] }
@@ -653,7 +733,8 @@ async function startExam() {
     }
 
     console.log('[Exam] 组卷完成:', exam.length, '题')
-    examQuestions.value = exam.sort(() => Math.random() - 0.5)
+      examQuestions.value = exam.sort(() => Math.random() - 0.5)
+    } // end else 按主题
     Object.keys(answers).forEach(k => delete answers[k])
     Object.keys(resultMap).forEach(k => delete resultMap[k])
     currentIndex.value = 0
@@ -773,6 +854,17 @@ onUnmounted(() => { if (timerInterval.value) clearInterval(timerInterval.value) 
 .score-summary { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-color); font-size: 13px; color: var(--text-secondary); }
 
 .pool-info { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; font-size: 14px; color: var(--text-secondary); }
+
+/* 题库选择 */
+.bank-selector { margin-bottom: 20px; }
+.bank-label { font-size: 14px; font-weight: 600; margin-bottom: 10px; color: var(--text-secondary); }
+.bank-list { display: flex; gap: 10px; flex-wrap: wrap; }
+.bank-card { padding: 12px 16px; background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 10px; cursor: pointer; transition: all 0.15s; min-width: 140px; }
+.bank-card:hover { border-color: var(--primary); }
+.bank-card.active { border-color: var(--primary); background: rgba(99,102,241,0.08); }
+.bank-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.bank-meta { font-size: 12px; color: var(--text-muted); }
+
 .config-form { max-width: 500px; }
 .start-btn { margin-top: 16px; width: 200px; height: 44px; font-size: 16px; }
 
