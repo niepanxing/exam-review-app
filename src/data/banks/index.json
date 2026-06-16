@@ -8,6 +8,14 @@
     "judge": 224
   },
   {
+    "name": "安全培训",
+    "file": "安全培训.json",
+    "total": 316,
+    "single": 159,
+    "multiple": 0,
+    "judge": 157
+  },
+  {
     "name": "模拟题1",
     "file": "模拟题1.json",
     "total": 80,

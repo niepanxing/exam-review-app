@@ -8,6 +8,7 @@ const routes = [
   { path: '/exam', name: 'Exam', component: () => import('../views/Exam.vue'), meta: { title: '试卷模式' } },
   { path: '/retry', name: 'WrongRetry', component: () => import('../views/WrongRetry.vue'), meta: { title: '错题重做' } },
   { path: '/bank', name: 'QuestionBank', component: () => import('../views/QuestionBank.vue'), meta: { title: '题库管理' } },
+  { path: '/knowledge', name: 'KnowledgePoints', component: () => import('../views/KnowledgePoints.vue'), meta: { title: '知识点复习' } },
   { path: '/settings', name: 'Settings', component: () => import('../views/Settings.vue'), meta: { title: '设置' } }
 ]
 

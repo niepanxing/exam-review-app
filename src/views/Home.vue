@@ -39,6 +39,14 @@
         </div>
         <el-icon class="action-arrow"><ArrowRight /></el-icon>
       </div>
+      <div class="action-card" @click="$router.push('/knowledge')">
+        <div class="action-icon">📚</div>
+        <div class="action-text">
+          <div class="action-title">知识点复习</div>
+          <div class="action-desc">考前速览核心要点</div>
+        </div>
+        <el-icon class="action-arrow"><ArrowRight /></el-icon>
+      </div>
       <div class="action-card" @click="$router.push('/settings')">
         <div class="action-icon">⚙️</div>
         <div class="action-text">

@@ -42,6 +42,10 @@
           <el-icon><RefreshRight /></el-icon>
           <span>错题重做</span>
         </el-menu-item>
+        <el-menu-item index="/knowledge">
+          <el-icon><Notebook /></el-icon>
+          <span>知识点复习</span>
+        </el-menu-item>
         <el-menu-item index="/bank">
           <el-icon><FolderOpened /></el-icon>
           <span>题库管理</span>
@@ -76,11 +80,11 @@
         <el-icon><Document /></el-icon>
         <span>考试</span>
       </div>
-      <div class="nav-item" :class="{ active: currentRoute === '/retry' }" @click="handleSelect('/retry')">
-        <el-icon><RefreshRight /></el-icon>
-        <span>错题</span>
+      <div class="nav-item" :class="{ active: currentRoute === '/knowledge' }" @click="handleSelect('/knowledge')">
+        <el-icon><Notebook /></el-icon>
+        <span>知识点</span>
       </div>
-      <div class="nav-item" :class="{ active: ['/bank', '/settings', '/upload'].includes(currentRoute) }" @click="showMoreMenu = true">
+      <div class="nav-item" :class="{ active: ['/retry', '/bank', '/settings', '/upload'].includes(currentRoute) }" @click="showMoreMenu = true">
         <el-icon><More /></el-icon>
         <span>更多</span>
       </div>
@@ -89,6 +93,9 @@
     <!-- 更多菜单（手机端弹出） -->
     <div class="more-overlay" v-if="showMoreMenu && isMobile" @click="showMoreMenu = false">
       <div class="more-menu" @click.stop>
+        <div class="more-menu-item" @click="handleSelect('/retry'); showMoreMenu = false">
+          <el-icon><RefreshRight /></el-icon><span>错题重做</span>
+        </div>
         <div class="more-menu-item" @click="handleSelect('/upload'); showMoreMenu = false">
           <el-icon><UploadFilled /></el-icon><span>上传文档</span>
         </div>

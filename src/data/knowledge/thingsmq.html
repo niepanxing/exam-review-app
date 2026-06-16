@@ -1,0 +1,167 @@
+<div class="section">
+<h2>一、物联网系统基础架构与核心挑战</h2>
+<ul>
+  <li>物联网系统基础架构由<strong>设备接入、协议接入、数据处理、应用</strong>四个核心层组成，与移动通信网络（终端→RU→DU→核心网）相对应。</li>
+  <li>三大核心挑战：
+    <ul>
+      <li><strong>设备接入协议种类多</strong>：物联终端协议百花齐放，定制开发工作量大，需考虑不同协议的会话管理和编解码。</li>
+      <li><strong>设备对接工作任务繁</strong>：持续性工作，团队难以专注业务开发，难以形成统一对接规范。</li>
+      <li><strong>多源异构数据处理难</strong>：终端上报数据格式难以统一，海量数据接入对系统提出更高要求。</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<div class="section">
+<h2>二、物联网设备接入协议</h2>
+<ul>
+  <li>物联网协议体系按网络分层：<strong>应用层</strong> / <strong>传输层</strong> / <strong>网络层</strong> / <strong>数据链路层</strong> / <strong>物理层</strong>。</li>
+  <li>常见应用层协议：
+    <span class="tag">MQTT</span><span class="tag">HTTP(s)</span>
+  </li>
+  <li>行业专有协议：
+    <span class="tag orange">HJ212（环保）</span><span class="tag orange">JT/T808（交通）</span><span class="tag orange">SL651（水利）</span><span class="tag orange">Modbus（工业）</span><span class="tag orange">OPC UA（工业）</span><span class="tag orange">IEC104（电力）</span><span class="tag orange">BACnet（建筑）</span><span class="tag orange">GA1400（安防）</span><span class="tag orange">KNX（楼宇）</span>
+  </li>
+  <li><strong>关键概念</strong>：标准协议定义了报文格式和交互流程，但协议承载的业务内容字段（Data）没有统一标准，各平台规范互不通用。</li>
+  <li>传输层核心：<strong>TCP / UDP</strong>；网络层：<strong>IPv4 / IPv6</strong>。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>三、ThingsMQ产品定位与架构</h2>
+<ul>
+  <li>ThingsMQ 是中国电信天翼物联推出的<strong>轻量级、可扩展的物联网消息队列中间件</strong>。</li>
+  <li>面向中小型物联网项目，提供多协议互联互通、数据桥接集成能力。</li>
+</ul>
+
+<h3>两种部署形态</h3>
+<ul>
+  <li><strong>边缘网关部署</strong>：网关+组件一体化交付，开箱即用；适用本地数据采集；支持多种CPU架构。</li>
+  <li><strong>云服务部署</strong>：按需资源分配，支持公有云/私有云/混合云；分钟级K8S云原生部署。</li>
+</ul>
+
+<h3>逻辑架构</h3>
+<ul>
+  <li>接入服务（协议插件）→ 规则引擎（解析/转换/流转）→ 桥接服务（数据库/消息队列）。</li>
+  <li>集成架构：支持与数据库/运维监控中间件无缝集成，可基于 <strong>Kubernetes</strong> 统一托管。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>四、插件管理机制</h2>
+<ul>
+  <li>按来源分：<strong>内置插件</strong>——开箱即用，覆盖主流标准协议和常见桥接目标；<strong>定制插件</strong>——按项目需求开发，满足私有协议接入或特殊桥接场景。</li>
+  <li>按功能分：<strong>协议插件</strong>——负责设备接入和协议编解码；<strong>桥接插件</strong>——负责数据向下游系统推送。</li>
+  <li><strong>动态加载/热插拔</strong>：无需服务中断，通过动态模块化架构确保高可用性和业务连续性。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>五、规则引擎（数据解析转换）</h2>
+<ul>
+  <li>通过<strong>脚本语言编写 + 流程编排</strong>构建自动化规则引擎，实现数据映射、过滤、计算、标准化输出。</li>
+</ul>
+
+<h3>SQL数据处理单元</h3>
+<ul>
+  <li>输入数据记作 <code>DEVICE_DATA</code> 虚拟表。</li>
+  <li>支持字段提取、重命名、添加、条件过滤。</li>
+  <li>输出仅含 SELECT 中列出的字段；不满足 WHERE 条件的数据被过滤。</li>
+</ul>
+
+<h3>JavaScript数据处理单元</h3>
+<ul>
+  <li>三个内置对象：<code>input</code>（接收数据）、<code>output</code>（输出结果）、<code>error</code>（调用 error.failed() 丢弃数据并记录原因）。</li>
+  <li>支持字段提取、数值转换、异常处理。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>六、二次开发三种方式</h2>
+<ul>
+  <li><strong>① 数据解析转换</strong>（核心自带能力）：开发SQL/JS脚本，实现数据接入、转换、过滤。</li>
+  <li><strong>② 协议插件开发</strong>：利用协议加载框架，开发私有协议接入插件，扩展设备和数据源接入能力。</li>
+  <li><strong>③ 桥接插件开发</strong>：利用桥接框架，开发桥接插件，扩展应用集成和数据目的地推送能力。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>七、协议插件开发</h2>
+
+<h3>技术栈</h3>
+<ul>
+  <li><span class="tag orange">Java 21</span> + <span class="tag orange">Spring Boot 3.3.5</span>（必须与组件一致）</li>
+</ul>
+
+<h3>必须实现的接口</h3>
+<ul>
+  <li><code>PluginDaStartService</code>：插件初始化（init）与卸载（destroy），设备接入层初始化。</li>
+  <li><code>DeviceAutoOffLineService</code>：设备断连回调（autoOffLine），清理设备状态。</li>
+</ul>
+
+<h3>可选接口</h3>
+<ul>
+  <li><code>ProtocolReceiveCmdService</code>：设备指令下发。</li>
+</ul>
+
+<h3>PluginInitContext上下文字段</h3>
+<ul>
+  <li><code>applicationContext</code>（Spring容器）</li>
+  <li><code>pluginAttributes</code>（配置参数Map）</li>
+  <li><code>pluginName</code>（插件名称）</li>
+</ul>
+
+<h3>设备协议处理7大环节</h3>
+<ol>
+  <li>设备连接处理（必选）</li>
+  <li>心跳保活（视协议）</li>
+  <li>数据上报（必选）</li>
+  <li>指令下发（可选）</li>
+  <li>设备生命周期（必选）</li>
+  <li>协议编解码（必选）</li>
+  <li>插件生命周期（框架要求）</li>
+</ol>
+
+<h3>三种实现方式</h3>
+<ul>
+  <li><strong>方式一：Netty监听+协议编解码</strong>：适用自定义TCP/UDP/HTTP协议；灵活度最高；开发量大。</li>
+  <li><strong>方式二：开源协议栈+框架适配</strong>：适用MQTT/CoAP/Modbus等标准协议；开发量适中；灵活度受限。
+    <ul>
+      <li>MQTT→Moquette/EMQX</li>
+      <li>CoAP→Californium</li>
+      <li>Modbus→Modbus4J</li>
+      <li>JT/T808→开源808框架</li>
+    </ul>
+  </li>
+  <li><strong>方式三：集成SDK+框架适配</strong>：适用云平台桥接/厂商SDK对接；开发量最小；灵活度最低。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>八、桥接插件开发</h2>
+<ul>
+  <li>技术栈与协议插件一致（Java 21 + Spring Boot 3.3.5）。</li>
+  <li>必须实现 <code>PluginBridgeService</code> 接口：<code>init(PluginInitContext)</code> 建立外部系统连接、<code>destroy()</code> 关闭连接释放资源。</li>
+  <li>需编写 <code>jsonSchema</code> 配置文件定义桥接目标参数（地址、端口、认证等）。</li>
+  <li><strong>destroy() 中必须释放外部连接，防止资源泄漏</strong>。</li>
+  <li>内置HTTP桥接插件支持推送设备上线、数据上报、设备下线事件到下游系统。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>九、二开环境与典型场景</h2>
+
+<h3>环境准备</h3>
+<ul>
+  <li>必备：<span class="tag orange">Java JDK 21</span>（配置 JAVA_HOME）、浏览器（Chrome / Edge）</li>
+  <li>选配：MQTTX（MQTT调试）、Apifox（API调试）、TCP工具、数据库（MySQL）、消息队列（Kafka/Pulsar/RocketMQ）、Docker、AI辅助工具</li>
+</ul>
+
+<h3>典型应用场景</h3>
+<ul>
+  <li><span class="tag">智慧园区</span>：设备接入→数据解析→消息流转，实现一张图管理。</li>
+  <li><span class="tag">低空经济</span>：边缘网关+ThingsMQ软硬一体，协议归一统一上云。</li>
+  <li><span class="tag">跨网解决方案</span>：通过桥接插件适配跨网交换系统，解决跨网域数据传输难题。</li>
+  <li><span class="tag">1+X赋能</span>：应急管理、民生工程、工业数采、市政监管、乡村振兴等领域。</li>
+</ul>
+</div>
