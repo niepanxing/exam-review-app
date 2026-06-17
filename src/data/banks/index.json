@@ -46,5 +46,13 @@
     "single": 188,
     "multiple": 75,
     "judge": 37
+  },
+  {
+    "name": "燎原第二周",
+    "file": "燎原第二周.json",
+    "total": 314,
+    "single": 171,
+    "multiple": 73,
+    "judge": 70
   }
 ]
