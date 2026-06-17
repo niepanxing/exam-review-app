@@ -61,7 +61,7 @@
         <div class="card-meta">
           <el-tag :type="typeTagMap[currentQ.type]" size="small">{{ typeLabelMap[currentQ.type] }}</el-tag>
           <el-tag :type="diffTagMap[currentQ.difficulty]" size="small" v-if="currentQ.difficulty">{{ '⭐'.repeat(currentQ.difficulty) }}</el-tag>
-          <span class="source-page" v-if="currentQ.sourcePage">📍 {{ currentQ.sourceDoc }} 第{{ currentQ.sourcePage }}页</span>
+          <span class="source-page" v-if="currentQ.sourceDoc">📍 {{ currentQ.sourceDoc }}<template v-if="currentQ.sourcePage"> 第{{ currentQ.sourcePage }}页</template></span>
         </div>
         <div class="card-question">{{ currentQ.question }}</div>
 

@@ -153,7 +153,7 @@
           <el-tag :type="typeTagMap[currentQ.type]" size="small">{{ typeLabelMap[currentQ.type] }}</el-tag>
           <el-tag type="info" size="small">第 {{ currentIndex + 1 }} 题</el-tag>
           <el-tag size="small">{{ getScoreLabel(currentQ) }}</el-tag>
-          <span class="source-page" v-if="currentQ.sourcePage">📍 {{ currentQ.sourceDoc }} 第{{ currentQ.sourcePage }}页</span>
+          <span class="source-page" v-if="currentQ.sourceDoc">📍 {{ currentQ.sourceDoc }}<template v-if="currentQ.sourcePage"> 第{{ currentQ.sourcePage }}页</template></span>
         </div>
 
         <div class="question-text">{{ currentQ.question }}</div>
@@ -808,12 +808,17 @@ async function confirmSubmit() {
 function doSubmitExam() {
   if (timerInterval.value) { clearInterval(timerInterval.value); timerInterval.value = null }
 
-  // 未答题的也记录
+  // 只记录实际答过的题，未答题不算错题
   examQuestions.value.forEach((q, i) => {
     if (resultMap[i] === undefined) {
       const correct = checkCorrect(q, i)
       resultMap[i] = correct
-      store.recordAnswer(q.id, correct === true || correct === 'full', JSON.stringify(answers[i]), 'exam')
+      // 只在用户实际作答了的情况下才记录到错题系统
+      const userAns = answers[i]
+      const hasAnswer = userAns !== undefined && userAns !== null && userAns !== '' && !(Array.isArray(userAns) && userAns.length === 0)
+      if (hasAnswer) {
+        store.recordAnswer(q.id, correct === true || correct === 'full', JSON.stringify(userAns), 'exam')
+      }
     }
   })
 
