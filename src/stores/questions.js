@@ -7,6 +7,7 @@ axios.defaults.timeout = 120000
 // 导入本地题目数据（构建时打包进去）
 import localQuestions from '../data/questions.json'
 import localStats from '../data/stats.json'
+import bankIndex from '../data/banks/index.json'
 
 // 检测后端是否可用
 let backendAvailable = true
@@ -90,6 +91,7 @@ export const useQuestionStore = defineStore('questions', () => {
       }
       // 后端不可用，用本地数据
       let filtered = [...localQuestions]
+      if (params.bank) filtered = filtered.filter(q => q.bank === params.bank)
       if (params.type) filtered = filtered.filter(q => q.type === params.type)
       if (params.random === 'true') filtered = filtered.sort(() => Math.random() - 0.5)
       if (params.limit) filtered = filtered.slice(0, parseInt(params.limit))
@@ -207,6 +209,7 @@ export const useQuestionStore = defineStore('questions', () => {
   return {
     questions, stats, loading, currentQuestionIndex, practiceResults,
     currentQuestion, progress, backendAvailable: () => backendAvailable,
+    bankIndex,
     fetchQuestions, fetchStats, deleteQuestion, recordAnswer,
     getProgressDetail, nextQuestion, prevQuestion, goToQuestion, resetPractice,
     loadSettings, saveSettings

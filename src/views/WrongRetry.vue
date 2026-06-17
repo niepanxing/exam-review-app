@@ -5,47 +5,60 @@
       <h2>🔄 错题重做</h2>
       <p class="page-desc">收集所有做错的题，反复练习直到全部掌握</p>
 
+      <!-- 题库筛选 -->
+      <div class="bank-filter" v-if="wrongQuestions.length > 0 || selectedBank">
+        <el-form label-position="top">
+          <el-form-item label="按题库筛选">
+            <el-radio-group v-model="selectedBank" @change="filterWrongByBank">
+              <el-radio-button value="">全部</el-radio-button>
+              <el-radio-button v-for="b in bankIndex" :key="b.name" :value="b.name">{{ b.name }}</el-radio-button>
+            </el-radio-group>
+          </el-form-item>
+        </el-form>
+      </div>
+
       <!-- 错题统计 -->
-      <div class="wrong-stats" v-if="wrongQuestions.length > 0">
+      <div class="wrong-stats" v-if="filteredWrong.length > 0">
         <div class="stat-card total">
-          <div class="stat-val">{{ wrongQuestions.length }}</div>
+          <div class="stat-val">{{ filteredWrong.length }}</div>
           <div class="stat-label">错题总数</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">{{ wrongQuestions.filter(q => q.type === 'single').length }}</div>
+          <div class="stat-val">{{ filteredWrong.filter(q => q.type === 'single').length }}</div>
           <div class="stat-label">单选</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">{{ wrongQuestions.filter(q => q.type === 'multiple').length }}</div>
+          <div class="stat-val">{{ filteredWrong.filter(q => q.type === 'multiple').length }}</div>
           <div class="stat-label">多选</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">{{ wrongQuestions.filter(q => q.type === 'judge').length }}</div>
+          <div class="stat-val">{{ filteredWrong.filter(q => q.type === 'judge').length }}</div>
           <div class="stat-label">判断</div>
         </div>
       </div>
 
       <!-- 模式选择 -->
-      <div class="retry-options" v-if="wrongQuestions.length > 0">
+      <div class="retry-options" v-if="filteredWrong.length > 0">
         <el-button type="primary" size="large" @click="startRetry('all')">
-          全部重做 ({{ wrongQuestions.length }} 题)
+          全部重做 ({{ filteredWrong.length }} 题)
         </el-button>
         <el-button type="warning" size="large" @click="startRetry('random')">
           随机抽取 20 题
         </el-button>
         <el-button type="success" size="large" @click="startRetry('multi')">
-          只做多选题 ({{ wrongQuestions.filter(q => q.type === 'multiple').length }} 题)
+          只做多选题 ({{ filteredWrong.filter(q => q.type === 'multiple').length }} 题)
         </el-button>
       </div>
 
       <!-- 错题预览 -->
-      <div class="wrong-list" v-if="wrongQuestions.length > 0">
+      <div class="wrong-list" v-if="filteredWrong.length > 0">
         <h3>错题列表</h3>
-        <div class="wrong-item" v-for="(q, i) in wrongQuestions" :key="q.id">
+        <div class="wrong-item" v-for="(q, i) in filteredWrong" :key="q.id">
           <span class="wrong-num">{{ i + 1 }}</span>
           <el-tag :type="typeTagMap[q.type]" size="small">{{ typeLabelMap[q.type] }}</el-tag>
           <span class="wrong-text">{{ q.question }}</span>
           <span class="wrong-source" v-if="q.sourceDoc">{{ q.sourceDoc }}</span>
+          <span class="wrong-bank" v-if="q.bank">{{ q.bank }}</span>
         </div>
       </div>
 
@@ -195,10 +208,16 @@ import { useQuestionStore } from '../stores/questions.js'
 import { ElMessage } from 'element-plus'
 
 const store = useQuestionStore()
+const bankIndex = computed(() => store.bankIndex || [])
 const loading = ref(false)
 const started = ref(false)
 const showResult = ref(false)
 const wrongQuestions = ref([])
+const selectedBank = ref('')
+const filteredWrong = computed(() => {
+  if (!selectedBank.value) return wrongQuestions.value
+  return wrongQuestions.value.filter(q => q.bank === selectedBank.value)
+})
 const questions = ref([])
 const wrongIndex = ref(0)
 const submitted = ref(false)
@@ -241,8 +260,11 @@ async function loadWrongQuestions() {
   } catch { wrongQuestions.value = [] } finally { loading.value = false }
 }
 
+// 题库筛选由 selectedBank + filteredWrong computed 自动处理
+function filterWrongByBank() {}
+
 function startRetry(mode) {
-  let pool = [...wrongQuestions.value]
+  let pool = [...filteredWrong.value]
   if (mode === 'multi') pool = pool.filter(q => q.type === 'multiple')
   if (mode === 'random') pool = pool.sort(() => Math.random() - 0.5).slice(0, 20)
   else pool.sort(() => Math.random() - 0.5)
@@ -370,6 +392,9 @@ loadWrongQuestions()
 .retry-page h2 { font-size: 22px; margin-bottom: 6px; }
 .page-desc { color: var(--text-muted); margin-bottom: 24px; }
 
+.bank-filter { margin-bottom: 20px; }
+.bank-filter .el-form-item { margin-bottom: 8px; }
+
 .wrong-stats { display: flex; gap: 12px; margin-bottom: 24px; }
 .stat-card { flex: 1; text-align: center; padding: 16px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; }
 .stat-card.total { border-color: var(--danger); }
@@ -384,6 +409,7 @@ loadWrongQuestions()
 .wrong-num { font-size: 12px; color: var(--text-muted); min-width: 24px; }
 .wrong-text { flex: 1; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .wrong-source { font-size: 11px; color: var(--text-muted); }
+.wrong-bank { font-size: 11px; color: var(--primary-light); background: rgba(99,102,241,0.1); padding: 2px 6px; border-radius: 4px; }
 
 .no-wrong { text-align: center; padding: 60px 20px; }
 .no-wrong-icon { font-size: 64px; margin-bottom: 16px; }

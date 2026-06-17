@@ -6,6 +6,12 @@
       <p class="page-desc">选完提交，即时反馈对错和详细解析</p>
       <div class="config-form">
         <el-form :model="config" label-position="top">
+          <el-form-item label="选择题库">
+            <el-radio-group v-model="config.bank">
+              <el-radio-button value="">全部题库</el-radio-button>
+              <el-radio-button v-for="b in bankIndex" :key="b.name" :value="b.name">{{ b.name }} ({{ b.total }})</el-radio-button>
+            </el-radio-group>
+          </el-form-item>
           <el-form-item label="题目范围">
             <el-radio-group v-model="config.scope">
               <el-radio-button value="all">全部题目</el-radio-button>
@@ -171,6 +177,7 @@ import { useQuestionStore } from '../stores/questions.js'
 import { ElMessage } from 'element-plus'
 
 const store = useQuestionStore()
+const bankIndex = computed(() => store.bankIndex || [])
 const totalQuestions = computed(() => store.stats.total)
 const started = ref(false)
 const loading = ref(false)
@@ -181,7 +188,7 @@ const submitted = ref(false)
 const practiceResults = ref([])
 const resultMap = ref({})
 
-const config = reactive({ scope: 'all', types: ['single', 'multiple', 'judge'], order: 'random', limit: 20 })
+const config = reactive({ bank: '', scope: 'all', types: ['single', 'multiple', 'judge'], order: 'random', limit: 20 })
 const userAnswers = reactive({ single: '', multiple: [], judge: null })
 
 // 每道题的答案快照，切换题目时保存/恢复
@@ -349,15 +356,16 @@ async function startPractice() {
   loading.value = true
   try {
     const params = { random: config.order === 'random' ? 'true' : 'false', limit: config.limit }
+    if (config.bank) params.bank = config.bank
     if (config.scope === 'type') {
       let all = []
-      for (const type of config.types) { const res = await store.fetchQuestions({ type, random: params.random }); all = all.concat(res) }
+      for (const type of config.types) { const res = await store.fetchQuestions({ ...params, type }); all = all.concat(res) }
       questions.value = all.sort(() => Math.random() - 0.5).slice(0, config.limit)
     } else if (config.scope === 'wrong') {
       const detail = store.getProgressDetail()
       const wrongIds = detail.wrongQuestions?.map(w => w.questionId) || []
       if (!wrongIds.length) { ElMessage.info('没有错题！全部都对了 👍'); loading.value = false; return }
-      const res = await store.fetchQuestions({ random: params.random })
+      const res = await store.fetchQuestions(params)
       questions.value = res.filter(q => wrongIds.includes(q.id))
     } else {
       questions.value = await store.fetchQuestions(params)

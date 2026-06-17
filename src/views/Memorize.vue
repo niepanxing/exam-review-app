@@ -5,6 +5,12 @@
       <p class="page-desc">直接看题目 + 答案 + 解析，像翻卡片一样快速过一遍</p>
       <div class="config-form">
         <el-form :model="config" label-position="top">
+          <el-form-item label="选择题库">
+            <el-radio-group v-model="config.bank">
+              <el-radio-button value="">全部题库</el-radio-button>
+              <el-radio-button v-for="b in bankIndex" :key="b.name" :value="b.name">{{ b.name }} ({{ b.total }})</el-radio-button>
+            </el-radio-group>
+          </el-form-item>
           <el-form-item label="题目范围">
             <el-radio-group v-model="config.scope">
               <el-radio-button value="all">全部题目</el-radio-button>
@@ -118,10 +124,11 @@ import { useQuestionStore } from '../stores/questions.js'
 import { ElMessage } from 'element-plus'
 
 const store = useQuestionStore()
+const bankIndex = computed(() => store.bankIndex || [])
 const started = ref(false); const finished = ref(false); const loading = ref(false)
 const questions = ref([]); const currentIndex = ref(0); const showAnswer = ref(false)
 const markedSet = ref(new Set())
-const config = reactive({ scope: 'all', types: ['single', 'multiple', 'judge'], order: 'random', limit: 20 })
+const config = reactive({ bank: '', scope: 'all', types: ['single', 'multiple', 'judge'], order: 'random', limit: 20 })
 const typeTagMap = { single: '', multiple: 'warning', judge: 'success' }
 const typeLabelMap = { single: '单选', multiple: '多选', judge: '判断' }
 const diffTagMap = { 1: 'success', 2: 'warning', 3: 'danger' }
@@ -142,9 +149,10 @@ async function startMemorize() {
   loading.value = true
   try {
     const params = { random: config.order === 'random' ? 'true' : 'false', limit: config.limit }
+    if (config.bank) params.bank = config.bank
     if (config.scope === 'type') {
       let all = []
-      for (const type of config.types) { const res = await store.fetchQuestions({ type, random: params.random }); all = all.concat(res) }
+      for (const type of config.types) { const res = await store.fetchQuestions({ ...params, type }); all = all.concat(res) }
       questions.value = all.sort(() => Math.random() - 0.5).slice(0, config.limit)
     } else { questions.value = await store.fetchQuestions(params) }
     if (!questions.value.length) { ElMessage.warning('没有符合条件的题目'); loading.value = false; return }
