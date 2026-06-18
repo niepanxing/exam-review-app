@@ -218,6 +218,34 @@ watch(activeModule, () => {
   line-height: 1.8;
   font-size: 15px;
 }
+.knowledge-content :deep(.toc-nav) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  position: sticky;
+  top: 8px;
+  z-index: 10;
+}
+.knowledge-content :deep(.toc-item) {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(99,102,241,0.08);
+  color: var(--primary-light);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.knowledge-content :deep(.toc-item:hover) {
+  background: var(--primary);
+  color: #fff;
+}
 .knowledge-content :deep(.section) {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -263,6 +291,43 @@ watch(activeModule, () => {
 .knowledge-content :deep(.tag.orange) {
   background: rgba(230, 81, 0, 0.1);
   color: #e65100;
+}
+.knowledge-content :deep(blockquote) {
+  margin: 12px 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--warning);
+  background: rgba(245,158,11,0.06);
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.knowledge-content :deep(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.knowledge-content :deep(th) {
+  background: rgba(99,102,241,0.1);
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+}
+.knowledge-content :deep(td) {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+}
+.knowledge-content :deep(pre) {
+  background: rgba(0,0,0,0.06);
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+.knowledge-content :deep(pre code) {
+  background: none;
+  padding: 0;
 }
 .knowledge-content :deep(code) {
   background: rgba(0,0,0,0.06);

@@ -1,4 +1,5 @@
 /* ========== 暗色主题（默认） ========== */
+html { scroll-behavior: smooth; }
 :root {
   --primary: #6366f1;
   --primary-light: #818cf8;

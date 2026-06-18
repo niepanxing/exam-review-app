@@ -1,0 +1,651 @@
+<div class="toc-nav"><a class="toc-item" href="#第一章-cv-二次开发">第一章 CV 二次开发</a>
+<a class="toc-item" href="#第二章-数字生活二开">第二章 数字生活二开</a>
+<a class="toc-item" href="#第三章-物联网感知云与-thingsmq">第三章 物联网感知云与 ThingsMQ</a>
+<a class="toc-item" href="#第四章-融合应用二开">第四章 融合应用二开</a>
+<a class="toc-item" href="#第五章-量子密信-sdk-客户端二开">第五章 量子密信 SDK 客户端二开</a>
+<a class="toc-item" href="#第六章-togaf-企业架构设计与实践">第六章 TOGAF 企业架构设计与实践</a>
+<a class="toc-item" href="#第七章-ttt-讲师培训high-翻课堂">第七章 TTT 讲师培训（HIGH 翻课堂）</a>
+<a class="toc-item" href="#第八章-数字生活二开实战考核真实考题">第八章 数字生活二开实战考核（真实考题）</a>
+<a class="toc-item" href="#第九章-重点难点速查手册">第九章 重点难点速查手册</a></div>
+
+<blockquote>主题主线：<strong>各类平台二次开发（CV / 数字生活 / 物联网感知云 / 融合应用 / 量子密信）+ TOGAF 企业架构 + TTT 讲师培训 + 大屏实操考核</strong>。</blockquote>
+<div class="section"><h2 id="第一章-cv-二次开发">第一章 CV 二次开发</h2>
+<blockquote>覆盖课件：CV二开实践流程培训材料、CV二开解决方案培训V2、天翼视联积木应用平台及二开、天翼视联·一语定场景培训</blockquote>
+<h3 id="第一章-cv-二次开发-1">1.1 CV 二开定义与背景 <span class="tag">★高频</span></h3>
+<p><strong>CV 二开（计算机视觉二次开发）</strong>：为满足各省市 CV 监控<strong>中长尾 AI 场景</strong>需求，加速二开交付效率、降低成本；由视联网 & AI 公司打通<strong>算法标训平台、推理平台与视联网应用</strong>，对省市二开需求进行支持。</p>
+<p>核心思想：<strong>如何利用视联各平台底座能力，快速搭建二开应用</strong>。</p>
+<p><strong>燎原计划 CV 二开专项</strong>打通"最后一公里"三个痛点：</p>
+<table><tr><th>痛点</th><th>解决手段</th></tr>
+<tr><td><strong>不能开</strong></td><td>平台解耦（算法入仓 + 能力开放）</td></tr>
+<tr><td><strong>不会开</strong></td><td>实战实训（流程培训 + 案例）</td></tr>
+<tr><td><strong>不会卖</strong></td><td>业务运营（销售品 + 定价）</td></tr>
+</table>
+<blockquote>关键判断：CV 二开 ≠ "拉流 + 省侧自建 AI"，<strong>必须基于标训推平台 / 视联网标准能力</strong>才算。</blockquote>
+<h3 id="第一章-cv-二次开发-2">1.2 平台体系：星海、星河、能力开放 <span class="tag">★高频</span></h3>
+<table><tr><th>平台</th><th>定位</th><th>作用</th></tr>
+<tr><td><strong>星海</strong>（标训推平台）</td><td>AI 公司集约<strong>标训推</strong>平台</td><td>低/零代码 + 高代码两条训练路径</td></tr>
+<tr><td><strong>星河</strong>（算法仓 + 推理网络）</td><td>集约<strong>算法仓</strong> + 星河推理网络（四级算力）</td><td>算法统一入仓、版本管理、两级下发省内推理节点</td></tr>
+<tr><td><strong>能力开放平台</strong></td><td>把天翼视联能力拆成细小单元以 <strong>API</strong> 输出</td><td>500+ 原子能力，门户 open.ctseelink.cn</td></tr>
+</table>
+<p><strong>星海训练两条路径</strong>：</p>
+<table><tr><th>路径</th><th>环节</th></tr>
+<tr><td>低/零代码</td><td>数据标注 → 基础模型 → 超参数 → 训练 → 测评 → 封装</td></tr>
+<tr><td>高代码</td><td>数据标注 → 模型搭建 → 资源接入 → 训练 & 评测 → 封装</td></tr>
+</table>
+<h3 id="第一章-cv-二次开发-3">1.3 算法入仓（第三方纳管）四步 <span class="tag">★高频</span></h3>
+<ol><li><strong>算法注册</strong>（起点，系统自动分配算法编码）</li>
+<li><strong>镜像注册</strong>（CV 图片流算法镜像自动化封装打包）</li>
+<li><strong>算法评测</strong>（安全 / 精度 / 接口 / 性能 / 稳定性，页面可配置）</li>
+<li><strong>算法上架</strong>（发布入仓，集中管理、版本控制、快速检索）</li>
+</ol>
+<blockquote>纳管完成邮件通知模型创建人；可两级下发省内推理节点。</blockquote>
+<h3 id="第一章-cv-二次开发-4">1.4 能力开放 / 积木式二开应用七步流程 <span class="tag">★高频</span></h3>
+<ol><li><strong>门户注册</strong>（必须是电信体系，营业执照 + 分公司名称一致）</li>
+<li><strong>原子能力下单</strong>（试点期可跳过）</li>
+<li><strong>APP 应用创建</strong>（获取 APP ID，填订单号或上传调研表）</li>
+<li><strong>算法接入申请</strong>（前置：算法已入仓星河 + 部署省内推理节点）</li>
+<li><strong>二开应用开发调试</strong>（鉴权 + 设备绑定；积木式可直接拖拽）</li>
+<li><strong>审核上线</strong>（正式计费；试点期二开免费，能力开放标准产品仍计费；<strong>试用 1-3 个月，可申请延期一次</strong>）</li>
+<li><strong>算法迭代</strong>（数据回流，星河打通星海完成二次迭代）</li>
+</ol>
+<h3 id="第一章-cv-二次开发-5">1.5 积木式应用平台 N+1+1 架构 <span class="tag">★高频</span></h3>
+<pre><code>N 个 AI+应用（平安慧眼 / 智慧商企 / 平安校园 / 水域监控 / 基层治理 / 通用应用）
+        ↑
+1 个 应用平台（租户体系 / 应用管理 / 二开能力 API+JS-API / 数据源 / 布局）
+        ↑
+1 个 开放平台（能力开放平台 + 门户；统一开放入口 / 统一能力调用）
+        ↑
+能力底座：视联能力（天翼视联网 PaaS）/ 物联能力 / AI 算法 / AI 大模型 / 生态
+</code></pre><p><strong>积木式后管中台三层定位</strong>：</p>
+<table><tr><th>层</th><th>定位</th></tr>
+<tr><td>积木式应用后管中台</td><td>底层能力接入赋能、串联下游、横向拉通公共能力、纵向统一标准</td></tr>
+<tr><td>积木式开放平台</td><td>省市积木二开<strong>唯一入驻入口</strong>，提供标准 API 及 JS-API</td></tr>
+<tr><td>积木式应用大屏</td><td>客户数据大屏，拖拉拽拼搭不同场景</td></tr>
+</table>
+<blockquote>适配尺寸标准：<strong>1920×1080</strong>。卡片渲染用 <strong>Web Components + Shadow DOM</strong>，主文档与卡片互不干扰。</blockquote>
+<h3 id="第一章-cv-二次开发-6">1.6 积木卡片 / 组件开发流程</h3>
+<p><strong>卡片开发标准流程</strong>：卡片申请 → 创建数据源（拉取/推送）→ 开发（后端对接积木接口、前端开发卡片）→ 打包上传 → 提交审核 → 发布上线。</p>
+<p><strong>数据源两种模式</strong>：</p>
+<table><tr><th>模式</th><th>说明</th><th>URL</th></tr>
+<tr><td><strong>拉取模式（推荐）</strong></td><td>合作方开放接口供积木调用</td><td><code>.../card/widgetData/proxy/{sourceId}</code></td></tr>
+<tr><td>推送模式</td><td>合作方按规范把数据推送到积木存储</td><td><code>.../card/widgetData/{sourceId}</code></td></tr>
+</table>
+<p><strong>组件二开单点登录流程</strong>：前端 JS_SDK 获取临时凭证 <strong>ticket</strong> → 后端用 ticket 换 <strong>accessToken</strong> → 后端用 accessToken 获取<strong>用户信息</strong>。</p>
+<blockquote>易错：<strong>卡片仅支持大屏</strong>，手机端需走标品业务流程。</blockquote>
+<h3 id="第一章-cv-二次开发-7">1.7 一语定场景 <span class="tag">★高频</span></h3>
+<p>天翼视联<strong>零代码 AI 视觉应用生成工具</strong>，自然语言描述监控需求即可自动创建 AI 检测场景，秒级上线。</p>
+<p><strong>三步</strong>：</p>
+<ol><li><strong>新建场景</strong>（门户工作台 → 创建场景 → 名称 + 需求描述）</li>
+<li><strong>配置检测</strong>（系统自动匹配检测项，可增删，实时预览）</li>
+<li><strong>发布使用</strong>（一键发布 → 审核 → 后台部署绑定摄像头 → APP 接收告警）</li>
+</ol>
+<p><strong>关键参数</strong>：单次最多勾选 <strong>20</strong> 个检测项；每账号最多创建 <strong>20</strong> 个场景；发布后 <strong>1 分钟内</strong>生效；试用阶段用<strong>灰度发布</strong>，正式用<strong>正式发布</strong>。</p>
+<h3 id="第一章-cv-二次开发-8">1.8 算力成本公式 <span class="tag">★高频</span><span class="tag orange">▲难点</span></h3>
+<pre><code>每路算力成本 = (硬件投入设备数 × 硬件成本) / 总路数
+            = (算法路数 / 算法QPS / 抽帧频率) × 硬件成本 / 总路数
+            ≈ 硬件成本 / 总路数   （当 路数 &lt; QPS × 抽帧频率）
+</code></pre><p><strong>核心原则（必背金句）</strong>：</p>
+<blockquote><strong>无论一路加载多少算法，抽帧永远按照加载算法的最小抽帧频率进行一次抽帧即可。</strong></blockquote>
+<ul><li>省节点资源一般<strong>冗余 20%</strong> 作为安全区，POC 测试在冗余资源上。</li>
+<li>结算链路：云公司 → 出账 → 天翼视联 → 出账 → 省公司 → 结算 → 地市公司。</li>
+</ul>
+<p><strong>明厨亮灶案例（A10，元/路月）</strong>：抽帧 0.94；老鼠/拖把清洗灶台 2；抽烟 0.52；画面异常/地面损坏 0.0003；其余（厨师服/帽/口罩/玩手机/垃圾桶/手套/挡鼠板）0.052；<strong>合计 5.8246 元/路月</strong>。</p>
+<h3 id="第一章-cv-二次开发-9">1.9 标品审核阈值（P / R / QPS）<span class="tag">★高频</span><span class="tag orange">▲难点</span></h3>
+<table><tr><th>指标</th><th>大目标</th><th>小目标</th></tr>
+<tr><td><strong>Precision（准确率）</strong></td><td><strong>> 92%</strong></td><td>至少 > 80%</td></tr>
+<tr><td><strong>Recall（召回率）</strong></td><td><strong>> 80%</strong></td><td>一般 > 70%</td></tr>
+</table>
+<table><tr><th>QPS 口径</th><th>阈值</th></tr>
+<tr><td>星河零代码训练</td><td><strong>> 80，普遍 > 100</strong></td></tr>
+<tr><td>省自研 YOLO</td><td><strong>> 50（最低不低于 50）</strong></td></tr>
+<tr><td>标品二开最低</td><td>> 20，希望 > 30</td></tr>
+</table>
+<blockquote>原则：漏了会出事的（如火情）<strong>recall 高一些</strong>；误报多了会被投诉的 <strong>precision 高一些</strong>。</blockquote>
+<blockquote>标品上架审核周期 <strong>6-8 周</strong>；标准调用接口审批 <strong>1 周左右</strong>。</blockquote>
+<h3 id="第一章-cv-二次开发-10">1.10 三大合作模式与定价 <span class="tag">★高频</span></h3>
+<table><tr><th>模式</th><th>流类型</th><th>结算</th><th>试用</th><th>特点</th></tr>
+<tr><td><strong>公有云二开</strong></td><td>图片流</td><td>按路引入付费 / 原子能力 / 合同</td><td>1-3 月</td><td>目标检测/分割/分类</td></tr>
+<tr><td><strong>边缘侧部署二开</strong></td><td>图片流 + 视频流</td><td>硬件一次性 + 合同</td><td>POC 样机</td><td>私有化，雅江等</td></tr>
+<tr><td><strong>云眼 B/C 类合作</strong></td><td>图片流</td><td>按路引入</td><td>测试期免费</td><td>要求规模发展量 + BC 销售品许可</td></tr>
+</table>
+<p><strong>标品定价要点</strong>：</p>
+<table><tr><th>项目</th><th>定价</th></tr>
+<tr><td>基础视频流服务</td><td><strong>0.0 元/路月</strong></td></tr>
+<tr><td>转码流 / AI 消息流订阅 / 设备控制</td><td>0.5 / 1.0 / 1.0 元/路月</td></tr>
+<tr><td>二开加载服务</td><td><strong>2.0 元/路月</strong></td></tr>
+<tr><td>积木式零代码二开套餐</td><td><strong>10000~20000 元/年</strong></td></tr>
+<tr><td>算法加载（公有云二开）</td><td>2.0 元/路月</td></tr>
+<tr><td>标准 AI 算法包 / 单一图片流算法</td><td>5.0 元/路月</td></tr>
+<tr><td>云化下发 / 终端算法下发服务费</td><td>48 / 24 元/路</td></tr>
+</table>
+<h3 id="第一章-cv-二次开发-11">1.11 销售品 A 类 vs 省 B/C 类 <span class="tag">★高频</span></h3>
+<table><tr><th>项</th><th>A 类</th><th>省 B/C 类</th></tr>
+<tr><td>管理</td><td>集团视联网</td><td>省公司</td></tr>
+<tr><td>可否自研替代</td><td>❌ 不可</td><td>试点期省开通承载</td></tr>
+<tr><td>客户类型</td><td>BGH 联动 / 小 B 多 / G 端级联</td><td>单一客户 / 项目制</td></tr>
+<tr><td>收费</td><td>按月订购</td><td>一次性 / 项目制</td></tr>
+<tr><td>结算</td><td>一点结算</td><td>省 B <strong>不纳入一点结算</strong>，需原子能力 / 合同方式</td></tr>
+</table>
+<blockquote>原则：<strong>不与 A 类大网销售品类型冲突</strong>。算法上标品三条件：①满足审核维度 ②不与 A 类场景重合 ③省 B 销售品能申请出来。</blockquote>
+<p><strong>交付方式判断</strong>：DICT 单一客户走能力开放云侧方案；全省规模 BGH 联动走 BC 类销售品对接。</p>
+<h3 id="第一章-cv-二次开发-12">1.12 能力开放成效与案例</h3>
+<p><strong>市场与考核数字</strong>：视联网设备 <strong>9000 万+</strong>；CV 算法覆盖率约 <strong>11%</strong>；CV 长尾年需求 <strong>200+</strong>（实测 217）；<strong>2025 年 CV 类二开市场空间约百亿</strong>，复合增长率 <strong>10%+</strong>；公共视频图像信息保存 <strong>30 日</strong>。</p>
+<p><strong>能力开放成效（截至 2026.4）</strong>：累计调用设备 3000 万路；赋能项目 3700+；API 日均调用 2.4 亿次；API 原子化能力 500+；积木可视化拼装组件 400+（卡片 309 + 功能 78 + 模版 25，共 412 个零代码组件）；二开组件 205+。</p>
+<p><strong>经典案例</strong>：四川自贡智慧消防（820 路、406.39 万、自研占比 95.07%、覆盖 12 大行业 569 家单位）；安徽明厨亮灶（10-12 万路、12+AI 场景）；湖南小天网未成年识别（小模型初判 + 大模型复核，剔除 90% 误报）。</p>
+</div>
+<div class="section"><h2 id="第二章-数字生活二开">第二章 数字生活二开</h2>
+<blockquote>覆盖课件：燎原培训-数字生活二开-202605.v1.4（本组主文件）</blockquote>
+<h3 id="第二章-数字生活二开-1">2.1 平台定位：集约底座 + 分布式开发 <span class="tag">★高频</span></h3>
+<p><strong>数字生活能力二开</strong>：基于天翼数字生活集约平台"<strong>底座 + 分布式开发</strong>"模式，省市公司通过积木式组合、集成交付、灵活调用开发本地特色应用。</p>
+<p><strong>统一社乡能力底座</strong>：全面融视联、融物联、融 AI，打造"<strong>个人-家庭-社乡-城市</strong>"全场景 <strong>GBHC</strong> 联动的天翼基层治理大平台（行业规模第一）。</p>
+<blockquote>集团 2022 年印发智慧社区和数字乡村平台整合指引：<strong>数生公司聚焦做强底座和标准应用，省市聚焦个性化应用开发</strong>。</blockquote>
+<p><strong>集约分工</strong>：数生做"大底座 + 标准应用"；省市做"个性化定制 / 项目集成"；ICT 项目中集约应用占比 <strong>50-70%</strong>。</p>
+<h3 id="第二章-数字生活二开-2">2.2 统一能力开放平台四层架构</h3>
+<table><tr><th>层</th><th>内容</th></tr>
+<tr><td>应用层</td><td>家庭智脑 / 社区乡村 / 天翼中屏 / 集团 Dcoos 协议</td></tr>
+<tr><td>开放层</td><td>统一能力开放平台、开发者门户、能力管理后台、智能体/低代码平台</td></tr>
+<tr><td>能力层</td><td>能力中台 / AI 中台 / IT 中台 / 社乡中台 / 天翼账号 / 小翼管家</td></tr>
+<tr><td>生态层</td><td>三方生态 / 电信体系生态</td></tr>
+</table>
+<p><strong>六大基础能力</strong>：统一认证、数据融通、定制大屏、数据开放、设备接入、应用组件。</p>
+<h3 id="第二章-数字生活二开-3">2.3 二开三级能力体系 <span class="tag">★高频</span></h3>
+<table><tr><th>级别</th><th>形式</th><th>产出</th></tr>
+<tr><td><strong>配置级</strong></td><td>菜单/大屏拖拉拽</td><td>省市应用 700+、个性化大屏 1.9w+</td></tr>
+<tr><td><strong>组装级</strong></td><td>组件化积木式组装</td><td>60+ 成熟应用组件，开箱即用</td></tr>
+<tr><td><strong>编码级</strong></td><td>650+ API、原子化能力、源码定制</td><td>案例：贵州/上海</td></tr>
+</table>
+<h3 id="第二章-数字生活二开-4">2.4 九类标准化对接集成模式 <span class="tag">★高频</span></h3>
+<blockquote>金句："<strong>形成了 9 类标准化对接集成模式，这是二开的核心</strong>。"</blockquote>
+<ol><li>第三方页面集成（SaaS）</li>
+<li>第三方应用能力集成</li>
+<li>集约应用 + 第三方数据集成（仅积分银行）</li>
+<li>分省自建平台融通集成</li>
+<li>H5 页面集成（SaaS）</li>
+<li>场景对外集成（SaaS）</li>
+<li>生态云联集成（集约南向规范对接 / 厂家平台协议对接）</li>
+<li>直连集成（设备 SDK 私有协议）</li>
+<li>大屏开发集成（SaaS）</li>
+</ol>
+<h3 id="第二章-数字生活二开-5">2.5 灵动云大屏卡片开发流程</h3>
+<p><strong>统一能力开放平台用户旅程 6 步</strong>：账号注册 → 应用创建（生成 AppKey）→ 能力申请（1-2 工作日审核）→ 联调测试（沙箱）→ 切换生产 → 发布上线。</p>
+<p><strong>卡片开发 9 步</strong>：账号注册 → 卡片创建 → 新建应用 → 代码开发 → 尺寸布局 → 请求接口（<code>dc.request</code>）→ 卡片上传 → 资源包上传 → 卡片审核发布（<strong>先设"体验版"才能发布</strong>）。</p>
+<blockquote>易错：版本管理处不能提交审核，必须到低代码平台卡片管理页点发布。</blockquote>
+<h3 id="第二章-数字生活二开-6">2.6 认证与加密 <span class="tag orange">▲难点</span></h3>
+<table><tr><th>机制</th><th>说明</th></tr>
+<tr><td>天翼账号统一背书</td><td>+ <strong>tokenCode</strong> 单点登录，<strong>2 分钟</strong>一次有效，专码专用</td></tr>
+<tr><td>用户授权</td><td>时效 <strong>30 天</strong></td></tr>
+<tr><td>自定义单点登录</td><td><strong>5 重防护</strong>：开发者校验、权限校验、tokenCode 校验、用户授权、访问范围校验</td></tr>
+<tr><td>敏感字段（手机/身份证/姓名）</td><td><strong>AES</strong> 对称加密（密钥 = AppKey）</td></tr>
+<tr><td>人脸图片</td><td>翼存加密桶</td></tr>
+<tr><td>前后端双重加密</td><td><strong>RSA 加密令牌 + AES 加密请求体</strong>（动态密钥）</td></tr>
+<tr><td>防重放/防劫持</td><td>一次性令牌 + SessionId 一致性校验</td></tr>
+<tr><td>权限模型</td><td><strong>RBAC</strong>（角色-菜单-按钮-接口）；垂直权限=接口权限，水平权限=数据权限</td></tr>
+</table>
+<blockquote>易错判断题：tokenCode 是 5 分钟有效（❌，2 分钟）；授权时效 7 天（❌，30 天）；测试环境 token 可用于正式环境（❌，不支持交叉）。</blockquote>
+<h3 id="第二章-数字生活二开-7">2.7 平台-场景数据三种交互 <span class="tag">★高频</span></h3>
+<table><tr><th>方式</th><th>方向</th><th>说明</th></tr>
+<tr><td><strong>场景调用</strong></td><td>场景 → 通用</td><td>内网主动获取</td></tr>
+<tr><td><strong>场景订阅</strong></td><td>通用 → 场景</td><td>实时推送（如通行订阅门禁记录）</td></tr>
+<tr><td><strong>通用接收</strong></td><td>场景 → 通用</td><td>按标准推送二开场景设备/告警数据</td></tr>
+</table>
+<p><strong>API vs 数据订阅</strong>：API 是 Pull 拉取（非实时、按需查询）；数据订阅是 Push 推送（毫秒/秒级实时，需自建服务端处理重试/幂等）。<strong>推送失败 3 次后不再重试</strong>。分页 size ≤ 100。</p>
+<h3 id="第二章-数字生活二开-8">2.8 能力开放成效数字</h3>
+<p>数字生活服务用户 <strong>1 亿+</strong>；月开门次数 2.1 亿次/月；设备连接 90 万+；拓展小区 26 万+；数字乡村覆盖 35 万行政村（占比 79%）/ 1.5 万乡镇（占比 39%）；接入监控终端 4557 万；集约平台加载省市应用 700+、个性化配置大屏 1.9w+；AI 编排助手页面搭建效率提升 80%+。</p>
+</div>
+<div class="section"><h2 id="第三章-物联网感知云与-thingsmq">第三章 物联网感知云与 ThingsMQ</h2>
+<blockquote>覆盖课件：物联网感知云智能应用设备接入能力（理论 + 实操）、ThingsMQ 知识点</blockquote>
+<h3 id="第三章-物联网感知云与-thingsmq-1">3.1 物联网协议四层体系 <span class="tag">★高频</span></h3>
+<table><tr><th>层</th><th>代表</th></tr>
+<tr><td>近距离</td><td>Bluetooth、NFC、RFID、IRdA、Dash7</td></tr>
+<tr><td>远距离蜂窝</td><td>GSM、LTE、5G、CDMA、<strong>NB-IoT</strong></td></tr>
+<tr><td>远距离非蜂窝</td><td>ZigBee、Z-Wave、<strong>LoRa</strong>、WiFi、wHART</td></tr>
+<tr><td>有线</td><td>MBus、RS232、RS485、Ethernet、USB</td></tr>
+<tr><td>应用层标准</td><td><strong>MQTT、CoAP、HTTP(s)、WebSocket</strong>、Modbus、OPC UA、IEC104、BacNet、SNMP、KNX</td></tr>
+<tr><td>行业专有</td><td>HJ212（环保）、JT/T808（交通）、SL651（水利）、GA1400（安防）、LwM2M</td></tr>
+</table>
+<blockquote>金句：<strong>标准协议只统一报文格式和交互流程，业务内容字段（Data）无统一标准，各平台互不通用。</strong></blockquote>
+<h3 id="第三章-物联网感知云与-thingsmq-2">3.2 ThingsMQ 定位、形态与性能</h3>
+<p><strong>ThingsMQ</strong>：中国电信天翼物联的<strong>轻量级、高性能、可扩展物联网消息队列中间件</strong>，面向中小型物联网项目，提供海量设备连接、低延时消息传递、多协议互联互通、数据桥接集成。</p>
+<p><strong>两种部署形态</strong>：</p>
+<table><tr><th>形态</th><th>特点</th></tr>
+<tr><td>边缘网关部署</td><td>网关 + 组件一体化，开箱即用，多 CPU 架构</td></tr>
+<tr><td>云服务部署</td><td>公有/私有/混合云，<strong>分钟级 K8S</strong></td></tr>
+</table>
+<p><strong>性能指标</strong>：单节点<strong>十万</strong>并发 / 集群<strong>百万</strong>并发；消息传输延迟低至<strong>毫秒级</strong>；协议插件覆盖 <strong>90%+</strong> 物联接入场景；10+ 数据桥接组件。</p>
+<blockquote>金句："ThingsMQ 中间件简化了设备接入流程，实现了设备层和业务层的解耦，应用更专注于业务。"</blockquote>
+<h3 id="第三章-物联网感知云与-thingsmq-3">3.3 ThingsMQ 三大核心组件 <span class="tag">★高频</span></h3>
+<table><tr><th>组件</th><th>作用</th><th>支持</th></tr>
+<tr><td><strong>物联协议插件槽</strong>（device access）</td><td>设备接入 + 协议编解码</td><td>MQTT/LwM2M/CoAP/Modbus/HJ212/OPCUA/IEC104/JTT808/BACnet/HTTP/私有</td></tr>
+<tr><td><strong>规则引擎</strong>（rule）</td><td>数据解析 → 格式转换 → 数据过滤 → 数据流转</td><td>SQL + JS 脚本</td></tr>
+<tr><td><strong>数据桥接器</strong>（bridge）</td><td>数据向下游系统推送</td><td>TDengine/Kafka/MySQL/Tidb/Pulsar/RocketMQ/AMQP/Redis/HTTP/MQ</td></tr>
+</table>
+<p>运维：监控中心 + 节点管理（K8S 统一托管）。</p>
+<h3 id="第三章-物联网感知云与-thingsmq-4">3.4 ThingsMQ 三种二开方式 <span class="tag">★高频</span></h3>
+<table><tr><th>方式</th><th>说明</th></tr>
+<tr><td>① <strong>数据解析转换</strong></td><td>直接用核心自带能力，开发 SQL/JS 脚本</td></tr>
+<tr><td>② <strong>协议插件开发</strong></td><td>扩展设备和数据源接入</td></tr>
+<tr><td>③ <strong>桥接插件开发</strong></td><td>扩展应用集成和数据目的地推送</td></tr>
+</table>
+<blockquote>二开 = ① and/or ② and/or ③。</blockquote>
+<p><strong>插件开发通用 5 步</strong>：创建 Spring Boot 项目 → 实现框架接口 → 编写 jsonSchema 配置 → 打包可执行 jar → 导入组件配置启停。</p>
+<h3 id="第三章-物联网感知云与-thingsmq-5">3.5 规则引擎脚本（SQL / JS）<span class="tag orange">▲难点</span></h3>
+<ul><li><strong>SQL 单元</strong>：输入记作 <code>DEVICE_DATA</code> 虚拟表，语法见 calcite.apache.org。</li>
+<li><strong>JS 单元</strong>：三个内置对象 <code>input / output / error</code>；<code>error.failed(msg)</code> 丢弃数据并记录原因。</li>
+</ul>
+<h3 id="第三章-物联网感知云与-thingsmq-6">3.6 协议 / 桥接插件接口规范 <span class="tag orange">▲难点</span></h3>
+<p><strong>强制技术栈</strong>：Java <strong>21</strong> + Spring Boot <strong>3.3.5</strong>。</p>
+<table><tr><th>接口</th><th>协议插件</th><th>桥接插件</th></tr>
+<tr><td>必选</td><td><strong>PluginDaStartService</strong> + <strong>DeviceAutoOffLineService</strong></td><td><strong>PluginBridgeService</strong></td></tr>
+<tr><td>可选</td><td>ProtocolReceiveCmdService（指令下发）</td><td>—</td></tr>
+<tr><td>方法</td><td>init / destroy / autoOffLine</td><td>init / destroy</td></tr>
+<tr><td>关键点</td><td>启动类必须<strong>同时实现两个接口</strong></td><td>destroy() 必须释放外部连接</td></tr>
+</table>
+<p><strong>协议插件三种实现方式</strong>：</p>
+<table><tr><th>方式</th><th>开发量</th><th>依赖</th></tr>
+<tr><td>Netty 监听 + 编解码（自定义 TCP/UDP/HTTP）</td><td>最大</td><td>灵活最高</td></tr>
+<tr><td>开源协议栈 + 适配（MQTT/CoAP/Modbus）</td><td>适中</td><td>依赖第三方</td></tr>
+<tr><td>集成 SDK + 适配（云桥接/厂商 SDK）</td><td>最小</td><td>强依赖</td></tr>
+</table>
+<p><strong>协议栈开源选型</strong>：MQTT→Moquette/EMQX；CoAP→Californium；Modbus→Modbus4J；JT/T808→开源 808 框架；阿里云 IoT→AMQP；华为云 IoT→AMQP/MQTT；OneNET→HTTP 推送回调。</p>
+<h3 id="第三章-物联网感知云与-thingsmq-7">3.7 南向北向接入协议</h3>
+<table><tr><th>方向</th><th>协议</th><th>说明</th></tr>
+<tr><td>南向-云云对接</td><td><strong>HTTPS</strong></td><td>适用集成厂商</td></tr>
+<tr><td>南向-直连对接</td><td><strong>MQTT</strong></td><td><strong>推荐</strong>，更高效稳定</td></tr>
+<tr><td>北向</td><td>大租户隔离输出设备能力（APaaS/SaaS）</td><td>统一设备能力调度框架</td></tr>
+</table>
+<blockquote>易错：融合应用中间件是 <strong>ThingMQ</strong>，不是 Kafka/RabbitMQ；融合应用 MQTT 的 client_id <strong>必须</strong>和设备编码一致。</blockquote>
+</div>
+<div class="section"><h2 id="第四章-融合应用二开">第四章 融合应用二开</h2>
+<blockquote>覆盖课件：融合应用二开知识点梳理</blockquote>
+<h3 id="第四章-融合应用二开-1">4.1 平台定位</h3>
+<p><strong>感知云融合应用平台</strong>：在全域感知平台"<strong>接物知数</strong>"基础上，轻松创建客户化场景化应用的利器，核心价值 = <strong>低成本快交付</strong>。理念：<strong>"一平台百应用"</strong>。</p>
+<h3 id="第四章-融合应用二开-2">4.2 四层架构</h3>
+<table><tr><th>层</th><th>内容</th></tr>
+<tr><td>设备层</td><td>各类感知设备</td></tr>
+<tr><td>接入层</td><td>AEP、第三方 IoT、<strong>ThingMQ 数采中间件</strong>、视联网平台</td></tr>
+<tr><td>平台层</td><td>感知融合应用平台 / 可视化 / 数据中心 / 基础框架</td></tr>
+<tr><td>应用层</td><td>SaaS：智慧灌区 / 水库 / 边坡 / 园区等</td></tr>
+</table>
+<h3 id="第四章-融合应用二开-3">4.3 五大功能模块</h3>
+<table><tr><th>模块</th><th>定位</th></tr>
+<tr><td>孪生应用大屏</td><td>20+ 行业 80+ 场景样例</td></tr>
+<tr><td>掌上物联移动端</td><td>移动端应用</td></tr>
+<tr><td>业务处置台（应用端）</td><td>一屏万物监测 + 全景运营应用组件池</td></tr>
+<tr><td>应用开发平台（开发端）</td><td>租户配置 + 场景上架管理</td></tr>
+<tr><td>开发工具集（工具端）</td><td>孪生屏配置台 + 大屏组件脚手架 + 应用组件脚手架</td></tr>
+</table>
+<h3 id="第四章-融合应用二开-4">4.4 二开流程与三级</h3>
+<p><strong>感知云二开三级</strong>：拖拽级 → 配置级 → 代码级（门槛递增）。</p>
+<p><strong>"一平台百应用"开户 5 步</strong>：创建应用 → 关联设备类型 → 维护测站类别 → 功能配置 → 大屏配置。</p>
+<p><strong>感知云二开四步</strong>：开发前准备 → 中间件部署/基础服务部署 → 前后端开发/整理上架 → 权限配置/应用上架。</p>
+<blockquote>易错：前端技术栈<strong>不含 React</strong>；中间件<strong>不含 MongoDB</strong>；Nacos 配置文件名称<strong>必须与 sceneCode 保持一致</strong>；大屏开发用 2.5D 底图设备撒点，<strong>设备编码必须一致</strong>才能打通。</blockquote>
+</div>
+<div class="section"><h2 id="第五章-量子密信-sdk-客户端二开">第五章 量子密信 SDK 客户端二开</h2>
+<blockquote>覆盖课件：【燎原计划】基于量子密信 SDK 的客户端二开</blockquote>
+<h3 id="第五章-量子密信-sdk-客户端二开-1">5.1 产品定位 <span class="tag">★高频</span></h3>
+<p><strong>量子密信 SDK</strong>：<strong>中电信量子</strong>推出的<strong>企业级加密即时通讯 SDK</strong>。</p>
+<ul><li>多平台：Android、iOS、HarmonyOS、Windows</li>
+<li>多形态产物：<strong>核心 SDK、Lib SDK、Kit SDK</strong>，统一接口、规范错误码</li>
+<li>符合<strong>国密标准</strong>，基于<strong>量子密钥</strong>，通过安全介质 + 安全中间件实现：</li>
+<li>消息<strong>一次一密</strong></li>
+<li>音视频<strong>全帧加密</strong></li>
+<li>支持文字、语音、图片、视频、文件；加密单聊/群聊、加密企业通讯录</li>
+</ul>
+<h3 id="第五章-量子密信-sdk-客户端二开-2">5.2 解决的四大问题</h3>
+<ol><li>现有 APP <strong>无法嵌入密信 APP</strong>（系统限制，需要可接入 SDK）</li>
+<li>基于密信 APP 二开成本高（公版业务庞杂，功能与界面高度耦合）</li>
+<li>客户只需<strong>部分能力</strong>或底层 IM/RTC，UI 完全自定义 → 需要<strong>能力解耦</strong></li>
+<li>传统 IM/RTC <strong>安全性不足</strong>，政企金融缺乏<strong>原生量子加解密</strong></li>
+</ol>
+<h3 id="第五章-量子密信-sdk-客户端二开-3">5.3 三种 SDK 形态 <span class="tag">★高频</span></h3>
+<table><tr><th>维度</th><th>核心版 (Core)</th><th>Lib 版</th><th>Kit 版</th></tr>
+<tr><td>内容</td><td>核心 IM/RTC/量子加解密</td><td>仅 API 接口与核心功能（底层）</td><td>预置界面组件 + 业务逻辑</td></tr>
+<tr><td>UI</td><td>无</td><td>开发者自定义</td><td>官方 UI 组件，深度定制</td></tr>
+<tr><td>复杂度</td><td>最低</td><td>高（需自主渲染消息列表/UI）</td><td>低（<strong>简化 80% 编码</strong>）</td></tr>
+<tr><td>适用</td><td>基础能力</td><td>功能驱动、深度定制 UI/UX</td><td>界面驱动、快速上线</td></tr>
+</table>
+<blockquote>UI Kit 与 Lib 可<strong>组合使用</strong>：Lib 实现核心功能，选择性集成 UI Kit 非关键模块，平衡效率与灵活性。</blockquote>
+<h3 id="第五章-量子密信-sdk-客户端二开-4">5.4 两种集成模式 <span class="tag">★高频</span></h3>
+<table><tr><th>模式</th><th>SDK + 公版 IM 服务</th><th>SDK + 私版 IM 服务</th></tr>
+<tr><td>部署</td><td>公有化部署</td><td>全量私有化部署，<strong>数据不出局</strong></td></tr>
+<tr><td>互联互通</td><td>与公版密信<strong>互联互通</strong>（同账号、消息互通）</td><td><strong>无需</strong>与公版互通</td></tr>
+<tr><td>适用</td><td>省分公司/专业公司集成；已有 APP 引入能力</td><td>有自有办公平台底座、有安全诉求</td></tr>
+<tr><td>案例</td><td>安徽量子云总机、北京"易办"、安徽 IWORK</td><td>湖南 OA / 湘办通</td></tr>
+</table>
+<h3 id="第五章-量子密信-sdk-客户端二开-5">5.5 技术架构 <span class="tag orange">▲难点</span></h3>
+<ul><li>应用与应用服务器交互业务信息（账号体系、用户数据），<strong>密信 SDK 不维护</strong>开发者应用数据。</li>
+<li>应用服务器与密信 SDK 服务器做<strong>身份验证</strong>，返回信息存入开发者应用服务器数据库。</li>
+<li>消息发送经<strong>密信 SDK 服务器转发</strong>给其他终端。</li>
+</ul>
+<p><strong>登录及消息发送流程</strong>：用户登录 App 获取 <strong>Token</strong> → 登录密信 SDK → IM 服务连接成功 → 可发送消息。</p>
+<p><strong>RTC 架构分层（自下而上）</strong>：基础能力层 → RTC SDK（业务逻辑层）→ RTC Kit（UI 交互层）→ APP 层。</p>
+<p><strong>UI Kit 架构（Android）</strong>：采用 <strong>MVVM</strong>（Model–View–ViewModel），UI 展示与业务逻辑独立；回调数据由 RecyclerViewAdapter 按 type 判定 UI 样式。</p>
+<h3 id="第五章-量子密信-sdk-客户端二开-6">5.6 量子加解密（量子安全盾）<span class="tag orange">▲难点</span></h3>
+<p>基于国密标准，提供：身份认证、数字证书、密码运算、密钥管理。</p>
+<ul><li><strong>安全介质</strong>：量子安全 U 盾、量子 SIM 卡、量子 TF 卡。</li>
+<li><strong>密钥全生命周期</strong>：充注、申请、查看、销毁、分发、协商、调度、供给。</li>
+<li><strong>密码服务节点</strong>：KMS、密码机、QKD/KM。</li>
+<li><strong>服务</strong>：身份认证、单点登录、SSL VPN、CA 证书、签名验签、数字信封、消息摘要。</li>
+</ul>
+<h3 id="第五章-量子密信-sdk-客户端二开-7">5.7 环境与版本要求 <span class="tag">★高频</span></h3>
+<table><tr><th>项</th><th>要求</th></tr>
+<tr><td>Android 最低</td><td><strong>9.0（API 28）及以上</strong></td></tr>
+<tr><td>Target API</td><td><strong>31</strong>（不再支持 support 库）</td></tr>
+<tr><td>JDK</td><td><strong>11+</strong></td></tr>
+<tr><td>Android API 范围</td><td>28-33</td></tr>
+<tr><td>gradle</td><td>7.3.3</td></tr>
+<tr><td>build gradle</td><td>7.0.3</td></tr>
+</table>
+<p>开放平台：<strong>https://open-mixin.zdxlz.com/index</strong>；SDK Demo（Android）：gitee.com/ctq-pro_1/ctq_qmchat_kit_demo_android。</p>
+</div>
+<div class="section"><h2 id="第六章-togaf-企业架构设计与实践">第六章 TOGAF 企业架构设计与实践</h2>
+<blockquote>覆盖课件：燎原计划-大型企业架构设计与实践(TOGAF)（最大文件，本章为全局重点）</blockquote>
+<h3 id="第六章-togaf-企业架构设计与实践-1">6.1 企业架构定义与意义 <span class="tag">★高频</span></h3>
+<blockquote><strong>企业架构</strong>是<strong>业务流程和 IT 的组织逻辑</strong>，反映了企业运营模型的集成和标准化需求，作为<strong>连接战略和 IT 的桥梁</strong>，将业务战略愿景转换为高效率运营的规则、过程和实施路线图，是构建企业核心竞争力之本。</blockquote>
+<ul><li>世界 500 强中<strong>超 80%</strong> 跨国企业使用企业架构（微软、IBM、华为）。</li>
+<li>TOGAF 由欧洲 <strong>The Open Group</strong> 于 <strong>1995 年</strong>开发出第一个版本。</li>
+</ul>
+<p><strong>建设意义（5 点）</strong>：①推进业务与数字技术融合创新 ②支持数字化转型战略 ③优化业务流程 ④提升组织管理效能 ⑤推进企业发展变革。</p>
+<h3 id="第六章-togaf-企业架构设计与实践-2">6.2 "4A"架构 <span class="tag">★高频</span></h3>
+<table><tr><th>架构</th><th>缩写</th><th>英文</th><th>定位</th></tr>
+<tr><td>业务架构</td><td><strong>BA</strong></td><td>Business Architecture</td><td>业务结构化描述：运营模式/流程体系/组织结构/地域分布</td></tr>
+<tr><td>数据架构</td><td><strong>DA</strong></td><td>Data/Information Architecture</td><td>数据结构化流转：数据流蓝图</td></tr>
+<tr><td>应用架构</td><td><strong>AA</strong></td><td>Application Architecture</td><td>应用结构化表达：支持业务并处理数据的应用功能</td></tr>
+<tr><td>技术架构</td><td><strong>TA</strong></td><td>Technology Architecture</td><td>IT 基础设施：软硬件组件</td></tr>
+</table>
+<blockquote>安全架构常作为<strong>扩展架构</strong>。</blockquote>
+<blockquote><strong>业务架构是源头</strong>；数据、应用、技术架构承接业务架构，把现实世界"孪生"到数字世界。</blockquote>
+<blockquote>关系：<strong>BA → 输入/支撑 → DA/AA → 实现 → TA</strong>。</blockquote>
+<h3 id="第六章-togaf-企业架构设计与实践-3">6.3 TOGAF ADM 架构开发方法 <span class="tag">★高频</span><span class="tag orange">▲难点</span>（核心中的核心）</h3>
+<p><strong>ADM 定义</strong>：一个<strong>用于开发架构的、经测试并可重复的流程</strong>。所有活动在一个连续的架构定义与实现迭代周期内实施，使组织能以受控方式实施企业转型。</p>
+<p><strong>ADM 各阶段（必背顺序与目标）</strong>：</p>
+<table><tr><th>阶段</th><th>名称</th><th>核心目标</th></tr>
+<tr><td><strong>预备阶段</strong></td><td>Preliminary</td><td>确定并建立组织期望的<strong>架构能力（EA 能力）</strong>；按需定制 TOGAF、定义架构原则</td></tr>
+<tr><td><strong>阶段 A</strong></td><td>架构愿景</td><td>识别关键利益相关者，形成<strong>架构愿景文档</strong>；获得<strong>架构工作声明</strong>批准</td></tr>
+<tr><td><strong>阶段 B</strong></td><td>业务架构</td><td>开发目标业务架构，响应战略驱动因素；差距分析识别备选路线图</td></tr>
+<tr><td><strong>阶段 C</strong></td><td>信息系统架构（数据 + 应用）</td><td>开发目标信息架构，含数据架构与应用架构</td></tr>
+<tr><td><strong>阶段 D</strong></td><td>技术架构</td><td>开发目标技术架构，通过技术组件/服务交付架构愿景</td></tr>
+<tr><td><strong>阶段 E</strong></td><td>机会和解决方案</td><td>基于 B/C/D 差距分析生成<strong>架构路线图初始完整版本</strong>；基于 ABB 定义整体 <strong>SBB</strong>；识别过渡架构</td></tr>
+<tr><td><strong>阶段 F</strong></td><td>迁移规划</td><td>最终确定详细实施与迁移计划；解决"<strong>如何从基线架构向目标架构转移</strong>"</td></tr>
+<tr><td><strong>阶段 G</strong></td><td>实施治理</td><td>通过实施项目确保与目标架构一致；<strong>与敏捷软件开发对齐</strong></td></tr>
+<tr><td><strong>阶段 H</strong></td><td>架构变更管理</td><td>确保架构生命周期维持、治理框架执行、EA 能力满足需求</td></tr>
+<tr><td><strong>需求管理</strong></td><td>Requirements Management</td><td><strong>贯穿整个 ADM</strong> 持续运行，是架构开发的<strong>中心</strong></td></tr>
+</table>
+<p><strong>ADM 特性</strong>：是逻辑方法，<strong>不应被视为顺序流程模型</strong>；信息流产生迭代；目标架构开发具有相互依存性。</p>
+<h3 id="第六章-togaf-企业架构设计与实践-4">6.4 关键术语 <span class="tag orange">▲难点</span></h3>
+<table><tr><th>术语</th><th>含义</th></tr>
+<tr><td><strong>ABB</strong></td><td>Architecture Building Block，架构构建块</td></tr>
+<tr><td><strong>SBB</strong></td><td>Solution Building Block，解决方案构建块（<strong>E 阶段基于 ABB 定义</strong>）</td></tr>
+<tr><td><strong>过渡架构</strong></td><td>增量方法下交付连续业务价值的中间架构</td></tr>
+<tr><td>基线架构 → 目标架构</td><td>差距分析是 E/F 阶段核心</td></tr>
+<tr><td><strong>需求管理居中</strong></td><td>需求管理和利益相关者参与居于架构开发的<strong>中心</strong></td></tr>
+</table>
+<h3 id="第六章-togaf-企业架构设计与实践-5">6.5 架构能力与 ACMM 成熟度</h3>
+<p><strong>架构能力（EA 能力）</strong> = 开发、运用、维持企业架构并运用该架构<strong>治理变革</strong>的能力；通过组织结构、角色、职责、技能、流程落实。</p>
+<p><strong>ACMM 成熟度模型 6 阶段</strong> <span class="tag">★高频</span>：</p>
+<ol><li>独立建设（信息孤岛、重复建设）</li>
+<li>项目化建设</li>
+<li>企业级架构定义</li>
+<li>企业级架构治理</li>
+<li>中台化转型</li>
+<li>数字化转型</li>
+</ol>
+<blockquote>典型企业当前所处：<strong>第二向第三阶段过渡</strong>。</blockquote>
+<h3 id="第六章-togaf-企业架构设计与实践-6">6.6 业务架构设计（阶段 B）<span class="tag orange">▲难点</span></h3>
+<p><strong>传统职能型业务架构四类问题</strong>：需求散、建设散、系统散、响应慢（<strong>客户中心化偏弱</strong>是根源）。</p>
+<p><strong>业务架构设计五步</strong>：</p>
+<ol><li>基于波特价值链方法论拆解业务活动类型</li>
+<li>对业务分解形成公司业务能力框架</li>
+<li>基于业务能力识别 <strong>L3 级业务流程框架</strong></li>
+<li>基于端到端价值流方法构建主流程（含数据 CRUD/数据流/断点/指标分析）</li>
+<li>沉淀共性组件，打造企业级组件复用（为业务中台奠基）</li>
+</ol>
+<blockquote>业务流程梳理到<strong>4 级</strong>（业务能力/活动级）。发展阶段：信息化=职能架构（以产品为中心）→ 数字化=<strong>赋能架构</strong>（以客户为中心）。</blockquote>
+<h3 id="第六章-togaf-企业架构设计与实践-7">6.7 数据架构设计（阶段 C-数据）<span class="tag orange">▲难点</span></h3>
+<p><strong>5 条原则（必背）</strong>：</p>
+<table><tr><th>原则</th><th>说明</th></tr>
+<tr><td>数据完整性</td><td>准确与完整，建立企业级数据模型</td></tr>
+<tr><td>数据可用性</td><td>任何时间/地点/服务连续可用</td></tr>
+<tr><td>数据一致性</td><td>不同系统同类数据取值一致</td></tr>
+<tr><td>数据唯一性</td><td>保证数据源唯一，减少冗余</td></tr>
+<tr><td>可信数据源</td><td>关键数据有权威可信源</td></tr>
+</table>
+<p><strong>数据资产三层（农场-工场-市场模型）</strong>：</p>
+<table><tr><th>层</th><th>含义</th></tr>
+<tr><td><strong>数据农场</strong></td><td>数据资源治理（标准/质量/安全/认责）</td></tr>
+<tr><td><strong>数据工场</strong></td><td>数据授权运营（授权/汇聚/加工/经营）</td></tr>
+<tr><td><strong>数据市场</strong></td><td>数据价值释放（共享/开放/流通）</td></tr>
+</table>
+<blockquote>数据治理原则：<strong>"谁生产、谁负责"</strong>。</blockquote>
+<h3 id="第六章-togaf-企业架构设计与实践-8">6.8 应用架构设计（阶段 C-应用）</h3>
+<p><strong>3 条原则</strong>：①完整性（全面覆盖业务）②集成性（纵横贯通，统一集成方案）③延续性（继承已有成果，弹性可扩展）。</p>
+<p><strong>应用功能形成三种方式</strong>：对现有系统功能分析 → 对业务组件直接使用 → 对业务组件打包组合（参数化）。沉淀共性应用组件是<strong>中台化基础</strong>。</p>
+<h3 id="第六章-togaf-企业架构设计与实践-9">6.9 技术架构设计（阶段 D）</h3>
+<p><strong>目标</strong>：①实现系统技术构建 ②建立先进基础设施 ③实现基于技术平台的集成。</p>
+<p><strong>云服务四层</strong>：<strong>IaaS / PaaS / DaaS / IOTS</strong>（物联网服务）。</p>
+<blockquote>公用 IT 资产整合重用优势：资产利用率越高 IT 边际成本越低；显著降低应用推出时间；初期投入高，后续边际成本越来越低。</blockquote>
+<h3 id="第六章-togaf-企业架构设计与实践-10">6.10 架构治理与落地 <span class="tag">★高频</span></h3>
+<p><strong>业界案例（背书）</strong>：农行"薄前台、厚中台、强后台"；国家电网"多场景、微应用、一系统"；建行"一套业务模型、一套数字化架构、一套管理流程"。</p>
+<p><strong>散而不统 → 统一架构统一管控</strong>：立足顶层设计解决散的问题，统一架构、统一管控才是根本。</p>
+<p><strong>四统一</strong>：统一业务视图、统一数据视图、统一应用视图、统一平台视图（对应 BA/DA/AA/TA）。</p>
+<p><strong>架构落地"三化协同"</strong>：体系化、架构化、数字化；企业架构"<strong>建、管、用</strong>"。</p>
+<blockquote>管架构金句：<strong>无架构不制度、无架构不流程、无架构不数字化</strong>。</blockquote>
+</div>
+<div class="section"><h2 id="第七章-ttt-讲师培训-high-翻课堂">第七章 TTT 讲师培训（HIGH 翻课堂）</h2>
+<blockquote>覆盖课件：TTT培训-HIGH翻课堂-培训课件</blockquote>
+<h3 id="第七章-ttt-讲师培训-high-翻课堂--1">7.1 三大模块与目标</h3>
+<p><strong>三大模块</strong>：①以学员为中心 ②教学技术 ③营造场域。</p>
+<p><strong>三大目标</strong>：①强化"学员为中心"理念 ②做到"生动化、结构化、清晰化" ③掌握营造和控制场域方法。</p>
+<p><strong>课堂四要素</strong>：<strong>内容、讲师、学员、形式</strong>。</p>
+<h3 id="第七章-ttt-讲师培训-high-翻课堂--2">7.2 SUPER 五要素 <span class="tag">★高频</span></h3>
+<p><strong>以学员为中心 — "学员 SUPER"</strong>：</p>
+<table><tr><th>字母</th><th>含义</th></tr>
+<tr><td><strong>S</strong></td><td>Safe（安全感）：轻松、被尊重</td></tr>
+<tr><td><strong>U</strong></td><td>Utilization（目的明确）：实用性、解决问题</td></tr>
+<tr><td><strong>P</strong></td><td>Participation（学员活动）：参与学习、承担责任</td></tr>
+<tr><td><strong>E</strong></td><td>Experience（关联实际）：关联学员经验、给予体验</td></tr>
+<tr><td><strong>R</strong></td><td>Reinforcement（强化）：不断强化和反馈</td></tr>
+</table>
+<h3 id="第七章-ttt-讲师培训-high-翻课堂--3">7.3 讲师七项基本功 <span class="tag">★高频</span></h3>
+<p>形象、声音、眼神、表情、姿态、手势、位置。</p>
+<p><strong>声音关键数字</strong>：</p>
+<ul><li>最佳语速：<strong>120-200 字/分钟</strong></li>
+<li>停顿间隔：<strong>10 秒</strong>=好好想；<strong>6 秒</strong>=稍微想；<strong>3 秒</strong>=段落；<strong>2 秒</strong>=语句间</li>
+</ul>
+<p><strong>表情要求</strong>：真心微笑（<strong>皮笑 + 肉笑 + 眼笑</strong>）。</p>
+<h3 id="第七章-ttt-讲师培训-high-翻课堂--4">7.4 讲授三部曲 <span class="tag orange">▲难点</span></h3>
+<p><strong>Capability（能力）— Conversion（转化）— Control（控场）</strong>：</p>
+<ol><li><strong>激发兴趣</strong>（开场设计/激活活动）</li>
+<li><strong>深层互动</strong>（记忆规律/互动设计/教学方法）</li>
+<li><strong>关闭总结</strong>（学习点总结/走墙式复盘/接龙式总结/闭场圈分享）</li>
+</ol>
+<p><strong>课程导入五种方法</strong>：引文法、提问法、利益分享法、故事法、数字法。</p>
+<h3 id="第七章-ttt-讲师培训-high-翻课堂--5">7.5 大脑记忆规律 <span class="tag">★高频</span></h3>
+<table><tr><th>原则</th><th>数字</th></tr>
+<tr><td>分块原则</td><td><strong>7±2</strong></td></tr>
+<tr><td>重复原则</td><td><strong>6X</strong>（重复 6 次）</td></tr>
+<tr><td>首要原则</td><td><strong>1</strong>（开头记得牢）</td></tr>
+<tr><td>最近原则</td><td><strong>Z</strong>（结尾记得牢，近因效应）</td></tr>
+</table>
+<h3 id="第七章-ttt-讲师培训-high-翻课堂--6">7.6 教学方法刺激度排序 <span class="tag">★高频</span></h3>
+<p><strong>由低到高</strong>：讲解授课 < 阅读理解 < 提问发言 < 大组讨论 < 小组讨论 < 案例分析 < 游戏带动 < 视听教学 < <strong>情景模拟</strong>（刺激度 5→10）。</p>
+<blockquote>核心原则：教学方法<strong>服从于培训目标</strong>。</blockquote>
+<h3 id="第七章-ttt-讲师培训-high-翻课堂--7">7.7 万能互动流程（Me-We-Us）</h3>
+<p>无人举手时：<strong>Me（个人思考书写）→ We（小组讨论交流）→ Us（全班分享）</strong>。先封闭再开放，利用学员<strong>自我承诺心理</strong>提高回答频率。</p>
+</div>
+<div class="section"><h2 id="第八章-数字生活二开实战考核-真实考题">第八章 数字生活二开实战考核（真实考题）</h2>
+<blockquote>覆盖课件：数字生活燎原二开实战题目 —— <strong>真实考题，揭示考核范围，最重要</strong></blockquote>
+<h3 id="第八章-数字生活二开实战考核-真实考题--1">8.1 考核形式 <span class="tag">★高频</span></h3>
+<p><strong>只有一道大题，纯实操，满分 100 分</strong>：《<strong>基层治理大屏设计</strong>》。</p>
+<p>不是选择/判断/简答，而是完整的<strong>端到端开发 + 编排 + 全流程研发管理</strong>实操题。难度：高（要求真实开发、真实接口调用、真实审核上线、真实大屏编排）。</p>
+<h3 id="第八章-数字生活二开实战考核-真实考题--2">8.2 评分点与分值 <span class="tag">★高频</span></h3>
+<table><tr><th>考核点</th><th>分值</th></tr>
+<tr><td><strong>大屏编排 + 整体用户体验</strong></td><td><strong>35</strong></td></tr>
+<tr><td>研发云完整研发动作链（需求/任务/代码/开发文档管理）</td><td>5</td></tr>
+<tr><td>组件-背景地图</td><td>15</td></tr>
+<tr><td>组件-图文发布</td><td>10</td></tr>
+<tr><td>组件-数据展示</td><td>10</td></tr>
+<tr><td>组件-图表统计类</td><td>10</td></tr>
+<tr><td>组件-自定义卡片 1</td><td>5</td></tr>
+<tr><td>组件-自定义卡片 2</td><td>5</td></tr>
+<tr><td>组件-自定义卡片 3</td><td>5</td></tr>
+<tr><td><strong>合计</strong></td><td><strong>100</strong></td></tr>
+</table>
+<h3 id="第八章-数字生活二开实战考核-真实考题--3">8.3 六张必开发卡片与尺寸 <span class="tag">★高频</span></h3>
+<table><tr><th>卡片</th><th>尺寸</th><th>说明</th></tr>
+<tr><td><strong>背景地图</strong></td><td><strong>1920×1080</strong></td><td>百度地图，调用集约平台小区/网格接口</td></tr>
+<tr><td>图文类卡片</td><td><strong>440×320</strong></td><td>调用图文发布接口</td></tr>
+<tr><td>数据展示类</td><td>440×320</td><td>调用集约平台接口，右键可编辑数据</td></tr>
+<tr><td>图表统计类</td><td>440×320</td><td>图表统计</td></tr>
+<tr><td>自定义卡片 1/2/3</td><td>440×320</td><td>必须符合基层治理主题，能与前 4 张搭配</td></tr>
+</table>
+<blockquote>注意：上传时<strong>必须选择卡片适配尺寸</strong>，因大屏编辑器只展示对应尺寸卡片。</blockquote>
+<h3 id="第八章-数字生活二开实战考核-真实考题--4">8.4 卡片开发七步</h3>
+<ol><li>安装<strong>数字生活灵动云开发工具</strong>（天翼账号登录）</li>
+<li>新建卡片（能力开放平台 → 低代码开发 → 组件管理 → 新增；<strong>归属产品 = 基层治理，面向用户 = G 端</strong>）</li>
+<li>新建卡片版本</li>
+<li>开发调试（工具栏 + 模拟器 + 调试器；预览在左侧模拟器）</li>
+<li>卡片上传（<strong>必须选择适配尺寸</strong>）</li>
+<li>编码规范</li>
+<li>卡片发布上线（<strong>先设为体验版</strong>才能发布；需审核通过）</li>
+</ol>
+<h3 id="第八章-数字生活二开实战考核-真实考题--5">8.5 JSSDK（SxIntegrationSDK）加密认证 <span class="tag">★高频</span><span class="tag orange">▲难点</span></h3>
+<p><strong>定位</strong>：基于<strong>社乡统一认证体系</strong>的 API 请求封装；卡片开发者一次性配置后，后续所有接口调用<strong>自动完成加密、签名、认证</strong>。</p>
+<p><strong>SDK 自动完成的处理（开发者无需关心）</strong>：</p>
+<table><tr><th>步骤</th><th>机制</th></tr>
+<tr><td>请求体加密</td><td><strong>AES-CBC</strong> 加密（data + orgId 合并）</td></tr>
+<tr><td>认证令牌生成</td><td><strong>SHA-256 签名 + RSA 公钥加密</strong></td></tr>
+<tr><td>请求头注入</td><td>X-DL-APP-ID、X-DL-WIDGET-ID、X-DL-Product-ID、Authorization、traceId</td></tr>
+<tr><td>响应解密</td><td><strong>code === 0</strong> 时自动 AES 解密 res.data</td></tr>
+<tr><td>认证过期</td><td><strong>code === 40105</strong> 时清除认证信息并触发回调</td></tr>
+</table>
+<h3 id="第八章-数字生活二开实战考核-真实考题--6">8.6 关键参数来源表 <span class="tag">★高频</span></h3>
+<table><tr><th>参数</th><th>来源</th></tr>
+<tr><td>appId</td><td>能力开放平台</td></tr>
+<tr><td>appKey</td><td>平台注入</td></tr>
+<tr><td>publicKey</td><td>能力开放平台（<strong>RSA 公钥 PKCS#8 Base64</strong>，<strong>2048 位</strong>）</td></tr>
+<tr><td><strong>widgetId</strong></td><td><strong>widgetJson.id</strong>（<span class="tag">★高频</span>从 widget.json 自动获取，不硬编码）</td></tr>
+<tr><td>productId</td><td>能力开放平台</td></tr>
+<tr><td>accessToken / hashKey / orgId / source / timeDiffrence</td><td>平台注入（均从 <strong>sessionStorage</strong> 读取）</td></tr>
+</table>
+<blockquote>source 默认 <strong>'gov'</strong>；timeDiffrence = 客户端与服务器<strong>时间差（毫秒）</strong>；缺失 appId/accessToken/hashKey 任一则 console.error 返回 null。</blockquote>
+<h3 id="第八章-数字生活二开实战考核-真实考题--7">8.7 编码规范</h3>
+<ul><li>变量/函数用<strong>小驼峰 lowerCamelCase</strong>；不以 <code>$</code> 开头</li>
+<li>全局变量、常量用<strong>大写 UPPERCASE</strong></li>
+<li>HTML5 属性以 <strong>data-</strong> 前缀</li>
+<li>CSS 用 <strong>-</strong> 连接属性名（font-size）</li>
+</ul>
+<h3 id="第八章-数字生活二开实战考核-真实考题--8">8.8 接口清单与域名</h3>
+<p>所有接口统一前缀 <strong>/ucop/</strong> + 模块 + v1 + 方法。</p>
+<table><tr><th>用途</th><th>路径</th></tr>
+<tr><td>地图位点（摄像头）</td><td><code>/ucop/tgp-mapPoint/v1/pageDevice</code></td></tr>
+<tr><td>小区/自然村</td><td><code>queryDistrictPoints</code></td></tr>
+<tr><td>网格</td><td><code>queryGridPoints</code></td></tr>
+<tr><td>图文资讯列表</td><td><code>/ucop/tgp-graphicInformation/v1/getGraphicInformationPage</code></td></tr>
+<tr><td>基础数据列表</td><td><code>/ucop/tgp-baseDataCard/v1/getBaseDataCardList</code></td></tr>
+<tr><td>重点人员列表</td><td><code>/ucop/tgp-keyPersonnel/v1/queryTotalList</code></td></tr>
+</table>
+<p><strong>域名</strong>：测试 <code>t-jczl.dlife.cn</code>；生产 <code>api-open-jczl.dlife.cn</code>。基层治理大屏入口：<code>https://jczl.dlife.cn/web/dashboard/login.html</code>。</p>
+<h3 id="第八章-数字生活二开实战考核-真实考题--9">8.9 大屏编排完整流程</h3>
+<p>开发者工具开发卡片 → 上传 → 审核 → 登录天翼基层治理平台 → 大屏编排 → 用户账号登录 → 大屏编辑器 → 创建编排大屏 → 返回客户管理首页 → 数据大屏查看效果。</p>
+</div>
+<div class="section"><h2 id="第九章-重点难点速查手册">第九章 重点难点速查手册</h2>
+<h3 id="第九章-重点难点速查手册-1">一、高频必背概念对比</h3>
+<table><tr><th>概念 A</th><th>概念 B</th><th>核心区别</th></tr>
+<tr><td>CV 零代码训练</td><td>CV 高代码训练</td><td>标准快速入仓 vs 第三方手动入仓；语义分割/OCR 仅高代码</td></tr>
+<tr><td>公有云二开</td><td>边缘侧部署二开</td><td>按路付费 vs 硬件一次性；图片流 vs 图片+视频流</td></tr>
+<tr><td>A 类销售品</td><td>省 B/C 类销售品</td><td>集团管理不可自研 vs 省开通；一点结算 vs 不纳入</td></tr>
+<tr><td>DICT 模式</td><td>标品模式</td><td>单一客户走能开云侧 vs 全省规模走 BC 类</td></tr>
+<tr><td>数字生活配置级 / 组装级 / 编码级</td><td>—</td><td>拖拽 → 组件积木 → API 源码，门槛递增</td></tr>
+<tr><td>云云对接</td><td>直连对接</td><td>HTTPS（集成厂商）vs MQTT（<strong>推荐</strong>，更高效稳定）</td></tr>
+<tr><td>API 拉取</td><td>数据订阅推送</td><td>非实时 Pull vs 实时 Push（失败 3 次不再重试）</td></tr>
+<tr><td>量子密信 Kit / Lib / Core</td><td>—</td><td>有 UI 简化 80% / 无 UI 灵活 / 基础能力</td></tr>
+<tr><td>公版 IM 集成</td><td>私版 IM 集成</td><td>公有化互通 vs 私有化数据不出局</td></tr>
+<tr><td>TOGAF BA / DA / AA / TA</td><td>—</td><td>业务/数据/应用/技术架构；BA 是源头</td></tr>
+<tr><td>ABB</td><td>SBB</td><td>架构构建块 vs 解决方案构建块（E 阶段基于 ABB 定义）</td></tr>
+<tr><td>基线架构</td><td>目标架构</td><td>现状 vs 愿景，F 阶段解决迁移</td></tr>
+<tr><td>数据农场 / 工场 / 市场</td><td>—</td><td>治理 / 运营 / 流通</td></tr>
+<tr><td>卡片背景地图</td><td>其余卡片</td><td>1920×1080 vs 440×320</td></tr>
+<tr><td>教学方法（低→高刺激度）</td><td>—</td><td>讲授 < … < 情景模拟</td></tr>
+<tr><td>协议插件</td><td>桥接插件</td><td>设备接入编解码 vs 数据向下游推送</td></tr>
+</table>
+<h3 id="第九章-重点难点速查手册-2">二、必背公式</h3>
+<h4>CV 算力成本 <span class="tag">★高频</span><span class="tag orange">▲难点</span></h4>
+<pre><code>每路算力成本 ≈ 硬件成本 / 总路数   （当 路数 &lt; QPS × 抽帧频率）
+原则：无论一路加载多少算法，抽帧永远按最小抽帧频率一次抽帧。
+省节点资源冗余 20% 作为安全区。
+</code></pre><h4>CV 标品审核阈值 <span class="tag">★高频</span></h4>
+<pre><code>大目标：Precision &gt; 92%，Recall &gt; 80%
+小目标：Recall &gt; 70%，Precision &gt; 80%
+星河零代码 QPS &gt; 80（普遍 &gt; 100）；省自研 YOLO QPS &gt; 50（最低不低于 50）
+标品上架审核 6-8 周；接口审批 1 周左右
+</code></pre><h4>JSSDK 加密链 <span class="tag">★高频</span><span class="tag orange">▲难点</span></h4>
+<pre><code>请求体：AES-CBC（data + orgId）
+认证令牌：SHA-256 签名 + RSA 公钥加密
+成功解密：code === 0；认证过期：code === 40105
+RSA 密钥：2048 位（PKCS#8 Base64）
+</code></pre><h4>认证时效（数字生活）</h4>
+<pre><code>tokenCode：2 分钟一次有效；用户授权：30 天；数据订阅推送失败 3 次不再重试
+</code></pre><h4>TTT 记忆与语速 <span class="tag">★高频</span></h4>
+<pre><code>分块 7±2；重复 6X；首要 1；最近 Z
+最佳语速 120-200 字/分；停顿 10/6/3/2 秒
+</code></pre><h3 id="第九章-重点难点速查手册-3">三、必背流程</h3>
+<h4>算法入仓 4 步</h4>
+<pre><code>算法注册 → 镜像注册 → 算法评测 → 算法上架
+</code></pre><h4>能力开放二开应用 7 步</h4>
+<pre><code>门户注册 → 原子能力下单 → APP 创建 → 算法接入申请 → 开发调试 → 审核上线 → 算法迭代
+</code></pre><h4>一语定场景 3 步</h4>
+<pre><code>新建场景 → 配置检测 → 发布使用（单次≤20 检测项，每账号≤20 场景，1 分钟生效）
+</code></pre><h4>ThingsMQ 二开 3 种方式</h4>
+<pre><code>①数据解析转换(SQL/JS)  ②协议插件开发  ③桥接插件开发
+插件开发5步：Spring Boot 项目 → 实现接口 → jsonSchema → 打包 jar → 导入启停
+</code></pre><h4>TOGAF ADM 各阶段 <span class="tag">★高频</span></h4>
+<pre><code>预备 → A愿景 → B业务 → C信息(数据+应用) → D技术 → E机会方案 → F迁移规划 → G实施治理 → H变更管理
+（需求管理贯穿全程、居于中心；非顺序流程模型）
+</code></pre><h4>卡片开发 7 步（实战考核）</h4>
+<pre><code>装工具 → 新建卡片(基层治理/G端) → 新建版本 → 开发调试 → 上传(选尺寸) → 编码规范 → 发布(先体验版)
+</code></pre><h4>大屏编排流程</h4>
+<pre><code>开发卡片 → 上传 → 审核 → 登录基层治理平台 → 大屏编排 → 大屏编辑器 → 创建大屏 → 查看效果
+</code></pre><h3 id="第九章-重点难点速查手册-4">四、易混淆辨析</h3>
+<h4>1. "CV 二开边界"</h4>
+<ul><li>CV 二开 ≠ 拉流 + 省侧自建 AI，<strong>必须基于标训推平台 / 视联网标准能力</strong>。</li>
+<li>比对类算法：零代码和高代码<strong>均不支持</strong>（建议先检测后标准比对串联）。</li>
+<li>端侧视频流：零代码和高代码均需芯片适配。</li>
+</ul>
+<h4>2. "ThingsMQ 中间件是什么"</h4>
+<ul><li>融合应用的数采中间件是 <strong>ThingMQ</strong>，<strong>不是 Kafka / RabbitMQ</strong>。</li>
+<li>MQTT 的 <strong>client_id 必须与设备编码一致</strong>；大屏撒点<strong>设备编码必须一致</strong>才能打通。</li>
+</ul>
+<h4>3. "TOGAF ADM 是顺序流程吗"</h4>
+<ul><li><strong>不是</strong>。ADM 是逻辑方法，不应被视为顺序流程模型；信息流产生迭代；目标架构相互依存；<strong>需求管理居于中心</strong>。</li>
+</ul>
+<h4>4. "企业当前架构成熟度"</h4>
+<ul><li>ACMM 6 阶段中，典型企业处于<strong>第二→第三阶段过渡</strong>（项目化建设 → 企业级架构定义）。</li>
+</ul>
+<h4>5. "实战考核是选择判断吗"</h4>
+<ul><li><strong>不是</strong>。是《基层治理大屏设计》<strong>100 分纯实操</strong>：6 张卡片真实开发 + 真实调接口 + 审核通过 + 大屏编排 + 研发云全流程。</li>
+<li>大屏编排 35 分（最高单项）；研发云管理仅 5 分但必做。</li>
+</ul>
+<h4>6. "量子密信加密方式"</h4>
+<ul><li>消息<strong>一次一密</strong>、音视频<strong>全帧加密</strong>；基于<strong>国密标准 + 量子密钥</strong>；UI Kit <strong>简化 80% 编码</strong>；Kit 与 Lib 可组合使用。</li>
+</ul>
+<h3 id="第九章-重点难点速查手册-5">五、关键数字速记</h3>
+<table><tr><th>数字</th><th>含义</th></tr>
+<tr><td>1920×1080 / 440×320</td><td>卡片尺寸（背景地图 / 其余）</td></tr>
+<tr><td>100</td><td>实战题总分；大屏编排占 35（最高）</td></tr>
+<tr><td>20 / 20 / 1 分钟</td><td>一语定场景：检测项上限 / 场景上限 / 生效时间</td></tr>
+<tr><td>92% / 80%</td><td>CV 大目标 Precision / Recall 阈值</td></tr>
+<tr><td>>80（>100）/ >50</td><td>星河零代码 / 省自研 YOLO QPS</td></tr>
+<tr><td>2 分钟 / 30 天 / 3 次</td><td>tokenCode 时效 / 授权时效 / 推送重试上限</td></tr>
+<tr><td>31 / 11+ / 28-33</td><td>量子密信 Target API / JDK / Android API</td></tr>
+<tr><td>80% / 1995 / >80%</td><td>UI Kit 简化编码 / TOGAF 首发年 / 500 强使用 EA</td></tr>
+<tr><td>6 阶段（2→3 过渡）/ 4 级</td><td>ACMM 成熟度 / 业务流程梳理层级</td></tr>
+<tr><td>2048 / 0 / 40105 / 'gov'</td><td>RSA 位数 / 成功 code / 过期 code / source 默认</td></tr>
+<tr><td>7±2 / 6X / 120-200 / 2·3·6·10</td><td>记忆分块 / 重复 / 语速(字分) / 停顿(秒)</td></tr>
+<tr><td>十万 / 百万 / 毫秒 / 90%+</td><td>ThingsMQ 单节点并发 / 集群并发 / 延迟 / 协议覆盖</td></tr>
+<tr><td>Java21 + SpringBoot3.3.5</td><td>ThingsMQ 插件强制技术栈</td></tr>
+<tr><td>9000 万+ / 百亿 / 10%+</td><td>视联网设备 / CV 二开市场空间 / 复合增速</td></tr>
+<tr><td>30 日</td><td>公共视频图像信息保存期限</td></tr>
+</table>
+<blockquote>复习建议：先掌握第九章速查手册，再回溯各章节深入理解。重点关注 <span class="tag">★高频</span> 标记的高频考点（CV 算力成本与审核阈值、数字生活二开三级与 9 类集成、ThingsMQ 三组件与三二开、量子密信三形态两模式、TOGAF ADM 各阶段、实战题大屏与 JSSDK）和 <span class="tag orange">▲难点</span> 标记的计算/深挖点。</blockquote>
+</div>

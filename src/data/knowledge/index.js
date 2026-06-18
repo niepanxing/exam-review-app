@@ -1,3 +1,4 @@
+import liaoYuan from './liao-yuan-di-er-zhou.html?raw'
 import cvErKaiFa from './cv-er-kai-fa.html?raw'
 import shuZiShengHuo from './shu-zi-sheng-huo.html?raw'
 import cvShiJian from './cv-shi-jian-liu-cheng.html?raw'
@@ -63,5 +64,12 @@ export const knowledgeModules = [
     icon: '🌐',
     color: '#1565c0',
     content: thingsmq
+  },
+  {
+    id: 'liao-yuan-di-er-zhou',
+    title: '燎原第二周复习资料汇总',
+    icon: '📋',
+    color: '#e65100',
+    content: liaoYuan
   }
 ]
