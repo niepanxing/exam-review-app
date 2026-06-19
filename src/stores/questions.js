@@ -174,7 +174,7 @@ export const useQuestionStore = defineStore('questions', () => {
     })
 
     const wrongQuestions = Object.entries(questionStats)
-      .filter(([_, s]) => s.attempts > 0 && s.correct < s.attempts)
+      .filter(([_, s]) => s.attempts > 0 && s.correct === 0)
       .map(([id, s]) => ({ ...s, questionId: id }))
 
     return {
