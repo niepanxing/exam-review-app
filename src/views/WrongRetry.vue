@@ -196,7 +196,7 @@
       <div class="result-actions">
         <el-button type="primary" @click="startRetry('all')" v-if="!allCorrect">再刷一轮</el-button>
         <el-button @click="$router.push('/practice')">去做题</el-button>
-        <el-button @click="showResult = false; started = false">返回</el-button>
+        <el-button @click="backToList">返回</el-button>
       </div>
     </div>
   </div>
@@ -383,6 +383,12 @@ function goTo(i) {
 }
 
 function finishRetry() { started.value = false; showResult.value = true; window.scrollTo({ top: 0 }) }
+
+function backToList() {
+  showResult.value = false
+  started.value = false
+  loadWrongQuestions()
+}
 
 loadWrongQuestions()
 </script>
