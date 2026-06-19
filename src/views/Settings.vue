@@ -59,6 +59,40 @@
 
       <el-card class="settings-card">
         <template #header>
+          <span class="card-title">📦 数据备份与迁移</span>
+        </template>
+
+        <p class="form-tip" style="margin-bottom: 16px;">
+          导出学习记录到文件，可跨设备/跨域名迁移数据。换域名后在新站点导入即可恢复所有进度。
+        </p>
+
+        <el-form-item>
+          <el-button type="primary" plain @click="exportData" :loading="exporting">
+            📤 导出学习记录
+          </el-button>
+          <el-button type="success" plain @click="triggerImport" :loading="importing">
+            📥 导入学习记录
+          </el-button>
+          <input ref="fileInput" type="file" accept=".json" style="display:none" @change="handleImport" />
+        </el-form-item>
+
+        <div v-if="importPreview" class="import-preview">
+          <el-alert type="info" :closable="false" style="margin-bottom: 12px;">
+            <template #title>即将导入以下数据（将与现有数据合并）</template>
+          </el-alert>
+          <div class="import-detail">
+            <span v-if="importPreview.progress">📊 做题记录 {{ importPreview.progress.records }} 条</span>
+            <span v-if="importPreview.history">📝 考试历史 {{ importPreview.history }} 次</span>
+            <span v-if="importPreview.examState">⏳ 进行中的考试 1 场</span>
+            <span v-if="importPreview.theme">🎨 主题设置</span>
+          </div>
+          <el-button type="primary" @click="confirmImport" style="margin-top: 12px;">确认导入</el-button>
+          <el-button @click="importPreview = null">取消</el-button>
+        </div>
+      </el-card>
+
+      <el-card class="settings-card">
+        <template #header>
           <span class="card-title">🗑️ 数据管理</span>
         </template>
 
@@ -86,6 +120,11 @@ const form = ref({
 })
 const saving = ref(false)
 const testing = ref(false)
+const exporting = ref(false)
+const importing = ref(false)
+const fileInput = ref(null)
+const importPreview = ref(null)
+let pendingImportData = null
 
 async function loadSettings() {
   try {
@@ -125,6 +164,101 @@ async function testConnection() {
   }
 }
 
+// ===== 数据备份与迁移 =====
+const STORAGE_KEYS = ['exam-progress', 'exam-settings', 'exam-state', 'exam-history', 'exam-theme']
+
+function exportData() {
+  exporting.value = true
+  try {
+    const data = {}
+    for (const key of STORAGE_KEYS) {
+      const val = localStorage.getItem(key)
+      if (val !== null) {
+        try { data[key] = JSON.parse(val) } catch { data[key] = val }
+      }
+    }
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    const date = new Date().toISOString().slice(0, 10)
+    a.download = `exam-backup-${date}.json`
+    a.click()
+    URL.revokeObjectURL(url)
+    ElMessage.success('学习记录已导出')
+  } catch (e) {
+    ElMessage.error('导出失败: ' + e.message)
+  } finally {
+    exporting.value = false
+  }
+}
+
+function triggerImport() {
+  fileInput.value?.click()
+}
+
+function handleImport(event) {
+  const file = event.target.files?.[0]
+  if (!file) return
+  
+  const reader = new FileReader()
+  reader.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target.result)
+      // 校验格式
+      const validKeys = Object.keys(data).filter(k => STORAGE_KEYS.includes(k))
+      if (validKeys.length === 0) {
+        ElMessage.error('无效的备份文件，未找到有效的学习记录')
+        return
+      }
+      // 生成预览
+      const preview = {}
+      if (data['exam-progress']?.records?.length) {
+        preview.progress = { records: data['exam-progress'].records.length }
+      }
+      if (data['exam-history']?.length) {
+        preview.history = data['exam-history'].length
+      }
+      if (data['exam-state']) {
+        preview.examState = true
+      }
+      if (data['exam-theme']) {
+        preview.theme = true
+      }
+      pendingImportData = data
+      importPreview.value = preview
+    } catch {
+      ElMessage.error('文件解析失败，请确认是有效的 JSON 备份文件')
+    }
+  }
+  reader.readAsText(file)
+  // 重置 input，允许重复选择同一文件
+  event.target.value = ''
+}
+
+function confirmImport() {
+  if (!pendingImportData) return
+  importing.value = true
+  try {
+    for (const key of STORAGE_KEYS) {
+      if (pendingImportData[key] !== undefined) {
+        const val = typeof pendingImportData[key] === 'string' 
+          ? pendingImportData[key] 
+          : JSON.stringify(pendingImportData[key])
+        localStorage.setItem(key, val)
+      }
+    }
+    importPreview.value = null
+    pendingImportData = null
+    ElMessage.success('学习记录已导入，页面将刷新...')
+    setTimeout(() => location.reload(), 1000)
+  } catch (e) {
+    ElMessage.error('导入失败: ' + e.message)
+  } finally {
+    importing.value = false
+  }
+}
+
 async function clearProgress() {
   try {
     await ElMessageBox.confirm('确定清除所有做题记录？', '提示', { type: 'warning' })
@@ -158,4 +292,25 @@ onMounted(() => loadSettings())
 .card-title { font-size: 16px; font-weight: 600; }
 
 .form-tip { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+.import-preview {
+  background: var(--bg-card-hover, rgba(0,0,0,0.04));
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 8px;
+}
+.import-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .import-detail {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
 </style>
